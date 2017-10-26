@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"></meta>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+		<title>Calcula tiros</title>
+	</head>
+	<body>
+		<div style="height: 100%;position: absolute;width: 100%;display: flex;justify-content: center;">
+			<div id="game" class="panel panel-default" style=" max-width: 100%;height: 100%;align-self: center;">
+				<div class="panel-heading" style="text-align: center;">
+					<h2 id="nameLabel">Calcula Tiros</h2>
+				</div>
+				<div style=" max-width: 100%;height: 100%;align-self: center;">
+					<!-- Nav tabs -->
+					<ul class="nav nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#porTiro" aria-controls="porTiro" role="tab" data-toggle="tab">Tiro dado</a></li>
+						<!-- <li role="presentation"><a href="#dinheiro" aria-controls="dinheiro" role="tab" data-toggle="tab">Dinheiro disponível</a></li> -->
+					</ul>
+					<!-- Tab panes -->
+					<div class="tab-content">
+						<div role="tabpanel" class="tab-pane active" id="porTiro">
+							<div class="panel-body">
+								<div class="row text-center" style="font-size: 20px">
+									<div class="row">
+										<div class="col-xs-12">
+											<h3>25 reias para entrar + tiros</h3>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6" style="border-bottom: 1px solid gray;border-right: 1px solid gray; padding: 10px">
+											.22 (R$ 0,80):
+											<input type="text" pattern="\d*" min="0" class="form-control" id="cal22" placeholder="Quantidade de tiros dados">
+											<span id="resultCal22" style="color: green"></span>
+										</div>
+										<div class="col-xs-6" style="border-bottom: 1px solid gray; padding: 10px">
+											.380 / 38 (R$ 1,50):
+											<input type="text" pattern="\d*" min="0" class="form-control" id="cal380" placeholder="Quantidade de tiros dados">
+											<span id="resultCal380" style="color: green"></span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6" style="border-bottom: 1px solid gray;border-right: 1px solid gray;  padding: 10px">
+											.40 (R$ 1,80):
+											<input type="text" pattern="\d*" min="0" class="form-control" id="cal40" placeholder="Quantidade de tiros dados">
+											<span id="resultCal40" style="color: green"></span>
+										</div>
+										<div class="col-xs-6" style="border-bottom: 1px solid gray; padding: 10px">
+											.357 (R$ 3,50):
+											<input type="text" pattern="\d*" min="0" class="form-control" id="cal357" placeholder="Quantidade de tiros dados">
+											<span id="resultCal357" style="color: green"></span>
+										</div>
+									</div>
+									<div class="row">
+										<div class="col-xs-6" style="border-bottom: 1px solid gray;border-right: 1px solid gray;  padding: 10px">
+											RT (R$ 4,60):
+											<input type="text" pattern="\d*" min="0" class="form-control" id="calRT" placeholder="Quantidade de tiros dados">
+											<span id="resultCalRT" style="color: green"></span>
+										</div>
+										<div class="col-xs-6" style="border-bottom: 1px solid gray; padding: 10px">
+											12 (R$ 3,00):
+											<input type="text" pattern="\d*" min="0" class="form-control" id="cal12" placeholder="Quantidade de tiros dados">
+											<span id="resultCal12" style="color: green"></span>
+										</div>
+									</div>
+								</div>
+								<div class="row text-center" style="margin-top: 20px">
+									<div class="col-xs-12" >
+										<button type="button" class="btn btn-primary btn-lg" onclick="calcular()">Calcular</button>
+									</div>
+								</div>
+								<div class="row text-center" style="margin-top: 20px">
+									<div class="col-xs-12" >
+										<div class="text-center" style="font-size: 50px;border: 1px solid black; padding: 5px;">
+											Total: <span id="total"></span> <span id="final" style="color: red"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+					    </div>
+						<div role="tabpanel" class="tab-pane" id="dinheiro">
+							<div class="panel-body">
+								<div class="row text-center" style="font-size: 20px">
+									<div class="col-xs-12" style="padding: 10px">
+										Dinheiro:
+										<input type="text" pattern="\d*" min="0" class="form-control" id="impDinheiro" placeholder="Quantidade de dinheiro disponível">
+									</div>
+									<div class="col-xs-12 text-left" style="padding: 10px">
+										<div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" value="">
+													.22
+												</label>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" value="">
+													.380 / 38
+												</label>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" value="">
+													.40
+												</label>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" value="">
+													.357
+												</label>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" value="">
+													RT
+												</label>
+											</div>
+											<div class="checkbox">
+												<label>
+													<input type="checkbox" value="">
+													12
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row text-center" style="margin-top: 20px">
+									<div class="col-xs-12" >
+										<button type="button" class="btn btn-primary btn-lg" onclick="calcular()">Calcular</button>
+									</div>
+								</div>
+								<div class="row text-center" style="margin-top: 20px">
+									<div class="col-xs-12" >
+										<div class="text-center" style="font-size: 50px;border: 1px solid black; padding: 5px;">
+											Total: <span id="total"></span> <span id="final" style="color: red"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+													<div class="row text-center" style="margin-top: 50px">
+									<div class="col-xs-12" >
+										<button type="button" class="btn btn-inverse" onclick="limpar()">Limpar</button>
+									</div>
+								</div>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="./app.js" ></script>
+	</body>
+</html>
