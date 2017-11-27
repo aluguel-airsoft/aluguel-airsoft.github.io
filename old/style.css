@@ -1,0 +1,45 @@
+.t {
+	height: 100%;
+	position: absolute;
+	width: 100%;
+	display: flex;
+}
+.r {
+	align-self: center;
+}
+.mt-lg{
+	margin-top: 15px;
+}
+body{
+  background-color: black;
+  /*position: absolute;*/
+  /*background-size: 100% auto;*/
+  /*object-fit: cover;*/
+}
+.gradientLeft {
+  background: linear-gradient(to left, rgba(7,7,8,1), rgba(7,7,8,0));
+}
+.gradientRight {
+  background: linear-gradient(to right, rgba(7,7,8,1), rgba(7,7,8,0));
+}
+.gradient {
+  position: absolute;
+  z-index: 15;
+  width: 50%;
+  left: 25%;
+  right: 25%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.background {
+  z-index: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  object-fit: cover;
+  transform: translate(-50%,-50%);
+  height: 100%;
+}
