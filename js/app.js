@@ -129,7 +129,7 @@ $( document ).ready(function() {
 		var data = $("#dataDesejada").val();
 		if (data) {
 			var equipIndis = existeReserva(data, equipamentos);
-			if (equipIndis.length > 0) {
+			if (equipIndis && equipIndis.length > 0) {
 				var auxEquips = "";
 				for(var i in equipIndis){
 					if (auxEquips) {
@@ -159,5 +159,25 @@ $( document ).ready(function() {
 		daysOfWeekHighlighted: "0",
 		autoclose: true
 	});
+
+	var existeReserva = function(data, equipamentosRequeridos) {
+		var equipAlugados = [];
+		for (var i in reservas) {
+			if(reservas[i].data == data){
+				equipAlugados = intersection(equipamentosRequeridos, reservas[i].equipamentos);
+				return equipAlugados;
+			}
+		}
+	};
+
+	var intersection = function(a, b){
+		var result = [];
+		for(var i in a){
+			if(b.includes(a[i])){
+				result.push(a[i]);
+			}
+		}
+		return result;
+	};
 
 });
