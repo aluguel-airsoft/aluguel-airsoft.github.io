@@ -77,35 +77,34 @@ $( document ).ready(function() {
 
 	$( "#confirmar" ).click(function() {
 
-		var equipamentosSelecionados = [];
+		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft%0AEquipamentos%3A%20%0A";
 
 		if($("#cBoxM4")[0].checked){
-			equipamentosSelecionados.push("M4");
+			texto += "-%20M4%0A";
 		}
 		if($("#cBoxGlock")[0].checked){
-			equipamentosSelecionados.push("Glock");
+			texto += "-%20Glock%0A";
 		}
 		if($("#cBoxOculos")[0].checked){
-			equipamentosSelecionados.push("Oculos");
+			texto += "-%20Óculos telado%0A";
 		}
 		if($("#cBoxMascara")[0].checked){
-			equipamentosSelecionados.push("Mascara");
+			texto += "-%20Máscara telada%0A";
 		}
 		if($("#cBoxBalaclava")[0].checked){
-			equipamentosSelecionados.push("Balaclava");
+			texto += "-%20Balaclava%0A";
 		}
 		if($("#cBoxColete")[0].checked){
-			equipamentosSelecionados.push("Colete");
+			texto += "-%20Colete%0A";
 		}
 		if($("#cBoxColdre")[0].checked){
-			equipamentosSelecionados.push("Coldre");
+			texto += "-%20Coldre%0A";
 		}
+		
+		texto += "%0A%20Total%3A%20"+encodeURI("R$ " + precoEquipamentos.toFixed(2))+"%20%0A";
 
-		var url = "https://api.whatsapp.com/send?text=Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft&phone=554799458621";
-
-		// window.location.href 
+		var url = "https://api.whatsapp.com/send?text="+texto+"&phone=554799458621";
 		window.open(url);
-
 	});
 
 });
