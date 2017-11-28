@@ -7,14 +7,20 @@ var precoColete		= 5.0;
 var precoColdre		= 4.0;
 
 var datasReservadas = [
+	"17/12/2017",
+];
+
+var datasReservadas2 = [
 	{
 		"data": "17/12/2017",
 		"equipamentos":["M4"]
 	}
 ];
 
-var existeReserva = function(dataAux) {
+var existeReserva = function(data) {
 	for (var i in datasReservadas) {
-		datasReservadas[i].data
+		if(datasReservadas[i].data = data){
+
+		}
 	}
 };
