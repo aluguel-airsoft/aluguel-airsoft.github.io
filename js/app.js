@@ -2,82 +2,86 @@ $( document ).ready(function() {
 	var precoEquipamentos = 0.0;
 	document.getElementById("ano").textContent = new Date().getFullYear();
 
-	var mensagemPadrao = function(argument) {
-		return "";
-	};
+	$("#precoM4").text(			"(R$ " + precoM4.toFixed(2) + 			")");
+	$("#precoGlock").text(		"(R$ " + precoGlock.toFixed(2) + 		")");
+	$("#precoOculos").text(		"(R$ " + precoOculos.toFixed(2) + 		")");
+	$("#precoMascara").text(	"(R$ " + precoMascara.toFixed(2) + 		")");
+	$("#precoBalaclava").text(	"(R$ " + precoBalaclava.toFixed(2) + 	")");
+	$("#precoColete").text(		"(R$ " + precoColete.toFixed(2) + 		")");
+	$("#precoColdre").text(		"(R$ " + precoColdre.toFixed(2) + 		")");
 
 	$('#cBoxM4').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 55.0;
+			precoEquipamentos += precoM4;
 		}else {
-			precoEquipamentos -= 55.0;
+			precoEquipamentos -= precoM4;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$('#cBoxGlock').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 30.0;
+			precoEquipamentos += precoGlock;
 
 		}else {
-			precoEquipamentos -= 30.0;
+			precoEquipamentos -= precoGlock;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$('#cBoxOculos').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 3.0;
+			precoEquipamentos += precoOculos;
 
 		}else {
-			precoEquipamentos -= 3.0;
+			precoEquipamentos -= precoOculos;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$('#cBoxMascara').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 3.0;
+			precoEquipamentos += precoMascara;
 
 		}else {
-			precoEquipamentos -= 3.0;
+			precoEquipamentos -= precoMascara;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$('#cBoxBalaclava').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 2.0;
+			precoEquipamentos += precoBalaclava;
 
 		}else {
-			precoEquipamentos -= 2.0;
+			precoEquipamentos -= precoBalaclava;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$('#cBoxColete').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 5.0;
+			precoEquipamentos += precoColete;
 
 		}else {
-			precoEquipamentos -= 5.0;
+			precoEquipamentos -= precoColete;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$('#cBoxColdre').change(function() {
 		if(this.checked) {
-			precoEquipamentos += 4.0;
+			precoEquipamentos += precoColdre;
 
 		}else {
-			precoEquipamentos -= 4.0;
+			precoEquipamentos -= precoColdre;
 		}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
 	$( "#confirmar" ).click(function() {
 
-		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft%0AEquipamentos%3A%20%0A";
+		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.,%0AEquipamentos%3A%20%0A";
 
 		if($("#cBoxM4")[0].checked){
 			texto += "-%20M4%0A";
