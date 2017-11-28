@@ -1,6 +1,6 @@
-[13:27, 27/11/2017] +55 47 9945-8621: /* Margin */
+/* Margin */
 .m-n {
-  margin: 0px   		   !important;
+  margin: 0px !important;
 }
 .m-xs {
   margin: 4px !important;
@@ -45,7 +45,7 @@
   margin: -40px !important;
 }
 .mb-n {
-  margin-bottom: 0px   		    !important;
+  margin-bottom: 0px !important;
 }
 .mb-xs {
   margin-bottom: 4px !important;
@@ -89,8 +89,14 @@
 .mb-xxl.n {
   margin-bottom: -40px !important;
 }
+.mb-xxxl {
+  margin-bottom: 110px !important;
+}
+.mb-xxxl.n {
+  margin-bottom: -110px !important;
+}
 .ml-n {
-  margin-left: 0px 			  !important;
+  margin-left: 0px !important;
 }
 .ml-xs {
   margin-left: 4px !important;
@@ -135,7 +141,7 @@
   margin-left: -40px !important;
 }
 .mr-n {
-  margin-right: 0px 			  !important;
+  margin-right: 0px !important;
 }
 .mr-xs {
   margin-right: 4px !important;
@@ -180,7 +186,7 @@
   margin-right: -40px !important;
 }
 .mt-n {
-  margin-top: 0px			 !important;
+  margin-top: 0px !important;
 }
 .mt-xs {
   margin-top: 4px !important;
@@ -226,7 +232,7 @@
 }
 /* Paddiing */
 .p-n {
-  padding: 0px   		 	 !important;
+  padding: 0px !important;
 }
 .p-xs {
   padding: 4px !important;
@@ -271,7 +277,7 @@
   padding: -40px !important;
 }
 .pb-n {
-  padding-bottom: 0px   		  	  !important;
+  padding-bottom: 0px !important;
 }
 .pb-xs {
   padding-bottom: 4px !important;
@@ -316,7 +322,7 @@
   padding-bottom: -40px !important;
 }
 .pl-n {
-  padding-left: 0px 			!important;
+  padding-left: 0px !important;
 }
 .pl-xs {
   padding-left: 4px !important;
@@ -361,7 +367,7 @@
   padding-left: -40px !important;
 }
 .pr-n {
-  padding-right: 0px 			 !important;
+  padding-right: 0px !important;
 }
 .pr-xs {
   padding-right: 4px !important;
@@ -406,7 +412,7 @@
   padding-right: -40px !important;
 }
 .pt-n {
-  padding-top: 0px			   !important;
+  padding-top: 0px !important;
 }
 .pt-xs {
   padding-top: 4px !important;
@@ -450,3 +456,4 @@
 .pt-xxl.n {
   padding-top: -40px !important;
 }
+
