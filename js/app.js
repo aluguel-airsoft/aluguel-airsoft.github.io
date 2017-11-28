@@ -83,34 +83,42 @@ $( document ).ready(function() {
 
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
 		var selecionouAlgum = false;
+		var equipamentos = [];
 
 		if($("#cBoxM4")[0].checked){
 			texto += "-%20M4%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[0]);
 		}
 		if($("#cBoxGlock")[0].checked){
 			texto += "-%20Glock%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[1]);
 		}
 		if($("#cBoxOculos")[0].checked){
 			texto += "-%20Óculos telado%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[2]);
 		}
 		if($("#cBoxMascara")[0].checked){
 			texto += "-%20Máscara telada%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[3]);
 		}
 		if($("#cBoxBalaclava")[0].checked){
 			texto += "-%20Balaclava%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[4]);
 		}
 		if($("#cBoxColete")[0].checked){
 			texto += "-%20Colete%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[5]);
 		}
 		if($("#cBoxColdre")[0].checked){
 			texto += "-%20Coldre%0A";
 			selecionouAlgum = true;
+			equipamentos.push(equipamentosExistentes[6]);
 		}
 		
 		if (!selecionouAlgum) {
@@ -120,11 +128,19 @@ $( document ).ready(function() {
 
 		var data = $("#dataDesejada").val();
 		if (data) {
-			if (datasReservadas.includes(data)) {
-				texto += "%0A%20Data%3A%20"+encodeURI(data)+"%20";
-			}else {
-				alert("Infelizmente já existe reserva neste dia");
+			var equipIndis = existeReserva(data, equipamentos);
+			if (equipIndis.length > 0) {
+				var auxEquips = "";
+				for(var i in equipIndis){
+					if (auxEquips) {
+						auxEquips += " - "
+					}
+					auxEquips += equipIndis[i];
+				}
+				alert("Infelizmente já existe reserva para os equipamentos \"" + auxEquips + "\" para o dia "+data);
 				return;
+			}else{
+				texto += "%0A%20Data%3A%20"+encodeURI(data)+"%20";
 			}
 		}else {
 			alert("Selecione uma data para locação");
@@ -136,7 +152,7 @@ $( document ).ready(function() {
 		window.open(url);
 	});
 
-	$('#dataDesejada').datepicker({
+	$('#dataDesejada').datepicker({			
 		format: "dd/mm/yyyy",
 		startDate: "Today",
 		language: "pt-BR",
