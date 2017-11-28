@@ -131,7 +131,7 @@
 }
 
 .profile-background .filter-black::after {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.35);
   content: "";
   display: block;
   height: 300px;
