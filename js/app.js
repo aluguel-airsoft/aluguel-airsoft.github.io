@@ -10,7 +10,7 @@ $( document ).ready(function() {
 	$("#precoColete").text(		"(R$ " + precoColete.toFixed(2) + 		")");
 	$("#precoColdre").text(		"(R$ " + precoColdre.toFixed(2) + 		")");
 
-	$('#cBoxM4').change(function() {
+	$('#cBoxM4').change(function() {		
 		if(this.checked) {
 			precoEquipamentos += precoM4;
 		}else {
@@ -19,7 +19,7 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$('#cBoxGlock').change(function() {
+	$('#cBoxGlock').change(function() {		
 		if(this.checked) {
 			precoEquipamentos += precoGlock;
 
@@ -29,7 +29,7 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$('#cBoxOculos').change(function() {
+	$('#cBoxOculos').change(function() {	
 		if(this.checked) {
 			precoEquipamentos += precoOculos;
 
@@ -39,7 +39,7 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$('#cBoxMascara').change(function() {
+	$('#cBoxMascara').change(function() {	
 		if(this.checked) {
 			precoEquipamentos += precoMascara;
 
@@ -49,7 +49,7 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$('#cBoxBalaclava').change(function() {
+	$('#cBoxBalaclava').change(function() {	
 		if(this.checked) {
 			precoEquipamentos += precoBalaclava;
 
@@ -59,7 +59,7 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$('#cBoxColete').change(function() {
+	$('#cBoxColete').change(function() {	
 		if(this.checked) {
 			precoEquipamentos += precoColete;
 
@@ -69,7 +69,7 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$('#cBoxColdre').change(function() {
+	$('#cBoxColdre').change(function() {	
 		if(this.checked) {
 			precoEquipamentos += precoColdre;
 
@@ -79,36 +79,69 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
-	$( "#confirmar" ).click(function() {
+	$( "#confirmar" ).click(function() {	
 
-		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.,%0AEquipamentos%3A%20%0A";
+		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
+		var selecionouAlgum = false;
 
 		if($("#cBoxM4")[0].checked){
 			texto += "-%20M4%0A";
+			selecionouAlgum = true;
 		}
 		if($("#cBoxGlock")[0].checked){
 			texto += "-%20Glock%0A";
+			selecionouAlgum = true;
 		}
 		if($("#cBoxOculos")[0].checked){
 			texto += "-%20Óculos telado%0A";
+			selecionouAlgum = true;
 		}
 		if($("#cBoxMascara")[0].checked){
 			texto += "-%20Máscara telada%0A";
+			selecionouAlgum = true;
 		}
 		if($("#cBoxBalaclava")[0].checked){
 			texto += "-%20Balaclava%0A";
+			selecionouAlgum = true;
 		}
 		if($("#cBoxColete")[0].checked){
 			texto += "-%20Colete%0A";
+			selecionouAlgum = true;
 		}
 		if($("#cBoxColdre")[0].checked){
 			texto += "-%20Coldre%0A";
+			selecionouAlgum = true;
 		}
 		
+		if (!selecionouAlgum) {
+			alert("Selecione ao menos um equipamento");
+			return;
+		}
+
+		var data = $("#dataDesejada").val();
+		if (data) {
+			if (datasReservadas.includes(data)) {
+				texto += "%0A%20Data%3A%20"+encodeURI(data)+"%20";
+			}else {
+				alert("Infelizmente já existe reserva neste dia");
+				return;
+			}
+		}else {
+			alert("Selecione uma data para locação");
+			return;
+		}
 		texto += "%0A%20Total%3A%20"+encodeURI("R$ " + precoEquipamentos.toFixed(2))+"%20%0A";
 
 		var url = "https://api.whatsapp.com/send?text="+texto+"&phone=554799458621";
 		window.open(url);
+	});
+
+	$('#dataDesejada').datepicker({
+		format: "dd/mm/yyyy",
+		startDate: "Today",
+		language: "pt-BR",
+		daysOfWeekHighlighted: "0",
+		autoclose: true
 	});
 
 });
