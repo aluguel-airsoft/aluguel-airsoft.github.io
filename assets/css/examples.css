@@ -122,8 +122,8 @@
 }
 
 .profile-background {
-  background-image: url("../paper_img/lamp.jpg");
-  background-position: center center;
+  background-image: url("../images/Viper.jpg");
+  background-position: 0px -250px;
   background-size: cover;
   height: 300px;
   position: relative;
