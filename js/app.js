@@ -141,7 +141,9 @@ $( document ).ready(function() {
 					rmHide(equipamentosExistentes[i].id);
 				}
 			}
-			alert("Para a data selecionada os equipamentos: \"" + indisponiveis + "\". Estes foram retirados da lista");
+			if (indisponiveis) {
+				alert("Para a data selecionada os equipamentos: \"" + indisponiveis + "\". Estes foram retirados da lista");
+			}
 		}else{
 			for(var i in equipamentosExistentes){
 				rmHide(equipamentosExistentes[i].id);
