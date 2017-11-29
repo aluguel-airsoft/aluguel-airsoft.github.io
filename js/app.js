@@ -185,7 +185,7 @@ $( document ).ready(function() {
 	var initialConfig = function(){					
 		document.getElementById("ano").textContent = new Date().getFullYear();
 
-		$("#precoMaximo").text("(R$ "+ precoMaximo.toFixed(2) +")");
+		$("#precoMaximo").text(precoMaximo.toFixed(2));
 
 		$("#precoM4").text(			"(R$ " + findExistEquip("key","m4").preco.toFixed(2) + 		")");
 		$("#precoGlock").text(		"(R$ " + findExistEquip("key","glock").preco.toFixed(2) + 	")");
