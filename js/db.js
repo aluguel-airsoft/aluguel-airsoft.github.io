@@ -1,4 +1,4 @@
-var equipamentosExistentes = [
+var equipamentosExistentes = [	
 	{
 		"name" 	: "M4",				//-> 0
 		"key"	: "m4",
@@ -43,7 +43,7 @@ var equipamentosExistentes = [
 	}
 ];
 
-var reservas = [
+var reservas = [				
 	{
 		"data": "17/12/2017",
 		"locador": "",

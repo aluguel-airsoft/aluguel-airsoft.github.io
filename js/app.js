@@ -1,5 +1,6 @@
 $( document ).ready(function() {
 	var precoEquipamentos = 0.0;
+	var equipSelecionados = [];
 
 	//------ Date picker -----------
 
@@ -13,11 +14,15 @@ $( document ).ready(function() {
 	//------ Checkbox change -------
 
 	window.onChangeFunc = function(thisInput) {
+		var objEquip = findExistEquip("id","#"+thisInput.id);
 		if(thisInput.checked) {
-			precoEquipamentos += findExistEquip("id","#"+thisInput.id).preco;
+			precoEquipamentos += objEquip.preco;
+			equipSelecionados.push(objEquip);
 		}else {
-			precoEquipamentos -= findExistEquip("id","#"+thisInput.id).preco;
+			precoEquipamentos -= objEquip.preco;
+			equipSelecionados.splice( equipSelecionados.indexOf(objEquip), 1);
 		}
+		if (precoEquipamentos > 80) {}
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	};
 
@@ -37,14 +42,20 @@ $( document ).ready(function() {
 
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
 		var selecionouAlgum = false;
-		var equipamentos = [];
+		var equipamentosName = [];
 
-		for(var i in equipamentosExistentes){
-			if($(equipamentosExistentes[i].id)[0].checked){
-				texto += "-%20"+ equipamentosExistentes[i].name +"%0A";
-				selecionouAlgum = true;
-				equipamentos.push(equipamentosExistentes[i].name);
-			}
+		// for(var i in equipamentosExistentes){
+		// 	if($(equipamentosExistentes[i].id)[0].checked){
+		// 		texto += "-%20"+ equipamentosExistentes[i].name +"%0A";
+		// 		selecionouAlgum = true;
+		// 		equipamentos.push(equipamentosExistentes[i].name);
+		// 	}
+		// }
+
+		for(var i in equipSelecionados){
+			texto += "-%20"+ equipSelecionados[i].name +"%0A";
+			selecionouAlgum = true;
+			equipamentosName.push(equipSelecionados[i].name);
 		}
 
 		if (!selecionouAlgum) {
@@ -54,7 +65,7 @@ $( document ).ready(function() {
 
 		var data = $("#dataDesejada").val();
 		if (data) {
-			var equipIndis = equipReservados(data, equipamentos);
+			var equipIndis = equipReservados(data, equipamentosName);
 			if (equipIndis && equipIndis.length > 0) {
 				var auxEquips = "";
 				for(var i in equipIndis){
@@ -84,7 +95,12 @@ $( document ).ready(function() {
 		if(!$(idCBox + "Hide").hasClass("hide")){
 			$(idCBox + "Hide").addClass("hide");
 		}
-		$(idCBox)[0].checked = false;
+		if ($(idCBox)[0].checked){
+			$(idCBox)[0].checked = false;
+			$(idCBox + "Hide .checkbox").removeClass("checked");
+			return true; 
+		}
+		return false;
 	};
 
 	function rmHide(idCBox) {				
@@ -95,15 +111,25 @@ $( document ).ready(function() {
 
 	var toggleHide = function(argument) {	
 		var res = findReserva($("#dataDesejada").val());
-
+		var indisponiveis = "";
 		if (res) {
 			for(var i in equipamentosExistentes){
 				if (res.equipamentos.includes(equipamentosExistentes[i].name)){
-					setHide(equipamentosExistentes[i].id);
+					if(setHide(equipamentosExistentes[i].id)){
+						if (indisponiveis) {
+							indisponiveis += " - ";
+						}
+						indisponiveis += equipamentosExistentes[i].name;
+
+						precoEquipamentos -= equipamentosExistentes[i].preco;
+						equipSelecionados.splice( equipSelecionados.indexOf(equipamentosExistentes[i]), 1);
+						$("#total").text("R$ " + precoEquipamentos.toFixed(2));
+					}
 				}else{
 					rmHide(equipamentosExistentes[i].id);
 				}
 			}
+			alert("Para a data selecionada os equipamentos: \"" + indisponiveis + "\". Estes foram retirados da lista");
 		}else{
 			for(var i in equipamentosExistentes){
 				rmHide(equipamentosExistentes[i].id);
