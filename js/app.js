@@ -10,6 +10,17 @@ $( document ).ready(function() {
 	$("#precoColete").text(		"(R$ " + precoColete.toFixed(2) + 		")");
 	$("#precoColdre").text(		"(R$ " + precoColdre.toFixed(2) + 		")");
 
+	//------ Date picker -----------
+
+	$('#dataDesejada').datepicker({			
+		format: "dd/mm/yyyy",
+		startDate: "Today",
+		language: "pt-BR",
+		daysOfWeekHighlighted: "0",
+	});
+
+	//------ Checkbox change -------
+
 	$('#cBoxM4').change(function() {		
 		if(this.checked) {
 			precoEquipamentos += precoM4;
@@ -79,6 +90,80 @@ $( document ).ready(function() {
 		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
 	});
 
+	//------ Date change ----------
+
+	$('#dataDesejada').datepicker().on('changeDate', function() {
+		var res = findReserva($("#dataDesejada").val());
+
+		if (res) {
+			if (res.equipamentos.includes(equipamentosExistentes[0])){
+				if(!$("#cBoxM4Hide").hasClass("hide")){
+					$("#cBoxM4Hide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxM4Hide").hasClass("hide")){
+					$("#cBoxM4Hide").removeClass("hide");	
+				}
+			}
+			if (res.equipamentos.includes(equipamentosExistentes[1])){
+				if(!$("#cBoxGlockHide").hasClass("hide")){
+					$("#cBoxGlockHide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxGlockHide").hasClass("hide")){
+					$("#cBoxGlockHide").removeClass("hide");	
+				}
+			}
+			if (res.equipamentos.includes(equipamentosExistentes[2])){
+				if(!$("#cBoxOculosHide").hasClass("hide")){
+					$("#cBoxOculosHide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxOculosHide").hasClass("hide")){
+					$("#cBoxOculosHide").removeClass("hide");	
+				}
+			}
+			if (res.equipamentos.includes(equipamentosExistentes[3])){
+				if(!$("#cBoxMascaraHide").hasClass("hide")){
+					$("#cBoxMascaraHide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxMascaraHide").hasClass("hide")){
+					$("#cBoxMascaraHide").removeClass("hide");	
+				}
+			}
+			if (res.equipamentos.includes(equipamentosExistentes[4])){
+				if(!$("#cBoxBalaclavaHide").hasClass("hide")){
+					$("#cBoxBalaclavaHide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxBalaclavaHide").hasClass("hide")){
+					$("#cBoxBalaclavaHide").removeClass("hide");	
+				}
+			}
+			if (res.equipamentos.includes(equipamentosExistentes[5])){
+				if(!$("#cBoxColeteHide").hasClass("hide")){
+					$("#cBoxColeteHide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxColeteHide").hasClass("hide")){
+					$("#cBoxColeteHide").removeClass("hide");	
+				}
+			}
+			if (res.equipamentos.includes(equipamentosExistentes[6])){
+				if(!$("#cBoxColdreHide").hasClass("hide")){
+					$("#cBoxColdreHide").addClass("hide");
+				}
+			}else{
+				if($("#cBoxColdreHide").hasClass("hide")){
+					$("#cBoxColdreHide").removeClass("hide");	
+				}
+			}
+		}
+	});
+
+	//------ Confirma -------------
+
 	$( "#confirmar" ).click(function() {	
 
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
@@ -128,7 +213,7 @@ $( document ).ready(function() {
 
 		var data = $("#dataDesejada").val();
 		if (data) {
-			var equipIndis = existeReserva(data, equipamentos);
+			var equipIndis = equipReservados(data, equipamentos);
 			if (equipIndis && equipIndis.length > 0) {
 				var auxEquips = "";
 				for(var i in equipIndis){
@@ -137,7 +222,7 @@ $( document ).ready(function() {
 					}
 					auxEquips += equipIndis[i];
 				}
-				alert("Infelizmente já existe reserva para os equipamentos \"" + auxEquips + "\" para o dia "+data);
+				alert("Infelizmente já existe reserva para o(s) equipamento(s) \"" + auxEquips + "\" para o dia "+data);
 				return;
 			}else{
 				texto += "%0A%20Data%3A%20"+encodeURI(data)+"%20";
@@ -152,15 +237,17 @@ $( document ).ready(function() {
 		window.open(url);
 	});
 
-	$('#dataDesejada').datepicker({			
-		format: "dd/mm/yyyy",
-		startDate: "Today",
-		language: "pt-BR",
-		daysOfWeekHighlighted: "0",
-		autoclose: true
-	});
+	//------ Aux functions --------
 
-	var existeReserva = function(data, equipamentosRequeridos) {
+	var findReserva = function(data){
+		for (var i in reservas) {
+			if(reservas[i].data == data){
+				return reservas[i];
+			}
+		}
+	};
+
+	var equipReservados = function(data, equipamentosRequeridos) {
 		var equipAlugados = [];
 		for (var i in reservas) {
 			if(reservas[i].data == data){
