@@ -1,23 +1,57 @@
-var precoM4			= 55.0;
-var precoGlock		= 30.0;
-var precoOculos		= 3.0;
-var precoMascara	= 3.0;
-var precoBalaclava	= 2.0;
-var precoColete		= 5.0;
-var precoColdre		= 4.0;
-
-//								0		1		2			3		   4		  5			6
-var equipamentosExistentes = ["M4", "Glock", "Óculos", "Máscara", "Balaclava", "Colete", "Coldre"];
+var equipamentosExistentes = [
+	{
+		"name" 	: "M4",				//-> 0
+		"key"	: "m4",
+		"id" 	: "#cBoxM4",
+		"preco"	: 55.0
+	},
+	{ 
+		"name" 	: "Glock",			//-> 1
+		"key"	: "glock",
+		"id" 	: "#cBoxGlock",
+		"preco"	: 30.0
+	},
+	{ 
+		"name" 	: "Óculos telado",	//-> 2
+		"key"	: "oculos",
+		"id" 	: "#cBoxOculos",
+		"preco"	: 3.0
+	},
+	{ 
+		"name" 	: "Máscara telada",	//-> 3
+		"key"	: "mascara",
+		"id" 	: "#cBoxMascara",
+		"preco"	: 3.0
+	},
+	{ 
+		"name" 	: "Balaclava",		//-> 4
+		"key"	: "balaclava",
+		"id" 	: "#cBoxBalaclava",
+		"preco"	: 2.0
+	},
+	{ 
+		"name" 	: "Colete",			//-> 5
+		"key"	: "colete",
+		"id" 	: "#cBoxColete",
+		"preco"	: 5.0
+	},
+	{ 
+		"name" 	: "Coldre",			//-> 6
+		"key"	: "coldre",
+		"id" 	: "#cBoxColdre",
+		"preco"	: 4.0
+	}
+];
 
 var reservas = [
 	{
 		"data": "17/12/2017",
 		"locador": "",
-		"equipamentos":[equipamentosExistentes[0], equipamentosExistentes[2], equipamentosExistentes[4]]
+		"equipamentos":[equipamentosExistentes[0].name, equipamentosExistentes[2].name, equipamentosExistentes[4].name]
 	},
 	{
 		"data": "03/12/2017",
 		"locador": "Gean Back Viper",
-		"equipamentos":[equipamentosExistentes[3]]
+		"equipamentos":[equipamentosExistentes[3].name]
 	}
 ];
