@@ -142,7 +142,7 @@ $( document ).ready(function() {
 				}
 			}
 			if (indisponiveis) {
-				alert("Para a data selecionada os equipamentos: \"" + indisponiveis + "\". Estes foram retirados da lista");
+				alert("Para a data selecionada os equipamentos: \"" + indisponiveis + "\" já foram locados. Estes foram retirados da lista");
 			}
 		}else{
 			for(var i in equipamentosExistentes){
