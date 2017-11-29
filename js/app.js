@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 	//------ Date picker -----------
 
-	$('#dataDesejada').datepicker({			
+	$('#dataDesejada').datepicker({					
 		format: "dd/mm/yyyy",
 		startDate: "Today",
 		language: "pt-BR",
@@ -13,7 +13,7 @@ $( document ).ready(function() {
 
 	//------ Checkbox change -------
 
-	window.onChangeFunc = function(thisInput) {
+	window.onChangeFunc = function(thisInput) {		
 		var objEquip = findExistEquip("id","#"+thisInput.id);
 		if(thisInput.checked) {
 			precoEquipamentos += objEquip.preco;
@@ -22,8 +22,7 @@ $( document ).ready(function() {
 			precoEquipamentos -= objEquip.preco;
 			equipSelecionados.splice( equipSelecionados.indexOf(objEquip), 1);
 		}
-		if (precoEquipamentos > 80) {}
-		$("#total").text("R$ " + precoEquipamentos.toFixed(2));
+		setTotal();
 	};
 
 	//------ Date change ----------
@@ -32,25 +31,17 @@ $( document ).ready(function() {
 		toggleHide();
 	});
 
-	$('#dataDesejada').change(function() {	
+	$('#dataDesejada').change(function() {			
 		toggleHide();
 	});
 
 	//------ Confirma -------------
 
-	$( "#confirmar" ).click(function() {	
+	$( "#confirmar" ).click(function() {			
 
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
 		var selecionouAlgum = false;
 		var equipamentosName = [];
-
-		// for(var i in equipamentosExistentes){
-		// 	if($(equipamentosExistentes[i].id)[0].checked){
-		// 		texto += "-%20"+ equipamentosExistentes[i].name +"%0A";
-		// 		selecionouAlgum = true;
-		// 		equipamentos.push(equipamentosExistentes[i].name);
-		// 	}
-		// }
 
 		for(var i in equipSelecionados){
 			texto += "-%20"+ equipSelecionados[i].name +"%0A";
@@ -91,7 +82,28 @@ $( document ).ready(function() {
 
 	//------ Aux functions --------
 
-	function setHide(idCBox) {				
+	var setTotal = function() {						
+		if (validaDesconto()) {
+			var totalComDesconto = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
+			if (totalComDesconto > precoMaximo) {
+				totalComDesconto = precoMaximo;
+			}
+			$("#total").text("R$ " + (totalComDesconto).toFixed(2));
+		}else {
+			$("#total").text("R$ " + precoEquipamentos.toFixed(2));
+		}
+	}
+
+	var validaDesconto = function() {				
+		if(equipSelecionados.indexOf(equipamentosExistentes[0]) >= 0 &&
+			equipSelecionados.indexOf(equipamentosExistentes[1]) >= 0){
+			return true;
+		}else {
+			return false;
+		}
+	};
+
+	var setHide = function(idCBox) {				
 		if(!$(idCBox + "Hide").hasClass("hide")){
 			$(idCBox + "Hide").addClass("hide");
 		}
@@ -103,13 +115,13 @@ $( document ).ready(function() {
 		return false;
 	};
 
-	function rmHide(idCBox) {				
+	var rmHide = function(idCBox) {					
 		if($(idCBox + "Hide").hasClass("hide")){
 			$(idCBox + "Hide").removeClass("hide");
 		}
 	};
 
-	var toggleHide = function(argument) {	
+	var toggleHide = function(argument) {			
 		var res = findReserva($("#dataDesejada").val());
 		var indisponiveis = "";
 		if (res) {
@@ -123,7 +135,7 @@ $( document ).ready(function() {
 
 						precoEquipamentos -= equipamentosExistentes[i].preco;
 						equipSelecionados.splice( equipSelecionados.indexOf(equipamentosExistentes[i]), 1);
-						$("#total").text("R$ " + precoEquipamentos.toFixed(2));
+						setTotal();
 					}
 				}else{
 					rmHide(equipamentosExistentes[i].id);
@@ -141,7 +153,7 @@ $( document ).ready(function() {
 		return equipamentosExistentes.find(function(aux){return aux[attr] == keyWord})
 	};	
 
-	var findReserva = function(data){		
+	var findReserva = function(data){				
 		for (var i in reservas) {
 			if(reservas[i].data == data){
 				return reservas[i];
@@ -159,7 +171,7 @@ $( document ).ready(function() {
 		}
 	};
 
-	var intersection = function(a, b){		
+	var intersection = function(a, b){				
 		var result = [];
 		for(var i in a){
 			if(b.includes(a[i])){
@@ -170,7 +182,7 @@ $( document ).ready(function() {
 	};
 
 	//------ Page configs --------
-	var initialConfig = function(){			
+	var initialConfig = function(){					
 		document.getElementById("ano").textContent = new Date().getFullYear();
 
 		$("#precoM4").text(			"(R$ " + findExistEquip("key","m4").preco.toFixed(2) + 		")");

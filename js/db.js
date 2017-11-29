@@ -1,3 +1,6 @@
+var porcentDesconto = 0.117;
+var precoMaximo = 85;
+
 var equipamentosExistentes = [	
 	{
 		"name" 	: "M4",				//-> 0
