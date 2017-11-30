@@ -1,6 +1,24 @@
 var porcentDesconto = 0.117;
 var precoMaximo = 85;
 
+var promoCodes = [
+	{
+		"code": "CODE1",
+		"valor": 0.176,
+		"precoMax": 65
+	},
+	{
+		"code": "CODE2",
+		"valor": 0.150,
+		"precoMax": 70
+	},
+	{
+		"code": "CODE3",
+		"valor": 0.130,
+		"precoMax": 75
+	}
+];
+
 var equipamentosExistentes = [	
 	{
 		"name" 	: "M4",				//-> 0

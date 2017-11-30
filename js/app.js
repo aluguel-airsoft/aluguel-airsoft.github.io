@@ -25,6 +25,12 @@ $( document ).ready(function() {
 		setTotal();
 	};
 
+	//------ Codigo change -------
+
+	$('#codigoPromocional').change(function() {			
+		setTotal();
+	});
+
 	//------ Date change ----------
 
 	$('#dataDesejada').datepicker().on('changeDate', function() {
@@ -95,9 +101,23 @@ $( document ).ready(function() {
 	}
 
 	var validaDesconto = function() {				
-		if(equipSelecionados.indexOf(equipamentosExistentes[0]) >= 0 &&
+		var objPromo = validaPromo();
+		if (objPromo) {
+			porcentDesconto = objPromo.valor;
+			precoMaximo = objPromo.precoMax;
+			return true;
+		}else if(equipSelecionados.indexOf(equipamentosExistentes[0]) >= 0 &&
 			equipSelecionados.indexOf(equipamentosExistentes[1]) >= 0){
 			return true;
+		}else {
+			return false;
+		}
+	};
+
+	var validaPromo = function() {					
+		var promo = findExistPromo($("#codigoPromocional").val());		
+		if(promo){
+			return promo;
 		}else {
 			return false;
 		}
@@ -152,7 +172,11 @@ $( document ).ready(function() {
 	};
 
 	var findExistEquip = function(attr, keyWord){	
-		return equipamentosExistentes.find(function(aux){return aux[attr] == keyWord})
+		return equipamentosExistentes.find(function(aux){return aux[attr] === keyWord})
+	};	
+
+	var findExistPromo = function(pCode){			
+		return promoCodes.find(function(aux){return aux.code === pCode})
 	};	
 
 	var findReserva = function(data){				
