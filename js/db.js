@@ -1,20 +1,20 @@
 var porcentDesconto = 0.117;
 var precoMaximo = 85;
 
-var promoCodes = [
+var promoCodes = [				
 	{
-		"code": "CODE1",
-		"valor": 0.176,
+		"code": "FIRMA",
+		"valor": 0.270,
 		"precoMax": 65
 	},
 	{
-		"code": "CODE2",
-		"valor": 0.150,
+		"code": "ASJLLE",
+		"valor": 0.176,
 		"precoMax": 70
 	},
 	{
-		"code": "CODE3",
-		"valor": 0.130,
+		"code": "NATAL",
+		"valor": 0.092,
 		"precoMax": 75
 	}
 ];
