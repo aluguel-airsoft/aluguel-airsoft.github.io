@@ -115,7 +115,7 @@ $( document ).ready(function() {
 	};
 
 	var validaPromo = function() {					
-		var promo = findExistPromo($("#codigoPromocional").val());		
+		var promo = findExistPromo($("#codigoPromocional").val().toUpperCase());		
 		if(promo){
 			return promo;
 		}else {
