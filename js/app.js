@@ -27,7 +27,7 @@ $( document ).ready(function() {
 
 	//------ Codigo change -------
 
-	$('#codigoPromocional').change(function() {			
+	$('#codigoPromocional').change(function() {		
 		setTotal();
 	});
 
@@ -106,6 +106,7 @@ $( document ).ready(function() {
 			porcentDesconto = objPromo.valor;
 			precoMaximo = objPromo.precoMax;
 			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code);
+			$("#precoMaximo").text(precoMaximo.toFixed(2));
 			return true;
 		}else if(equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0 &&
 			equipSelecionados.indexOf(findExistEquip("key", "glock")) >= 0){
