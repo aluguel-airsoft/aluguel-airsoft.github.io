@@ -3,7 +3,7 @@ var precoMaximo = 85;
 
 var promoCodes = [				
 	{
-		"code": "FIRMA",
+		"code": "AFIRMATIRA",
 		"valor": 0.270,
 		"precoMax": 65
 	},
