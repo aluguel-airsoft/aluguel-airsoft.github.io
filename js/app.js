@@ -105,11 +105,14 @@ $( document ).ready(function() {
 		if (objPromo) {
 			porcentDesconto = objPromo.valor;
 			precoMaximo = objPromo.precoMax;
+			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code);
 			return true;
 		}else if(equipSelecionados.indexOf(equipamentosExistentes[0]) >= 0 &&
 			equipSelecionados.indexOf(equipamentosExistentes[1]) >= 0){
+			$("#promAplicada").text("");
 			return true;
 		}else {
+			$("#promAplicada").text("");
 			return false;
 		}
 	};

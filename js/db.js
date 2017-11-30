@@ -1,4 +1,4 @@
-var porcentDesconto = 0.117;
+var porcentDesconto = 0.06;
 var precoMaximo = 85;
 
 var promoCodes = [				
@@ -14,7 +14,7 @@ var promoCodes = [
 	},
 	{
 		"code": "NATAL",
-		"valor": 0.092,
+		"valor": 0.1,
 		"precoMax": 75
 	}
 ];
