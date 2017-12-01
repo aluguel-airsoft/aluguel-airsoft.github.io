@@ -88,7 +88,7 @@ $( document ).ready(function() {
 
 	//------ Aux functions --------
 
-	var setTotal = function() {	
+	var setTotal = function() {						
 		if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0
 			&& equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0) {
 			precoMaximo = precoMaximoComG36;
@@ -203,8 +203,58 @@ $( document ).ready(function() {
 		$("#precoColete").text(		"(R$ " + findExistEquip("key","colete").preco.toFixed(2) + 	")");
 		$("#precoColdre").text(		"(R$ " + findExistEquip("key","coldre").preco.toFixed(2) + 	")");
 
+
+
+
+
+		for(var i in equipamentosExistentes){
+			if (res.equipamentos.includes(equipamentosExistentes[i].name)){
+				if(setHide(equipamentosExistentes[i].id)){
+					if (indisponiveis) {
+						indisponiveis += " - ";
+					}
+					indisponiveis += equipamentosExistentes[i].name;
+
+					precoEquipamentos -= equipamentosExistentes[i].preco;
+					equipSelecionados.splice( equipSelecionados.indexOf(equipamentosExistentes[i]), 1);
+					setTotal();
+				}
+			}else{
+				rmHide(equipamentosExistentes[i].id);
+			}
+		}
+
+
+
+
+
+
+
+
+
 	};
 	initialConfig();
+
+
+	var htmlEquipamentos = "<div class=\"row mt-xl\">\
+		<div class=\"col-md-2 col-xs-5\">\
+			<img src=\"assets/images/"+ nomeImagem +"\" class=\"img-no-padding img-responsive\">\
+		</div>\
+		<div class=\"col-md-7 col-xs-5\">\
+			<h6>"+nome+"<br/><small>"+descricao+" <br/><b>"+preco+"</b></small></h6>\
+		</div>\
+		<div class=\"col-md-3 col-xs-2\">\
+			<div  id=\""+id+"Hide\">\
+				<label class=\"checkbox\" for=\""+id+"\">\
+					<input type=\"checkbox\" onchange=\"onChangeFunc(this)\" value=\"S\" id=\""+id+"\" data-toggle=\"checkbox\">\
+				</label>\
+			</div>\
+		</div>\
+	</div>";
+
+
+
+
 
 });
 
