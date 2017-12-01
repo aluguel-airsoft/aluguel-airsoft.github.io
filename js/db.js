@@ -1,3 +1,43 @@
+//Métodos Db
+
+var findExistEquip = function(attr, keyWord){	
+	return equipamentosExistentes.find(function(aux){return aux[attr] === keyWord})
+};	
+
+var findExistPromo = function(pCode){			
+	return promoCodes.find(function(aux){return aux.code === pCode})
+};	
+
+var findReserva = function(data){				
+	for (var i in reservas) {
+		if(reservas[i].data == data){
+			return reservas[i];
+		}
+	}
+};
+
+var intersection = function(a, b){				
+	var result = [];
+	for(var i in a){
+		if(b.includes(a[i])){
+			result.push(a[i]);
+		}
+	}
+	return result;
+};
+
+var findEquipReservados = function(data, equipamentosRequeridos) {
+	var equipAlugados = [];
+	for (var i in reservas) {
+		if(reservas[i].data == data){
+			equipAlugados = intersection(equipamentosRequeridos, reservas[i].equipamentos);
+			return equipAlugados;
+		}
+	}
+};
+
+// Db
+
 var porcentDesconto = 0.06;
 var precoMaximo = 85;
 
@@ -68,48 +108,11 @@ var reservas = [
 	{
 		"data": "03/12/2017",
 		"locador": "Gean Back Viper",
-		"equipamentos":[findExistEquip("key","mascara")]
+		"equipamentos":["mascara"]
 	},
 	{
 		"data": "17/12/2017",
 		"locador": "",
-		"equipamentos":[findExistEquip("key","m4")]
+		"equipamentos":["m4"]
 	}
 ];
-
-
-var findExistEquip = function(attr, keyWord){	
-	return equipamentosExistentes.find(function(aux){return aux[attr] === keyWord})
-};	
-
-var findExistPromo = function(pCode){			
-	return promoCodes.find(function(aux){return aux.code === pCode})
-};	
-
-var findReserva = function(data){				
-	for (var i in reservas) {
-		if(reservas[i].data == data){
-			return reservas[i];
-		}
-	}
-};
-
-var intersection = function(a, b){				
-	var result = [];
-	for(var i in a){
-		if(b.includes(a[i])){
-			result.push(a[i]);
-		}
-	}
-	return result;
-};
-
-var findEquipReservados = function(data, equipamentosRequeridos) {
-	var equipAlugados = [];
-	for (var i in reservas) {
-		if(reservas[i].data == data){
-			equipAlugados = intersection(equipamentosRequeridos, reservas[i].equipamentos);
-			return equipAlugados;
-		}
-	}
-};

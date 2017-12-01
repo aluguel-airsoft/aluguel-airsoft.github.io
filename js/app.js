@@ -69,7 +69,7 @@ $( document ).ready(function() {
 					if (auxEquips) {
 						auxEquips += " - "
 					}
-					auxEquips += equipIndis[i];
+					auxEquips += findExistEquip("key", equipIndis[i]).name;
 				}
 				alert("Infelizmente já existe reserva para o(s) equipamento(s) \"" + auxEquips + "\" para o dia "+data);
 				return;
