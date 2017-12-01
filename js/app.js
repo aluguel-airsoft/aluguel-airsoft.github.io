@@ -62,7 +62,7 @@ $( document ).ready(function() {
 
 		var data = $("#dataDesejada").val();
 		if (data) {
-			var equipIndis = equipReservados(data, equipamentosKey);
+			var equipIndis = findEquipReservados(data, equipamentosKey);
 			if (equipIndis && equipIndis.length > 0) {
 				var auxEquips = "";
 				for(var i in equipIndis){
@@ -173,42 +173,6 @@ $( document ).ready(function() {
 				rmHide(equipamentosExistentes[i].id);
 			}
 		}
-	};
-
-	var findExistEquip = function(attr, keyWord){	
-		return equipamentosExistentes.find(function(aux){return aux[attr] === keyWord})
-	};	
-
-	var findExistPromo = function(pCode){			
-		return promoCodes.find(function(aux){return aux.code === pCode})
-	};	
-
-	var findReserva = function(data){				
-		for (var i in reservas) {
-			if(reservas[i].data == data){
-				return reservas[i];
-			}
-		}
-	};
-
-	var equipReservados = function(data, equipamentosRequeridos) {
-		var equipAlugados = [];
-		for (var i in reservas) {
-			if(reservas[i].data == data){
-				equipAlugados = intersection(equipamentosRequeridos, reservas[i].equipamentos);
-				return equipAlugados;
-			}
-		}
-	};
-
-	var intersection = function(a, b){				
-		var result = [];
-		for(var i in a){
-			if(b.includes(a[i])){
-				result.push(a[i]);
-			}
-		}
-		return result;
 	};
 
 	//------ Page configs --------
