@@ -207,3 +207,7 @@ $( document ).ready(function() {
 	initialConfig();
 
 });
+
+// http://amsul.ca/pickadate.js/
+// https://github.com/RobinHerbots/Inputmask
+// http://robinherbots.github.io/Inputmask/
