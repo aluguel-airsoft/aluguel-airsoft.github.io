@@ -14,7 +14,7 @@ $( document ).ready(function() {
 	//------ Checkbox change -------
 
 	window.onChangeFunc = function(thisInput) {		
-		var objEquip = findExistEquip("id","#"+thisInput.id);
+		var objEquip = findExistEquip("id",thisInput.id);
 		if(thisInput.checked) {
 			precoEquipamentos += objEquip.preco;
 			equipSelecionados.push(objEquip);
@@ -140,20 +140,20 @@ $( document ).ready(function() {
 	};
 
 	var setHide = function(idCBox) {				
-		if(!$(idCBox + "Hide").hasClass("hide")){
-			$(idCBox + "Hide").addClass("hide");
+		if(!$("#"+idCBox + "Hide").hasClass("hide")){
+			$("#"+idCBox + "Hide").addClass("hide");
 		}
-		if ($(idCBox)[0].checked){
-			$(idCBox)[0].checked = false;
-			$(idCBox + "Hide .checkbox").removeClass("checked");
+		if ($("#"+idCBox)[0].checked){
+			$("#"+idCBox)[0].checked = false;
+			$("#"+idCBox + "Hide .checkbox").removeClass("checked");
 			return true; 
 		}
 		return false;
 	};
 
 	var rmHide = function(idCBox) {					
-		if($(idCBox + "Hide").hasClass("hide")){
-			$(idCBox + "Hide").removeClass("hide");
+		if($("#"+idCBox + "Hide").hasClass("hide")){
+			$("#"+idCBox + "Hide").removeClass("hide");
 		}
 	};
 
@@ -162,7 +162,7 @@ $( document ).ready(function() {
 		var indisponiveis = "";
 		if (res) {
 			for(var i in equipamentosExistentes){
-				if (res.equipamentos.includes(equipamentosExistentes[i].name)){
+				if (res.equipamentos.includes(equipamentosExistentes[i].key)){
 					if(setHide(equipamentosExistentes[i].id)){
 						if (indisponiveis) {
 							indisponiveis += " - ";
@@ -193,70 +193,47 @@ $( document ).ready(function() {
 
 		$("#precoMaximo").text(precoMaximo.toFixed(2));
 
-		$("#precoM4").text(			"(R$ " + findExistEquip("key","m4").preco.toFixed(2) + 		")");
-		$("#precoG36").text(		"(R$ " + findExistEquip("key","g36").preco.toFixed(2) + 	")");
-		$("#precoGlock").text(		"(R$ " + findExistEquip("key","glock").preco.toFixed(2) + 	")");
-		$("#precoOculos").text(		"(R$ " + findExistEquip("key","oculos").preco.toFixed(2) + 	")");
-		$("#precoMascara").text(	"(R$ " + findExistEquip("key","mascara").preco.toFixed(2) + ")");
-		$("#precoMascara1").text(	"(R$ " + findExistEquip("key","mascara1").preco.toFixed(2) + ")");
-		$("#precoBalaclava").text(	"(R$ " + findExistEquip("key","balaclava").preco.toFixed(2) + ")");
-		$("#precoColete").text(		"(R$ " + findExistEquip("key","colete").preco.toFixed(2) + 	")");
-		$("#precoColdre").text(		"(R$ " + findExistEquip("key","coldre").preco.toFixed(2) + 	")");
+		// $("#precoM4").text(			"(R$ " + findExistEquip("key","m4").preco.toFixed(2) + 		")");
+		// $("#precoG36").text(		"(R$ " + findExistEquip("key","g36").preco.toFixed(2) + 	")");
+		// $("#precoGlock").text(		"(R$ " + findExistEquip("key","glock").preco.toFixed(2) + 	")");
+		// $("#precoOculos").text(		"(R$ " + findExistEquip("key","oculos").preco.toFixed(2) + 	")");
+		// $("#precoMascara").text(	"(R$ " + findExistEquip("key","mascara").preco.toFixed(2) + ")");
+		// $("#precoMascara1").text(	"(R$ " + findExistEquip("key","mascara1").preco.toFixed(2) + ")");
+		// $("#precoBalaclava").text(	"(R$ " + findExistEquip("key","balaclava").preco.toFixed(2) + ")");
+		// $("#precoColete").text(		"(R$ " + findExistEquip("key","colete").preco.toFixed(2) + 	")");
+		// $("#precoColdre").text(		"(R$ " + findExistEquip("key","coldre").preco.toFixed(2) + 	")");
 
 
-
-
-
-		for(var i in equipamentosExistentes){
-			if (res.equipamentos.includes(equipamentosExistentes[i].name)){
-				if(setHide(equipamentosExistentes[i].id)){
-					if (indisponiveis) {
-						indisponiveis += " - ";
-					}
-					indisponiveis += equipamentosExistentes[i].name;
-
-					precoEquipamentos -= equipamentosExistentes[i].preco;
-					equipSelecionados.splice( equipSelecionados.indexOf(equipamentosExistentes[i]), 1);
-					setTotal();
-				}
-			}else{
-				rmHide(equipamentosExistentes[i].id);
-			}
-		}
-
-
-
-
-
-
-
+		
 
 
 	};
 	initialConfig();
 
 
-	var htmlEquipamentos = "<div class=\"row mt-xl\">\
+});
+
+var htmlToAppend = "";
+
+for(var i in equipamentosExistentes){
+	htmlToAppend += "<div class=\"row mt-xl\">\
 		<div class=\"col-md-2 col-xs-5\">\
-			<img src=\"assets/images/"+ nomeImagem +"\" class=\"img-no-padding img-responsive\">\
+			<img src=\"assets/images/" + equipamentosExistentes[i].imagem + "\" class=\"img-no-padding img-responsive\">\
 		</div>\
 		<div class=\"col-md-7 col-xs-5\">\
-			<h6>"+nome+"<br/><small>"+descricao+" <br/><b>"+preco+"</b></small></h6>\
+			<h6>" + equipamentosExistentes[i].name + "<br/><small>"+equipamentosExistentes[i].descricao+" <br/><b>(R$ "+equipamentosExistentes[i].preco.toFixed(2) +")</b></small></h6>\
 		</div>\
 		<div class=\"col-md-3 col-xs-2\">\
-			<div  id=\""+id+"Hide\">\
-				<label class=\"checkbox\" for=\""+id+"\">\
-					<input type=\"checkbox\" onchange=\"onChangeFunc(this)\" value=\"S\" id=\""+id+"\" data-toggle=\"checkbox\">\
+			<div  id=\""+equipamentosExistentes[i].id+"Hide\">\
+				<label class=\"checkbox\" for=\""+equipamentosExistentes[i].id+"\">\
+					<input type=\"checkbox\" onchange=\"onChangeFunc(this)\" value=\"S\" id=\""+equipamentosExistentes[i].id+"\" data-toggle=\"checkbox\">\
 				</label>\
 			</div>\
 		</div>\
 	</div>";
+}
 
-
-
-
-
-});
+$( "#equipamentos" ).append( htmlToAppend );
 
 // http://amsul.ca/pickadate.js/
 // https://github.com/RobinHerbots/Inputmask

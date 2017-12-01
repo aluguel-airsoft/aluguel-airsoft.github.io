@@ -66,57 +66,75 @@ var promoCodes = [
 
 var equipamentosExistentes = [	
 	{
-		"name" 	: "M4",			
+		"name" 	: "M4",		
+		"descricao": "M4 elétrica com 2 magazines",
 		"key"	: "m4",
-		"id" 	: "#cBoxM4",
+		"imagem": "m4.jpg",
+		"id" 	: "cBoxM4",
 		"preco"	: 55.0
 	},
 	{
 		"name" 	: "G36",			
+		"descricao": "G36 elétrica",
 		"key"	: "g36",
-		"id" 	: "#cBoxG36",
+		"imagem": "g36.jpg",
+		"id" 	: "cBoxG36",
 		"preco"	: 60.0
 	},
 	{ 
 		"name" 	: "Glock",		
+		"descricao": "Glock elétrica",
 		"key"	: "glock",
-		"id" 	: "#cBoxGlock",
+		"imagem": "glock.jpg",
+		"id" 	: "cBoxGlock",
 		"preco"	: 30.0
 	},
 	{ 
 		"name" 	: "Óculos telado",
+		"descricao": "Óculos telado pequeno",
 		"key"	: "oculos",
-		"id" 	: "#cBoxOculos",
+		"imagem": "oculos.jpg",
+		"id" 	: "cBoxOculos",
 		"preco"	: 3.0
 	},
 	{ 
 		"name" 	: "Máscara telada",
+		"descricao": "Mascara telada para proteção facial",
 		"key"	: "mascara",
-		"id" 	: "#cBoxMascara",
+		"imagem": "mascara.jpg",
+		"id" 	: "cBoxMascara",
 		"preco"	: 3.0
 	},
 	{ 
 		"name" 	: "Máscara telada",
+		"descricao": "Mascara telada para proteção facial",
 		"key"	: "mascara1",
-		"id" 	: "#cBoxMascara1",
+		"imagem": "mascara.jpg",
+		"id" 	: "cBoxMascara1",
 		"preco"	: 3.0
 	},
 	{ 
 		"name" 	: "Balaclava",	
+		"descricao": "Balaclava de caveira. Meia face",
 		"key"	: "balaclava",
-		"id" 	: "#cBoxBalaclava",
+		"imagem": "balaclava.jpg",
+		"id" 	: "cBoxBalaclava",
 		"preco"	: 2.0
 	},
 	{ 
 		"name" 	: "Colete",		
+		"descricao": "Colete tático preto com porta mags e bolsos auxiliares",
 		"key"	: "colete",
-		"id" 	: "#cBoxColete",
+		"imagem": "colete.jpg",
+		"id" 	: "cBoxColete",
 		"preco"	: 5.0
 	},
 	{ 
 		"name" 	: "Coldre",		
+		"descricao": "Coldre lateral de perna com cinto tático",
 		"key"	: "coldre",
-		"id" 	: "#cBoxColdre",
+		"imagem": "coldre.jpg",
+		"id" 	: "cBoxColdre",
 		"preco"	: 4.0
 	}
 ];

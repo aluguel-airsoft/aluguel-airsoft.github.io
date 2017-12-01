@@ -44,7 +44,8 @@
 					<legend></legend>
 					<div class="col-md-8 col-md-offset-2"> 
 						<p>
-							Selecione os equipamentos que deseja alugar. Conforme seleção, alguns descontos serão aplicados. Preço máximo R$ <span id="precoMaximo"></span>
+							Selecione os equipamentos que deseja alugar. Conforme seleção, alguns descontos serão aplicados.
+							<!--  Preço máximo R$ <span id="precoMaximo"></span> -->
 						</p>
 						<p>
 							Após a seleção da data desejada, alguns equipamentos poderão ficar indisponíveis para seleção, pois já foram locados nesta data.
@@ -62,7 +63,7 @@
 						</p>
 					</div>
 				</div>
-				<!-- <legend></legend> -->
+				<legend></legend>
 				<div class="row mt-md"> <!-- Data -->		
 					<div class="col-lg-3 col-lg-offset-3 col-md-3 col-md-offset-3 col-sm-6">
 						<div class="form-group text-center">
@@ -78,155 +79,15 @@
 					</div>	
 				</div>
 				<legend></legend>
-
-
-				<div>
-					<!-- Nav tabs -->
+				<div style="min-height: 400px">
 					<ul class="nav nav-tabs" role="tablist">
 						<li role="presentation" class="active"><a href="#equipamentos" aria-controls="equipamentos" role="tab" data-toggle="tab">Equipamentos</a></li>
 						<li role="presentation"><a href="#combos" aria-controls="combos" role="tab" data-toggle="tab">Combos</a></li>
 					</ul>
-					<!-- Tab panes -->
-					<div class="tab-content">
-						<div role="tabpanel" class="tab-pane active" id="equipamentos">
-							<div class="row mt-xl"> <!-- M4 -->			
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/m4.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>M4<br/><small>M4 elétrica com 2 magazines <br/><b id="precoM4"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div  id="cBoxM4Hide">
-										<label class="checkbox" for="cBoxM4">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxM4" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md"> <!-- G36 -->		
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/g36.jpeg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>G36<br/><small>G36 elétrica <br/><b id="precoG36"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div  id="cBoxG36Hide">
-										<label class="checkbox" for="cBoxG36">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxG36" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md">	<!-- Glock -->		
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/glock.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Glock 18C<br/><small>Glock elétrica <br/><b id="precoGlock"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxGlockHide">
-										<label class="checkbox" for="cBoxGlock">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxGlock" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md">	<!-- Oculos -->		
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/oculos-telado.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Óculos telado<br/><small>Óculos telado pequeno <br/><b id="precoOculos"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxOculosHide">
-										<label class="checkbox" for="cBoxOculos">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxOculos" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md">	<!-- Mascara -->	
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/mascara-telada.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Mascara telada<br/><small>Mascara telada para proteção facial <br/><b id="precoMascara"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxMascaraHide">
-										<label class="checkbox" for="cBoxMascara">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxMascara" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md">	<!-- Mascara1 -->	
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/mascara-telada.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Mascara telada<br/><small>Mascara telada para proteção facial <br/><b id="precoMascara1"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxMascara1Hide">
-										<label class="checkbox" for="cBoxMascara1">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxMascara1" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>				
-							<div class="row pt-md">	<!-- Balaclava -->	
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/balaclava.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Balaclava<br/><small>Balaclava de caveira. Meia face <br/><b id="precoBalaclava"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxBalaclavaHide">
-										<label class="checkbox" for="cBoxBalaclava">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxBalaclava" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md">	<!-- Colete -->		
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/colete.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Colete<br/><small>Colete tático preto com porta mags e bolsos auxiliares <br/><b id="precoColete"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxColeteHide">
-										<label class="checkbox" for="cBoxColete">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxColete" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="row pt-md">	<!-- Coldre -->		
-								<div class="col-md-2 col-xs-5">
-									<img src="assets/images/coldre-perna.jpg" class="img-no-padding img-responsive">
-								</div>
-								<div class="col-md-7 col-xs-5">
-									<h6>Coldre<br/><small>Coldre lateral de perna com cinto tático <br/><b id="precoColdre"></b></small></h6>
-								</div>
-								<div class="col-md-3 col-xs-2">
-									<div id="cBoxColdreHide">
-										<label class="checkbox" for="cBoxColdre">
-											<input type="checkbox" onchange="onChangeFunc(this)" value="S" id="cBoxColdre" data-toggle="checkbox">
-										</label>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="tab-content">				
+						<div role="tabpanel" class="tab-pane active" id="equipamentos"></div>
 						<div role="tabpanel" class="tab-pane" id="combos">
-							<div class="row mt-xl"> <!-- M4 -->			
+							<div class="row mt-xl">
 								<div class="col-md-2 col-xs-5">
 									<img src="assets/images/combo1.jpg" class="img-no-padding img-responsive">
 								</div>
@@ -244,13 +105,7 @@
 						</div>
 					</div>
 				</div>
-
-
-
-
-
 				<legend></legend>
-
 			</div>
 		</div>
 		<div class="container fixed-bottom">
