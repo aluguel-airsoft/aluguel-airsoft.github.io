@@ -182,12 +182,15 @@ $( document ).ready(function() {
 		$("#precoMaximo").text(precoMaximo.toFixed(2));
 
 		$("#precoM4").text(			"(R$ " + findExistEquip("key","m4").preco.toFixed(2) + 		")");
+		$("#precoG36").text(		"(R$ " + findExistEquip("key","g36").preco.toFixed(2) + 	")");
 		$("#precoGlock").text(		"(R$ " + findExistEquip("key","glock").preco.toFixed(2) + 	")");
 		$("#precoOculos").text(		"(R$ " + findExistEquip("key","oculos").preco.toFixed(2) + 	")");
-		$("#precoMascara").text(	"(R$ " + findExistEquip("key","mascara").preco.toFixed(2) + 	")");
+		$("#precoMascara").text(	"(R$ " + findExistEquip("key","mascara").preco.toFixed(2) + ")");
+		$("#precoMascara1").text(	"(R$ " + findExistEquip("key","mascara1").preco.toFixed(2) + ")");
 		$("#precoBalaclava").text(	"(R$ " + findExistEquip("key","balaclava").preco.toFixed(2) + ")");
 		$("#precoColete").text(		"(R$ " + findExistEquip("key","colete").preco.toFixed(2) + 	")");
 		$("#precoColdre").text(		"(R$ " + findExistEquip("key","coldre").preco.toFixed(2) + 	")");
+
 	};
 	initialConfig();
 

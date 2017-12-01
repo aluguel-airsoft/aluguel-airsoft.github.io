@@ -61,43 +61,55 @@ var promoCodes = [
 
 var equipamentosExistentes = [	
 	{
-		"name" 	: "M4",				//-> 0
+		"name" 	: "M4",			
 		"key"	: "m4",
 		"id" 	: "#cBoxM4",
 		"preco"	: 55.0
 	},
+	{
+		"name" 	: "G36",			
+		"key"	: "g36",
+		"id" 	: "#cBoxG36",
+		"preco"	: 60.0
+	},
 	{ 
-		"name" 	: "Glock",			//-> 1
+		"name" 	: "Glock",		
 		"key"	: "glock",
 		"id" 	: "#cBoxGlock",
 		"preco"	: 30.0
 	},
 	{ 
-		"name" 	: "Óculos telado",	//-> 2
+		"name" 	: "Óculos telado",
 		"key"	: "oculos",
 		"id" 	: "#cBoxOculos",
 		"preco"	: 3.0
 	},
 	{ 
-		"name" 	: "Máscara telada",	//-> 3
+		"name" 	: "Máscara telada",
 		"key"	: "mascara",
 		"id" 	: "#cBoxMascara",
 		"preco"	: 3.0
 	},
 	{ 
-		"name" 	: "Balaclava",		//-> 4
+		"name" 	: "Máscara telada",
+		"key"	: "mascara1",
+		"id" 	: "#cBoxMascara1",
+		"preco"	: 3.0
+	},
+	{ 
+		"name" 	: "Balaclava",	
 		"key"	: "balaclava",
 		"id" 	: "#cBoxBalaclava",
 		"preco"	: 2.0
 	},
 	{ 
-		"name" 	: "Colete",			//-> 5
+		"name" 	: "Colete",		
 		"key"	: "colete",
 		"id" 	: "#cBoxColete",
 		"preco"	: 5.0
 	},
 	{ 
-		"name" 	: "Coldre",			//-> 6
+		"name" 	: "Coldre",		
 		"key"	: "coldre",
 		"id" 	: "#cBoxColdre",
 		"preco"	: 4.0
@@ -113,6 +125,6 @@ var reservas = [
 	{
 		"data": "17/12/2017",
 		"locador": "",
-		"equipamentos":["m4"]
+		"equipamentos":["m4", "g36"]
 	}
 ];
