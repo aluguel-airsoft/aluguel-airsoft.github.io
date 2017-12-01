@@ -88,15 +88,23 @@ $( document ).ready(function() {
 
 	//------ Aux functions --------
 
-	var setTotal = function() {						
+	var setTotal = function() {	
+		if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0
+			&& equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0) {
+			precoMaximo = precoMaximoComG36;
+		}else {
+			precoMaximo = precoMaximoPadrao;
+		}					
 		if (validaDesconto()) {
 			var totalComDesconto = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
 			if (totalComDesconto > precoMaximo) {
 				totalComDesconto = precoMaximo;
 			}
 			$("#total").text("R$ " + (totalComDesconto).toFixed(2));
+			$("#precoMaximo").text(precoMaximo.toFixed(2));
 		}else {
 			$("#total").text("R$ " + precoEquipamentos.toFixed(2));
+			$("#precoMaximo").text(precoMaximo.toFixed(2));
 		}
 	}
 
@@ -104,9 +112,13 @@ $( document ).ready(function() {
 		var objPromo = validaPromo();
 		if (objPromo) {
 			porcentDesconto = objPromo.valor;
-			precoMaximo = objPromo.precoMax;
+			if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0
+				&& equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0) {
+				precoMaximo = objPromo.precoMaxComG36;
+			}else {
+				precoMaximo = objPromo.precoMax;
+			}
 			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code);
-			$("#precoMaximo").text(precoMaximo.toFixed(2));
 			return true;
 		}else if(equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0 &&
 			equipSelecionados.indexOf(findExistEquip("key", "glock")) >= 0){
