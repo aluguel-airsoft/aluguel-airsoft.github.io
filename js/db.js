@@ -71,6 +71,7 @@ var equipamentosExistentes = [
 		"key"	: "m4",
 		"imagem": "m4.jpg",
 		"id" 	: "cBoxM4",
+		"disponivel" : true,
 		"preco"	: 55.0
 	},
 	{
@@ -79,6 +80,7 @@ var equipamentosExistentes = [
 		"key"	: "g36",
 		"imagem": "g36.jpg",
 		"id" 	: "cBoxG36",
+		"disponivel" : true,
 		"preco"	: 60.0
 	},
 	{ 
@@ -87,6 +89,7 @@ var equipamentosExistentes = [
 		"key"	: "glock",
 		"imagem": "glock.jpg",
 		"id" 	: "cBoxGlock",
+		"disponivel" : true,
 		"preco"	: 30.0
 	},
 	{ 
@@ -95,6 +98,7 @@ var equipamentosExistentes = [
 		"key"	: "oculos",
 		"imagem": "oculos.jpg",
 		"id" 	: "cBoxOculos",
+		"disponivel" : true,
 		"preco"	: 3.0
 	},
 	{ 
@@ -103,6 +107,7 @@ var equipamentosExistentes = [
 		"key"	: "mascara",
 		"imagem": "mascara.jpg",
 		"id" 	: "cBoxMascara",
+		"disponivel" : true,
 		"preco"	: 3.0
 	},
 	{ 
@@ -111,6 +116,7 @@ var equipamentosExistentes = [
 		"key"	: "mascara1",
 		"imagem": "mascara.jpg",
 		"id" 	: "cBoxMascara1",
+		"disponivel" : true,
 		"preco"	: 3.0
 	},
 	{ 
@@ -119,6 +125,7 @@ var equipamentosExistentes = [
 		"key"	: "balaclava",
 		"imagem": "balaclava.jpg",
 		"id" 	: "cBoxBalaclava",
+		"disponivel" : true,
 		"preco"	: 2.0
 	},
 	{ 
@@ -127,6 +134,7 @@ var equipamentosExistentes = [
 		"key"	: "colete",
 		"imagem": "colete.jpg",
 		"id" 	: "cBoxColete",
+		"disponivel" : true,
 		"preco"	: 5.0
 	},
 	{ 
@@ -135,6 +143,7 @@ var equipamentosExistentes = [
 		"key"	: "coldre",
 		"imagem": "coldre.jpg",
 		"id" 	: "cBoxColdre",
+		"disponivel" : true,
 		"preco"	: 4.0
 	}
 ];

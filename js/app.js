@@ -218,47 +218,38 @@ $( document ).ready(function() {
 
 		$("#precoMaximo").text(precoMaximo.toFixed(2));
 
-		// $("#precoM4").text(			"(R$ " + findExistEquip("key","m4").preco.toFixed(2) + 		")");
-		// $("#precoG36").text(		"(R$ " + findExistEquip("key","g36").preco.toFixed(2) + 	")");
-		// $("#precoGlock").text(		"(R$ " + findExistEquip("key","glock").preco.toFixed(2) + 	")");
-		// $("#precoOculos").text(		"(R$ " + findExistEquip("key","oculos").preco.toFixed(2) + 	")");
-		// $("#precoMascara").text(	"(R$ " + findExistEquip("key","mascara").preco.toFixed(2) + ")");
-		// $("#precoMascara1").text(	"(R$ " + findExistEquip("key","mascara1").preco.toFixed(2) + ")");
-		// $("#precoBalaclava").text(	"(R$ " + findExistEquip("key","balaclava").preco.toFixed(2) + ")");
-		// $("#precoColete").text(		"(R$ " + findExistEquip("key","colete").preco.toFixed(2) + 	")");
-		// $("#precoColdre").text(		"(R$ " + findExistEquip("key","coldre").preco.toFixed(2) + 	")");
-
-
-		
-
-
 	};
 	initialConfig();
 
 
 });
 
-var htmlToAppend = "";
+var equipBuild = function() {
+	var htmlToAppend = "";
+	for(var i in equipamentosExistentes){
+		if (equipamentosExistentes[i].disponivel) {
+			htmlToAppend += "<div class=\"row mt-xl\">\
+				<div class=\"col-md-2 col-xs-5\">\
+					<img src=\"assets/images/" + equipamentosExistentes[i].imagem + "\" class=\"img-no-padding img-responsive\">\
+				</div>\
+				<div class=\"col-md-7 col-xs-5\">\
+					<h6>" + equipamentosExistentes[i].name + "<br/><small>"+equipamentosExistentes[i].descricao+" <br/><b>(R$ "+equipamentosExistentes[i].preco.toFixed(2) +")</b></small></h6>\
+				</div>\
+				<div class=\"col-md-3 col-xs-2\">\
+					<div  id=\""+equipamentosExistentes[i].id+"Hide\">\
+						<label class=\"checkbox\" for=\""+equipamentosExistentes[i].id+"\">\
+							<input type=\"checkbox\" onchange=\"onChangeFunc(this)\" value=\"S\" id=\""+equipamentosExistentes[i].id+"\" data-toggle=\"checkbox\">\
+						</label>\
+					</div>\
+				</div>\
+			</div>";
+		}
+	}
 
-for(var i in equipamentosExistentes){
-	htmlToAppend += "<div class=\"row mt-xl\">\
-		<div class=\"col-md-2 col-xs-5\">\
-			<img src=\"assets/images/" + equipamentosExistentes[i].imagem + "\" class=\"img-no-padding img-responsive\">\
-		</div>\
-		<div class=\"col-md-7 col-xs-5\">\
-			<h6>" + equipamentosExistentes[i].name + "<br/><small>"+equipamentosExistentes[i].descricao+" <br/><b>(R$ "+equipamentosExistentes[i].preco.toFixed(2) +")</b></small></h6>\
-		</div>\
-		<div class=\"col-md-3 col-xs-2\">\
-			<div  id=\""+equipamentosExistentes[i].id+"Hide\">\
-				<label class=\"checkbox\" for=\""+equipamentosExistentes[i].id+"\">\
-					<input type=\"checkbox\" onchange=\"onChangeFunc(this)\" value=\"S\" id=\""+equipamentosExistentes[i].id+"\" data-toggle=\"checkbox\">\
-				</label>\
-			</div>\
-		</div>\
-	</div>";
-}
+	$( "#equipamentos" ).append( htmlToAppend );
 
-$( "#equipamentos" ).append( htmlToAppend );
+};
+equipBuild();
 
 // http://amsul.ca/pickadate.js/
 // https://github.com/RobinHerbots/Inputmask
