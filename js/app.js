@@ -74,19 +74,44 @@ $( document ).ready(function() {
 				alert("Infelizmente já existe reserva para o(s) equipamento(s) \"" + auxEquips + "\" para o dia "+data);
 				return;
 			}else{
-				texto += "%0A%20Data%3A%20"+encodeURI(data)+"%20";
+				texto += "%0AData%3A%20"+encodeURI(data)+"%20";
 			}
 		}else {
 			alert("Selecione uma data para locação");
 			return;
 		}
-		texto += "%0A%20Total%3A%20"+encodeURI("R$ " + precoEquipamentos.toFixed(2))+"%20%0A";
+		
+		var total = precoEquipamentos;
+		if (validaDesconto()) {
+			total = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
+			if (total > precoMaximo) {
+				total = precoMaximo;
+			}
+		}
+		texto += "%0ATotal%3A%20"+encodeURI("R$ " + total.toFixed(2))+"%20";
+
+		var objPromo = validaPromo();
+		if(objPromo){
+			texto += "%0A%0AC%C3%B3digo%20promocional%20utilizado%3A%20*" + objPromo.code+"*";
+		}
+
 
 		var url = "https://api.whatsapp.com/send?text="+texto+"&phone=554799458621";
 		window.open(url);
 	});
 
 	//------ Aux functions --------
+
+	var setTotal = function() {						
+
+		if (validaDesconto()) {
+			var totalComDesconto = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
+			if (totalComDesconto > precoMaximo) {
+				totalComDesconto = precoMaximo;
+			}
+		}
+
+	}
 
 	var setTotal = function() {						
 		if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0

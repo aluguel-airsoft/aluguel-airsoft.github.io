@@ -142,12 +142,10 @@ var equipamentosExistentes = [
 var reservas = [				
 	{
 		"data": "03/12/2017",
-		"locador": "Gean Back Viper",
-		"equipamentos":["mascara"]
+		"equipamentos":["mascara", "glock"]
 	},
 	{
 		"data": "17/12/2017",
-		"locador": "",
 		"equipamentos":["m4", "g36"]
 	}
 ];
