@@ -47,12 +47,12 @@ $( document ).ready(function() {
 
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
 		var selecionouAlgum = false;
-		var equipamentosName = [];
+		var equipamentosKey = [];
 
 		for(var i in equipSelecionados){
 			texto += "-%20"+ equipSelecionados[i].name +"%0A";
 			selecionouAlgum = true;
-			equipamentosName.push(equipSelecionados[i].name);
+			equipamentosKey.push(equipSelecionados[i].key);
 		}
 
 		if (!selecionouAlgum) {
@@ -62,7 +62,7 @@ $( document ).ready(function() {
 
 		var data = $("#dataDesejada").val();
 		if (data) {
-			var equipIndis = equipReservados(data, equipamentosName);
+			var equipIndis = equipReservados(data, equipamentosKey);
 			if (equipIndis && equipIndis.length > 0) {
 				var auxEquips = "";
 				for(var i in equipIndis){

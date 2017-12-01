@@ -66,13 +66,13 @@ var equipamentosExistentes = [
 
 var reservas = [				
 	{
-		"data": "17/12/2017",
-		"locador": "",
-		"equipamentos":[equipamentosExistentes[0].name, equipamentosExistentes[2].name, equipamentosExistentes[4].name]
-	},
-	{
 		"data": "03/12/2017",
 		"locador": "Gean Back Viper",
-		"equipamentos":[equipamentosExistentes[3].name]
+		"equipamentos":[findExistEquip("key","mascara")]
+	},
+	{
+		"data": "17/12/2017",
+		"locador": "",
+		"equipamentos":[findExistEquip("key","m4")]
 	}
 ];
