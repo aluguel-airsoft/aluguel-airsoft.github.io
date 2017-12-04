@@ -155,6 +155,7 @@ var reservas = [
 	},
 	{
 		"data": "17/12/2017",
-		"equipamentos":["m4", "g36"]
+		"equipamentos":["m4", "g36", "glock", "colete"],
+		"obs": "Glock + Colete -> Giovane Gonçalves"
 	}
 ];
