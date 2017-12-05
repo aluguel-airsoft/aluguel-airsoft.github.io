@@ -228,7 +228,7 @@ var equipBuild = function() {
 	var htmlToAppend = "";
 	for(var i in equipamentosExistentes){
 		if (equipamentosExistentes[i].disponivel) {
-			htmlToAppend += "<div class=\"row mt-xl\">\
+			htmlToAppend += "<div class=\"row mt-xl\" id=\""+equipamentosExistentes[i].id+"Hide\">\
 				<div class=\"col-md-2 col-xs-5\">\
 					<img src=\"assets/images/" + equipamentosExistentes[i].imagem + "\" class=\"img-no-padding img-responsive\">\
 				</div>\
@@ -236,7 +236,7 @@ var equipBuild = function() {
 					<h6>" + equipamentosExistentes[i].name + "<br/><small>"+equipamentosExistentes[i].descricao+" <br/><b>(R$ "+equipamentosExistentes[i].preco.toFixed(2) +")</b></small></h6>\
 				</div>\
 				<div class=\"col-md-3 col-xs-2\">\
-					<div  id=\""+equipamentosExistentes[i].id+"Hide\">\
+					<div>\
 						<label class=\"checkbox\" for=\""+equipamentosExistentes[i].id+"\">\
 							<input type=\"checkbox\" onchange=\"onChangeFunc(this)\" value=\"S\" id=\""+equipamentosExistentes[i].id+"\" data-toggle=\"checkbox\">\
 						</label>\
