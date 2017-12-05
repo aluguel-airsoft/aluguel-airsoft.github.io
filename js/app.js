@@ -22,13 +22,13 @@ $( document ).ready(function() {
 			precoEquipamentos -= objEquip.preco;
 			equipSelecionados.splice( equipSelecionados.indexOf(objEquip), 1);
 		}
-		setTotal();
+		writeTotal();
 	};
 
 	//------ Codigo change -------
 
 	$('#codigoPromocional').change(function() {		
-		setTotal();
+		writeTotal();
 	});
 
 	//------ Date change ----------
@@ -44,7 +44,6 @@ $( document ).ready(function() {
 	//------ Confirma -------------
 
 	$( "#confirmar" ).click(function() {			
-
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
 		var selecionouAlgum = false;
 		var equipamentosKey = [];
@@ -81,20 +80,12 @@ $( document ).ready(function() {
 			return;
 		}
 		
-		var total = precoEquipamentos;
-		if (validaDesconto()) {
-			total = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
-			if (total > precoMaximo) {
-				total = precoMaximo;
-			}
-		}
-		texto += "%0ATotal%3A%20"+encodeURI("R$ " + total.toFixed(2))+"%20";
+		texto += "%0ATotal%3A%20"+encodeURI("R$ " + getTotal().toFixed(2))+"%20";
 
 		var objPromo = validaPromo();
 		if(objPromo){
 			texto += "%0A%0AC%C3%B3digo%20promocional%20utilizado%3A%20*" + objPromo.code+"*";
 		}
-
 
 		var url = "https://api.whatsapp.com/send?text="+texto+"&phone=554799458621";
 		window.open(url);
@@ -102,51 +93,56 @@ $( document ).ready(function() {
 
 	//------ Aux functions --------
 
-	var setTotal = function() {						
-
+	var getTotal = function() {						
 		if (validaDesconto()) {
 			var totalComDesconto = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
 			if (totalComDesconto > precoMaximo) {
-				totalComDesconto = precoMaximo;
+				// totalComDesconto = precoMaximo;
 			}
+			return totalComDesconto;
+		}else{
+			return precoEquipamentos;
 		}
+	};
 
-	}
-
-	var setTotal = function() {						
+	var setPrecoMaximo = function(objPromo) {		
 		if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0
 			&& equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0) {
-			precoMaximo = precoMaximoComG36;
-		}else {
-			precoMaximo = precoMaximoPadrao;
-		}					
-		if (validaDesconto()) {
-			var totalComDesconto = Math.round(precoEquipamentos - precoEquipamentos*porcentDesconto);
-			if (totalComDesconto > precoMaximo) {
-				totalComDesconto = precoMaximo;
+			if (objPromo) {
+				precoMaximo = objPromo.precoMaxComG36;
+			}else{
+				precoMaximo = precoMaximoComG36;
 			}
-			$("#total").text("R$ " + (totalComDesconto).toFixed(2));
-			$("#precoMaximo").text(precoMaximo.toFixed(2));
 		}else {
-			$("#total").text("R$ " + precoEquipamentos.toFixed(2));
-			$("#precoMaximo").text(precoMaximo.toFixed(2));
+			if (objPromo) {
+				precoMaximo = objPromo.precoMax;
+			}else{
+				precoMaximo = precoMaximoPadrao;
+			}
 		}
-	}
+	};
+
+	var writeTotal = function() {					
+		$("#total").text("R$ " + getTotal().toFixed(2));
+		$("#precoMaximo").text(precoMaximo.toFixed(2));
+	};
+
+	var validaDescontoPorSelecao = function() {		
+		if(equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0 &&
+			equipSelecionados.indexOf(findExistEquip("key", "glock")) >= 0){
+			return true;
+		}
+		return false;
+	};
 
 	var validaDesconto = function() {				
 		var objPromo = validaPromo();
 		if (objPromo) {
 			porcentDesconto = objPromo.valor;
-			if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0
-				&& equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0) {
-				precoMaximo = objPromo.precoMaxComG36;
-			}else {
-				precoMaximo = objPromo.precoMax;
-			}
+			setPrecoMaximo();
 			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code);
 			return true;
-		}else if(equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0 &&
-			equipSelecionados.indexOf(findExistEquip("key", "glock")) >= 0){
+		}else if(validaDescontoPorSelecao()){
 			$("#promAplicada").text("");
 			return true;
 		}else {
@@ -196,7 +192,7 @@ $( document ).ready(function() {
 
 						precoEquipamentos -= equipamentosExistentes[i].preco;
 						equipSelecionados.splice( equipSelecionados.indexOf(equipamentosExistentes[i]), 1);
-						setTotal();
+						writeTotal();
 					}
 				}else{
 					rmHide(equipamentosExistentes[i].id);
@@ -217,10 +213,8 @@ $( document ).ready(function() {
 		document.getElementById("ano").textContent = new Date().getFullYear();
 
 		$("#precoMaximo").text(precoMaximo.toFixed(2));
-
 	};
 	initialConfig();
-
 
 });
 
@@ -247,7 +241,6 @@ var equipBuild = function() {
 	}
 
 	$( "#equipamentos" ).append( htmlToAppend );
-
 };
 equipBuild();
 
