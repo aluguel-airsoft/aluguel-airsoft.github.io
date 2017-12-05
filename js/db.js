@@ -75,6 +75,15 @@ var equipamentosExistentes = [
 		"preco"	: 55.0
 	},
 	{
+		"name" 	: "Shotgun",		
+		"descricao": "Shotgun spring, dispara 3 BBs por vez",
+		"key"	: "shotgun",
+		"imagem": "shotgun.jpg",
+		"id" 	: "cBoxShotgun",
+		"disponivel" : false,
+		"preco"	: 50.0
+	},
+	{
 		"name" 	: "G36",			
 		"descricao": "G36 elétrica",
 		"key"	: "g36",
