@@ -163,8 +163,12 @@ var reservas = [
 		"equipamentos":["mascara", "glock"]
 	},
 	{
+		"data": "10/12/2017",
+		"equipamentos":["coldre", "glock"]
+	},
+	{
 		"data": "17/12/2017",
-		"equipamentos":["m4", "g36", "glock", "colete"],
-		"obs": "Glock + Colete -> Giovane Gonçalves"
+		"equipamentos":["m4", "g36", "shotgun", "colete"],
+		"obs": "Shotgun + Colete -> Giovane Gonçalves"
 	}
 ];
