@@ -164,7 +164,7 @@ var reservas = [
 	},
 	{
 		"data": "10/12/2017",
-		"equipamentos":["coldre", "glock"]
+		"equipamentos":["coldre", "glock", "shotgun"]
 	},
 	{
 		"data": "17/12/2017",
