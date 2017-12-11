@@ -93,6 +93,15 @@ var equipamentosExistentes = [
 		"preco"	: 60.0
 	},
 	{ 
+		"name" 	: "USP",		
+		"descricao": "Pistola USP Gbb(CO2)",
+		"key"	: "usp",
+		"imagem": "usp.jpg",
+		"id" 	: "cBoxUsp",
+		"disponivel" : true,
+		"preco"	: 35.0
+	},
+	{ 
 		"name" 	: "Glock",		
 		"descricao": "Glock elétrica",
 		"key"	: "glock",
@@ -164,11 +173,11 @@ var reservas = [
 	},
 	{
 		"data": "10/12/2017",
-		"equipamentos":["coldre", "glock", "shotgun"]
+		"equipamentos":["coldre", "glock", "shotgun", "mascara"]
 	},
 	{
 		"data": "17/12/2017",
-		"equipamentos":["m4", "g36", "shotgun", "colete"],
-		"obs": "Shotgun + Colete -> Giovane Gonçalves"
+		"equipamentos":["m4", "g36", "shotgun", "colete", "mascara"],
+		"obs": "Shotgun + Colete + Mascara-> Giovane Gonçalves"
 	}
 ];
