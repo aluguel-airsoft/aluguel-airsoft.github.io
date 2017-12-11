@@ -107,7 +107,7 @@ var equipamentosExistentes = [
 		"key"	: "glock",
 		"imagem": "glock.jpg",
 		"id" 	: "cBoxGlock",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 30.0
 	},
 	{ 
