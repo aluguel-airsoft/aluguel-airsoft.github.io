@@ -92,6 +92,15 @@ var equipamentosExistentes = [
 		"disponivel" : true,
 		"preco"	: 60.0
 	},
+	{
+		"name" 	: "Mossberg",		
+		"descricao": "Shotgun mossberg spring, dispara 1 BBs por vez",
+		"key"	: "mossberg",
+		"imagem": "mossberg.jpg",
+		"id" 	: "cBoxMossberg",
+		"disponivel" : true,
+		"preco"	: 40.0
+	},
 	{ 
 		"name" 	: "USP",		
 		"descricao": "Pistola USP Gbb(CO2)",
