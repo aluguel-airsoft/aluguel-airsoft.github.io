@@ -193,5 +193,10 @@ var reservas = [
 		"data": "14/01/2018",
 		"equipamentos":["m4", "balaclava", "oculos"],
 		// "obs": "Shotgun + Colete + Mascara-> Giovane Gonçalves"
+	},
+	{
+		"data": "21/01/2018",
+		"equipamentos":["colete", "shotgun"],
+		"obs": "Colete-> Gean Viper"
 	}
 ];
