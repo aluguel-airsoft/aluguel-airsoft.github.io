@@ -198,5 +198,10 @@ var reservas = [
 		"data": "21/01/2018",
 		"equipamentos":["colete", "shotgun"],
 		"obs": "Colete-> Gean Viper"
+	},
+	{
+		"data": "27/01/2018",
+		"equipamentos":["m4"],
+		"obs": "m4-> Ricardo Rangers"
 	}
 ];
