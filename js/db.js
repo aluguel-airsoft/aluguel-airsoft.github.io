@@ -187,26 +187,30 @@ var reservas = [
 	{
 		"data": "17/12/2017",
 		"equipamentos":["m4", "g36", "shotgun", "colete", "mascara"],
-		"obs": "Shotgun + Colete + Mascara-> Giovane Gonçalves"
+		"obs": ["Shotgun + Colete + Mascara-> Giovane Gonçalves"]
 	},
 	{
 		"data": "14/01/2018",
 		"equipamentos":["m4", "balaclava", "oculos"],
-		// "obs": "Shotgun + Colete + Mascara-> Giovane Gonçalves"
+		// "obs": ["Shotgun + Colete + Mascara-> Giovane Gonçalves"]
 	},
 	{
 		"data": "21/01/2018",
 		"equipamentos":["colete", "shotgun"],
-		"obs": "Colete-> Gean Viper"
+		"obs": ["Colete-> Gean Viper"]
 	},
 	{
 		"data": "27/01/2018",
 		"equipamentos":["m4"],
-		"obs": "m4-> Ricardo Rangers"
+		"obs": ["m4-> Ricardo Rangers R$ 40,00"]
 	},
 	{
 		"data": "28/01/2018",
-		"equipamentos":["shotgun", "oculos", "mascara", "colete", "g36", "balaclava", "mascara1"],
-		"obs": "shotgun + oculos + mascara + colete-> Caue amigo Paulo"
+		"equipamentos":["shotgun", "oculos", "mascara", "colete", "g36", "balaclava", "mascara1", "m4"],
+		"obs": [
+			"shotgun + oculos + mascara + colete -> Caue amigo Paulo R$ 45,00",
+			"g36 + balaclava + mascara1 -> Guilherme amigo Paulo R$ 65,00",
+			"m4 + balaclavaCamo -> Amigo Guilherme R$ 57,00 "
+		]	
 	}
 ];
