@@ -203,5 +203,10 @@ var reservas = [
 		"data": "27/01/2018",
 		"equipamentos":["m4"],
 		"obs": "m4-> Ricardo Rangers"
+	},
+	{
+		"data": "28/01/2018",
+		"equipamentos":["shotgun", "oculos", "mascara", "colete"],
+		"obs": "shotgun + oculos + mascara + colete-> Caue amigo Paulo"
 	}
 ];
