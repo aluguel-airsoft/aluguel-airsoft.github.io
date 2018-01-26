@@ -206,7 +206,7 @@ var reservas = [
 	},
 	{
 		"data": "28/01/2018",
-		"equipamentos":["shotgun", "oculos", "mascara", "colete", “g36”, “balaclava”, “mascara1”],
+		"equipamentos":["shotgun", "oculos", "mascara", "colete", "g36", "balaclava", "mascara1"],
 		"obs": "shotgun + oculos + mascara + colete-> Caue amigo Paulo"
 	}
 ];
