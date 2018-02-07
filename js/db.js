@@ -219,7 +219,7 @@ var reservas = [
 		"obs": [
 			"g36 + oculos + mascara -> Guilherme amigo Paulo R$ 66,00"
 		]	
-	}
+	},
 	{
 		"data": "18/02/2018",
 		"equipamentos":["m4", "shotgun", "g36", "mossberg", "usp", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coldre"],
