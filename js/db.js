@@ -212,5 +212,24 @@ var reservas = [
 			"g36 + balaclava + mascara1 -> Guilherme amigo Paulo R$ 65,00",
 			"m4 + balaclavaCamo -> Amigo Guilherme R$ 57,00 "
 		]	
+	},
+	{
+		"data": "11/02/2018",
+		"equipamentos":["g36", "oculos", "mascara"],
+		"obs": [
+			"g36 + oculos + mascara -> Guilherme amigo Paulo R$ 66,00"
+		]	
+	}
+	{
+		"data": "18/02/2018",
+		"equipamentos":["m4", "shotgun", "g36", "mossberg", "usp", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coldre"],
+		"obs": [
+			"shotgun + oculos + mascara + colete -> Caue amigo Paulo R$ 45,00",
+			"g36 + balaclava + mascara1 -> Guilherme amigo Paulo R$ 65,00",
+			"m4 + balaclavaCamo -> Amigo Guilherme R$ 57,00 "
+		]	
 	}
 ];
+
+
+
