@@ -215,10 +215,11 @@ var reservas = [
 	},
 	{
 		"data": "11/02/2018",
-		"equipamentos":["g36", "oculos", "mascara", "colete"],
+		"equipamentos":["g36", "oculos", "mascara", "colete", "mascara1"],
 		"obs": [
 			"g36 + oculos + mascara -> Jhonatan R$ 66,00",
-			"colete -> Gean"
+			"colete -> Gean", 
+			"mascara1 -> Danilo Patrício"
 		]	
 	},
 	{
