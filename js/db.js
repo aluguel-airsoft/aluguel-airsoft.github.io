@@ -241,6 +241,12 @@ var reservas = [
 		"data": "18/02/2018",
 		"equipamentos":["m4", "shotgun", "g36", "mossberg", "usp", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coldre"],
 		"obs": [
+			{
+				"nome": "Guilherme amigo Paulo",
+				"telefone": "554796763157",
+				"valor": 66.0,
+				"equipamentos": "m4 + shotgun + g36 + mossberg + usp + glock + oculos + mascara + mascara1 + balaclava + colete + coldre"
+			},
 		]	
 	}
 ];

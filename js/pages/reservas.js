@@ -22,7 +22,8 @@ $( document ).ready(function() {
 		showReservas();
 	});
 
-	var showReservas = function(argument) {			
+	var showReservas = function(argument) {		
+		$('#reservas div').empty();	
 		var res = findReserva($("#dataDesejada").val());
 		if (res) {
 			var htmlToAppend = "";
@@ -30,20 +31,20 @@ $( document ).ready(function() {
 
 			}
 			if (res.obs) {
-				htmlToAppend += "<div class=\"row mt-xl\">";
+				htmlToAppend += "<div class=\"row\">";
 				for(var i in res.obs){
 					htmlToAppend += "<div class=\"col-md-12 col-xs-12 mb-sm\">\
 							<b><h5>" + res.obs[i].nome + "\
 								<small> <a target=\"_blank\" href=\"https://api.whatsapp.com/send?phone="+res.obs[i].telefone+"\">("+res.obs[i].telefone+")</a></small>\
 							</h5></b>\
-							<span>Equipamentos: "+res.obs[i].equipamentos+" \
+							<span>- Equipamentos: "+res.obs[i].equipamentos+" \
 								<br/>\
-								Preço: <b>R$ "+res.obs[i].valor.toFixed(2) +"</b>\
+								- Preço: <b>R$ "+res.obs[i].valor.toFixed(2) +"</b>\
 							</span>\
 						</div>";
 
 					if (res.obs.length-1 > i) {				
-						htmlToAppend += "<div class=\"col-md-12 col-xs-12 mb-sm\">\
+						htmlToAppend += "<div class=\"col-md-12 col-xs-12\">\
 							<legend></legend>\
 						</div>\
 						"
