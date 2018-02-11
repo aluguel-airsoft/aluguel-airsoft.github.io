@@ -234,6 +234,12 @@ var reservas = [
 				"telefone": "554796063185",
 				"valor": 3.0,
 				"equipamentos": "mascara1"
+			} ,
+			{
+				"nome": "wagner mattos",
+				"telefone": "-",
+				"valor": 45.0,
+				"equipamentos": "shotgun"
 			}
 		]	
 	},
