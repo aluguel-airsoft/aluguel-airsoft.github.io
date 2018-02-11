@@ -215,7 +215,7 @@ var reservas = [
 	},
 	{
 		"data": "11/02/2018",
-		"equipamentos":["g36", "oculos", "mascara", "colete", "mascara1"],
+		"equipamentos":["g36", "oculos", "mascara", "colete", "mascara1", "shotgun"],
 		"obs": [
 			{
 				"nome": "Jhonatan",
