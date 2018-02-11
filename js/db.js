@@ -238,7 +238,7 @@ var reservas = [
 			{
 				"nome": "wagner mattos",
 				"telefone": "-",
-				"valor": 45.0,
+				"valor": 50.0,
 				"equipamentos": "shotgun"
 			}
 		]	
