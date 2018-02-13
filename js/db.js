@@ -266,19 +266,19 @@ var reservas = [
 			}
 		]	
 	},
-	{
-		"data": "14/02/2018",
-		"equipamentos":["g36", "oculos", "mascara", "colete"],
-		"responsavel": "Pedro S.",
-		"obs": [
-			{
-				"nome": "Alex",
-				"telefone": "554796346862",
-				"valor": 71.0,
-				"equipamentos": "g36 + oculos + mascara + colete"
-			}
-		]	
-	},
+	// {
+	// 	"data": "14/02/2018",
+	// 	"equipamentos":["g36", "oculos", "mascara", "colete"],
+	// 	"responsavel": "Pedro S.",
+	// 	"obs": [
+	// 		{
+	// 			"nome": "Alex",
+	// 			"telefone": "554796346862",
+	// 			"valor": 71.0,
+	// 			"equipamentos": "g36 + oculos + mascara + colete"
+	// 		}
+	// 	]	
+	// },
 	{
 		"data": "18/02/2018",
 		"equipamentos":["m4", "shotgun", "g36", "mossberg", "usp", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coldre"],
