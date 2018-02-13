@@ -4,7 +4,7 @@ $( document ).ready(function() {
 
 	//------ Date picker -----------
 
-	$('#dataDesejada').datepicker({					
+	$('#dataDesejada').datepicker({						
 		format: "dd/mm/yyyy",
 		startDate: "Today",
 		language: "pt-BR",
@@ -18,11 +18,11 @@ $( document ).ready(function() {
 		showReservas();
 	});
 
-	$('#dataDesejada').change(function() {			
+	$('#dataDesejada').change(function() {				
 		showReservas();
 	});
 
-	var showReservas = function(argument) {		
+	var showReservas = function(argument) {				
 		$('#reservas div').empty();	
 		var res = findReserva($("#dataDesejada").val());
 		if (res) {
@@ -60,8 +60,42 @@ $( document ).ready(function() {
 		}
 	};
 
+
+	var verificaDatas = function (dtInicial, dtFinal){	
+		
+		var dtini = dtInicial;
+		var dtfim = dtFinal;
+		
+		if ((dtini == '') && (dtfim == '')) {
+			alert('Complete os Campos.');
+			campos.inicial.focus();
+			return false;
+		}
+		
+		datInicio = new Date(dtini.substring(6,10), 
+							 dtini.substring(3,5), 
+							 dtini.substring(0,2));
+		datInicio.setMonth(datInicio.getMonth() - 1); 
+		
+		
+		datFim = new Date(dtfim.substring(6,10), 
+						  dtfim.substring(3,5), 
+						  dtfim.substring(0,2));
+		datFim.setMonth(datFim.getMonth() - 1); 
+
+		if(datInicio <= datFim){
+			alert('Cadastro Completo!');
+			return true;
+		} else {
+			alert('ATENÇÃO: Data Inicial é maior que Data Final');
+			document.all.campos.final.focus();
+			document.all.campos.final.select();
+			return false;
+		}    
+	}
+
 	//------ Page configs --------
-	var initialConfig = function(){					
+	var initialConfig = function(){						
 		document.getElementById("ano").textContent = new Date().getFullYear();
 	};
 	initialConfig();

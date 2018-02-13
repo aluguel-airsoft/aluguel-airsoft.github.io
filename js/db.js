@@ -178,44 +178,67 @@ var equipamentosExistentes = [
 var reservas = [				
 	{
 		"data": "03/12/2017",
+		"responsavel": "Mauricio M",
 		"equipamentos":["mascara", "glock"]
 	},
 	{
 		"data": "10/12/2017",
+		"responsavel": "Mauricio M",
 		"equipamentos":["coldre", "glock", "shotgun", "mascara"]
 	},
 	{
 		"data": "17/12/2017",
 		"equipamentos":["m4", "g36", "shotgun", "colete", "mascara"],
+		"responsavel": "Mauricio M",
 		"obs": ["Shotgun + Colete + Mascara-> Giovane Gonçalves"]
 	},
 	{
 		"data": "14/01/2018",
 		"equipamentos":["m4", "balaclava", "oculos"],
+		"responsavel": "Mauricio M",
 		// "obs": ["Shotgun + Colete + Mascara-> Giovane Gonçalves"]
 	},
 	{
 		"data": "21/01/2018",
 		"equipamentos":["colete", "shotgun"],
+		"responsavel": "Mauricio M",
 		"obs": ["Colete-> Gean Viper"]
 	},
 	{
 		"data": "27/01/2018",
 		"equipamentos":["m4"],
+		"responsavel": "Mauricio M",
 		"obs": ["m4-> Ricardo Rangers R$ 40,00"]
 	},
 	{
 		"data": "28/01/2018",
 		"equipamentos":["shotgun", "oculos", "mascara", "colete", "g36", "balaclava", "mascara1", "m4"],
+		"responsavel": "Mauricio M",
 		"obs": [
-			"shotgun + oculos + mascara + colete -> Caue amigo Paulo R$ 45,00",
-			"g36 + balaclava + mascara1 -> Guilherme amigo Paulo R$ 65,00",
-			"m4 + balaclavaCamo -> Amigo Guilherme R$ 57,00 "
+			{	
+				"nome": "Caue amigo Paulo",
+				"telefone": " - ",
+				"valor": 45.0,
+				"equipamentos": "shotgun + oculos + mascara + colete"
+			},
+			{	
+				"nome": "Guilherme amigo Paulo",
+				"telefone": " - ",
+				"valor": 65.0,
+				"equipamentos": "g36 + balaclava + mascara1"
+			},
+			{	
+				"nome": "Amigo Guilherme",
+				"telefone": " - ",
+				"valor": 57.0,
+				"equipamentos": "m4 + balaclavaCamo"
+			}
 		]	
 	},
 	{
 		"data": "11/02/2018",
 		"equipamentos":["g36", "oculos", "mascara", "colete", "mascara1", "shotgun"],
+		"responsavel": "Pedro S.",
 		"obs": [
 			{
 				"nome": "Jhonatan",
@@ -244,12 +267,26 @@ var reservas = [
 		]	
 	},
 	{
+		"data": "14/02/2018",
+		"equipamentos":["g36", "oculos", "mascara", "colete"],
+		"responsavel": "Pedro S.",
+		"obs": [
+			{
+				"nome": "Alex",
+				"telefone": "554796346862",
+				"valor": 71.0,
+				"equipamentos": "g36 + oculos + mascara + colete"
+			}
+		]	
+	},
+	{
 		"data": "18/02/2018",
 		"equipamentos":["m4", "shotgun", "g36", "mossberg", "usp", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coldre"],
+		"responsavel": "A confirmar",
 		"obs": [
 			{
 				"nome": "Guilherme amigo Paulo",
-				"telefone": "554796763157",
+				"telefone": "",
 				"valor": 66.0,
 				"equipamentos": "m4 + shotgun + g36 + mossberg + usp + glock + oculos + mascara + mascara1 + balaclava + colete + coldre"
 			},
