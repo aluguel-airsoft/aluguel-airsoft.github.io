@@ -245,6 +245,19 @@ var reservas = [
 		]	
 	},
 	{
+		"data": "04/02/2018",
+		"equipamentos":["g36", "oculos", "mascara1", "mascara", "colete", "coldre"],
+		"responsavel": "Mauricio M",
+		"obs": [
+			{	
+				"nome": "Lauro",
+				"telefone": " - ",
+				"valor": 78.0,
+				"equipamentos": "g36 + oculos + mascara + mascara1 + colete + coldre"
+			}
+		]	
+	},
+	{
 		"data": "11/02/2018",
 		"equipamentos":["g36", "oculos", "mascara", "colete", "mascara1", "shotgun"],
 		"responsavel": "Pedro S.",
