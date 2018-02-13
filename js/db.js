@@ -165,6 +165,15 @@ var equipamentosExistentes = [
 		"preco"	: 5.0
 	},
 	{ 
+		"name" 	: "Colete Tan",		
+		"descricao": "Colete tático Tan com porta mags e bolsos auxiliares",
+		"key"	: "coleteTan",
+		"imagem": "coleteTan.jpg",
+		"id" 	: "cBoxColeteTan",
+		"disponivel" : true,
+		"preco"	: 5.0
+	},
+	{ 
 		"name" 	: "Coldre",		
 		"descricao": "Coldre lateral de perna com cinto tático",
 		"key"	: "coldre",
