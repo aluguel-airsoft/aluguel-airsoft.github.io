@@ -1,6 +1,4 @@
 $( document ).ready(function() {
-	var precoEquipamentos = 0.0;
-	var equipSelecionados = [];
 
 	//------ Date picker -----------
 
@@ -23,8 +21,6 @@ $( document ).ready(function() {
 	});
 
 	var showReservas = function(argument) {				
-		$('#reservas div').empty();	
-		var res = findReserva($("#dataDesejada").val());
 		if (res) {
 			var htmlToAppend = "<div class=\"row\">\
 				<div class=\"col-md-12 col-xs-12 mb-sm\">\
@@ -60,38 +56,45 @@ $( document ).ready(function() {
 		}
 	};
 
+	$( "#veri" ).click(function() {		
+		verificaDatas();
+	});	
 
-	var verificaDatas = function (dtInicial, dtFinal){	
+
+	var verificaDatas = function(dtInicial)	{	
+		$('#reservas div').empty();	
+		var res = findReserva($("#dataDesejada").val());
 		
-		var dtini = dtInicial;
-		var dtfim = dtFinal;
+		var equipamentosEntreDatas = [];
+		var datas = returnAllDatas();
+		dtFinal = new Date();
 		
-		if ((dtini == '') && (dtfim == '')) {
-			alert('Complete os Campos.');
-			campos.inicial.focus();
-			return false;
-		}
-		
-		datInicio = new Date(dtini.substring(6,10), 
-							 dtini.substring(3,5), 
-							 dtini.substring(0,2));
+		datInicio = new Date(dtInicial.substring(6,10), 
+							 dtInicial.substring(3,5), 
+							 dtInicial.substring(0,2));
 		datInicio.setMonth(datInicio.getMonth() - 1); 
-		
-		
-		datFim = new Date(dtfim.substring(6,10), 
-						  dtfim.substring(3,5), 
-						  dtfim.substring(0,2));
-		datFim.setMonth(datFim.getMonth() - 1); 
 
-		if(datInicio <= datFim){
-			alert('Cadastro Completo!');
-			return true;
-		} else {
-			alert('ATENÇÃO: Data Inicial é maior que Data Final');
-			document.all.campos.final.focus();
-			document.all.campos.final.select();
-			return false;
-		}    
+		for(var i in datas){
+			dataAtual = new Date(datas[i].substring(6,10), 
+								 datas[i].substring(3,5), 
+								 datas[i].substring(0,2));
+			dataAtual.setMonth(dataAtual.getMonth() - 1); 
+
+			if(datInicio <= dataAtual && dtFinal >= dataAtual){
+
+				equipamentosEntreDatas.push(findReserva(datas[i]));
+
+			} else {
+			}
+		}   
+
+		for(var i in equipamentosEntreDatas){
+			var equip = equipamentosEntreDatas[i];
+
+
+
+		}
+		return array; 
 	}
 
 	//------ Page configs --------

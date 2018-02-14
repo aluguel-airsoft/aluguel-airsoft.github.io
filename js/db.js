@@ -16,6 +16,14 @@ var findReserva = function(data){
 	}
 };
 
+var returnAllDatas = function() {
+	var datas = [];
+	for (var i in reservas) {
+		datas.push(reservas[i].data);
+	}
+	return datas;
+};
+
 var intersection = function(a, b){				
 	var result = [];
 	for(var i in a){
