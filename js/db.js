@@ -88,7 +88,7 @@ var equipamentosExistentes = [
 		"key"	: "shotgun",
 		"imagem": "shotgun.jpg",
 		"id" 	: "cBoxShotgun",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 50.0
 	},
 	{
@@ -124,7 +124,7 @@ var equipamentosExistentes = [
 		"key"	: "glock",
 		"imagem": "glock.jpg",
 		"id" 	: "cBoxGlock",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 30.0
 	},
 	{ 
@@ -298,14 +298,14 @@ var reservas = [
 	},
 	{
 		"data": "14/02/2018",
-		"equipamentos":["g36", "shotgun", "oculos", "mascara", "colete", "mascara1", "coleteTan"],
+		"equipamentos":["g36", "glock", "oculos", "mascara", "colete", "mascara1", "coleteTan"],
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
 				"nome": "Alex",
 				"telefone": "554796346862",
-				"valor": 130.0,
-				"equipamentos": "g36 + shotgun + oculos + mascara + mascara1 + colete + coleteTan"
+				"valor": 110.0,
+				"equipamentos": "g36 + glock + oculos + mascara + mascara1 + colete + coleteTan"
 			}
 		]	
 	},
@@ -323,6 +323,3 @@ var reservas = [
 		]	
 	}
 ];
-
-
-
