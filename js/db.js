@@ -324,14 +324,14 @@ var reservas = [
 	},
 	{
 		"data": "25/02/2018",
-		"equipamentos":["oculos", "colete"],
+		"equipamentos":["g36", "oculos", "colete"],
 		"responsavel": "A confirmar",
 		"obs": [
 			{
-				"nome": "Guilherme ",
+				"nome": "Guilherme Oliveira",
 				"telefone": "554796009839",
-				"valor": 8.0,
-				"equipamentos": "oculos + colete"
+				"valor": 68.0,
+				"equipamentos": "G36 + oculos + colete"
 			},
 		]	
 	}
