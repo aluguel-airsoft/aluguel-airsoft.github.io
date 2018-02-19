@@ -312,13 +312,26 @@ var reservas = [
 	{
 		"data": "18/02/2018",
 		"equipamentos":["m4", "shotgun", "g36", "mossberg", "usp", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coldre"],
-		"responsavel": "A confirmar",
+		"responsavel": "Pedro S.",
 		"obs": [
 			{
 				"nome": "Guilherme amigo Paulo",
 				"telefone": "",
 				"valor": 66.0,
 				"equipamentos": "m4 + shotgun + g36 + mossberg + usp + glock + oculos + mascara + mascara1 + balaclava + colete + coldre"
+			},
+		]	
+	},
+	{
+		"data": "25/02/2018",
+		"equipamentos":["oculos", "colete"],
+		"responsavel": "A confirmar",
+		"obs": [
+			{
+				"nome": "Guilherme ",
+				"telefone": "554796009839",
+				"valor": 8.0,
+				"equipamentos": "oculos + colete"
 			},
 		]	
 	}
