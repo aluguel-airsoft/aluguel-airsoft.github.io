@@ -324,7 +324,7 @@ var reservas = [
 	},
 	{
 		"data": "25/02/2018",
-		"equipamentos":["g36", "oculos", "colete"],
+		"equipamentos":["g36", "oculos", "colete", "mascara", "coleteTan"],
 		"responsavel": "A confirmar",
 		"obs": [
 			{
@@ -333,6 +333,12 @@ var reservas = [
 				"valor": 68.0,
 				"equipamentos": "G36 + oculos + colete"
 			},
-		]	
+			{
+				"nome": "Danilo Patrício",
+				"telefone": "554796063185",
+				"valor": 8.0,
+				"equipamentos": "Mascara + colete tan"
+			}
+		]
 	}
 ];
