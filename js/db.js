@@ -324,7 +324,7 @@ var reservas = [
 	},
 	{
 		"data": "25/02/2018",
-		"equipamentos":["g36", "oculos", "colete", "mascara", "coleteTan", "glock"],
+		"equipamentos":["g36", "oculos", "colete", "mascara", "coleteTan", "glock", "balaclava"],
 		"responsavel": "A confirmar",
 		"obs": [
 			{
@@ -336,8 +336,8 @@ var reservas = [
 			{
 				"nome": "Danilo Patrício",
 				"telefone": "554796063185",
-				"valor": 38.0,
-				"equipamentos": "Glock + Mascara + colete tan"
+				"valor": 40.0,
+				"equipamentos": "Glock + Mascara + colete tan + balaclava"
 			}
 		]
 	}
