@@ -324,7 +324,7 @@ var reservas = [
 	},
 	{
 		"data": "25/02/2018",
-		"equipamentos":["g36", "oculos", "colete", "mascara", "coleteTan", "glock", "balaclava"],
+		"equipamentos":["g36", "oculos", "colete", "mascara", "coleteTan", "glock", "balaclava", "usp"],
 		"responsavel": "A confirmar",
 		"obs": [
 			{
@@ -338,6 +338,12 @@ var reservas = [
 				"telefone": "554796063185",
 				"valor": 40.0,
 				"equipamentos": "Glock + Mascara + colete tan + balaclava"
+			},
+			{
+				"nome": "Guilherme Marino(Amigo Paulo)",
+				"telefone": "554797082354",
+				"valor": 35.0,
+				"equipamentos": "USP"
 			}
 		]
 	}
