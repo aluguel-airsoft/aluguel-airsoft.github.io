@@ -83,6 +83,15 @@ var equipamentosExistentes = [
 		"preco"	: 55.0
 	},
 	{
+		"name" 	: "L96",		
+		"descricao": "Sniper spring, acompanha luneta",
+		"key"	: "l96",
+		"imagem": "l96.jpg",
+		"id" 	: "cBoxL96",
+		"disponivel" : false,
+		"preco"	: 70.0
+	},
+	{
 		"name" 	: "Shotgun",		
 		"descricao": "Shotgun spring, dispara 3 BBs por vez",
 		"key"	: "shotgun",
@@ -325,7 +334,7 @@ var reservas = [
 	{
 		"data": "25/02/2018",
 		"equipamentos":["g36", "oculos", "colete", "mascara", "coleteTan", "glock", "balaclava", "usp"],
-		"responsavel": "A confirmar",
+		"responsavel": "M. Michels",
 		"obs": [
 			{
 				"nome": "Guilherme Oliveira",
@@ -344,6 +353,19 @@ var reservas = [
 				"telefone": "554797082354",
 				"valor": 35.0,
 				"equipamentos": "USP"
+			}
+		]
+	},
+	{
+		"data": "04/03/2018",
+		"equipamentos":["colete", "balaclava"],
+		"responsavel": "A confirmar",
+		"obs": [
+			{
+				"nome": "Elison Fagundes",
+				"telefone": "554796759938",
+				"valor": 7.0,
+				"equipamentos": "colete + balaclava"
 			}
 		]
 	}
