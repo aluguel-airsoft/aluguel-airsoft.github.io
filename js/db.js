@@ -79,7 +79,7 @@ var equipamentosExistentes = [
 		"key"	: "m4",
 		"imagem": "m4.jpg",
 		"id" 	: "cBoxM4",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 55.0
 	},
 	{
