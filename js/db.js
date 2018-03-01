@@ -358,7 +358,7 @@ var reservas = [
 	},
 	{
 		"data": "04/03/2018",
-		"equipamentos":["colete", "balaclava", "m4", "glock"],
+		"equipamentos":["colete", "balaclava", "m4", "g36"],
 		"responsavel": "A confirmar",
 		"obs": [
 			{
@@ -370,8 +370,8 @@ var reservas = [
 			{
 				"nome": "Guilherme Marino(Amigo Paulo)",
 				"telefone": "554797082354",
-				"valor": 80.0,
-				"equipamentos": "M4 + Glock"
+				"valor": 95.0,
+				"equipamentos": "M4 + G36"
 			}
 		]
 	}
