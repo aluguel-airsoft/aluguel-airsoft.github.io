@@ -372,6 +372,12 @@ var reservas = [
 				"telefone": "554797082354",
 				"valor": 95.0,
 				"equipamentos": "M4 + G36"
+			},
+			{
+				"nome": "Cledemir",
+				"telefone": "554796988156",
+				"valor": 41.0,
+				"equipamentos": "USP + Óculos telado + Mascara"
 			}
 		]
 	}
