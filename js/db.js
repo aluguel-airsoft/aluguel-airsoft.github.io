@@ -359,7 +359,7 @@ var reservas = [
 	{
 		"data": "04/03/2018",
 		"equipamentos":["colete", "balaclava", "m4", "g36"],
-		"responsavel": "A confirmar",
+		"responsavel": "Pedro S.",
 		"obs": [
 			{
 				"nome": "Elison Fagundes",
