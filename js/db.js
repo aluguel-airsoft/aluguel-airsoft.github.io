@@ -358,7 +358,7 @@ var reservas = [
 	},
 	{
 		"data": "04/03/2018",
-		"equipamentos":["colete", "balaclava", "m4", "g36"],
+		"equipamentos":["colete", "balaclava", "m4", "g36", "usp", "oculos", "mascara", "mascara1", "colete", "coleteTan"],
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
@@ -378,6 +378,12 @@ var reservas = [
 				"telefone": "554796988156",
 				"valor": 41.0,
 				"equipamentos": "USP + Óculos telado + Mascara"
+			},
+			{
+				"nome": "",
+				"telefone": "554796346862",
+				"valor": 15.0,
+				"equipamentos": "Óculos telado + Mascara + colete + colete tan"
 			}
 		]
 	}
