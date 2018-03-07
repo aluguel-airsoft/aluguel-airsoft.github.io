@@ -386,5 +386,18 @@ var reservas = [
 				"equipamentos": "Óculos telado + Mascara + colete tan"
 			}
 		]
+	} ,
+	{
+		"data": "11/03/2018",
+		"equipamentos":["colete", "balaclava"],
+		"responsavel": "Pedro S.",
+		"obs": [
+			{
+				"nome": "Elison Fagundes",
+				"telefone": "554796759938",
+				"valor": 7.0,
+				"equipamentos": "colete + balaclava"
+			}
+		]
 	}
 ];
