@@ -106,7 +106,7 @@ var equipamentosExistentes = [
 		"key"	: "g36",
 		"imagem": "g36.jpg",
 		"id" 	: "cBoxG36",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 60.0
 	},
 	{
@@ -142,7 +142,7 @@ var equipamentosExistentes = [
 		"key"	: "oculos",
 		"imagem": "oculos.jpg",
 		"id" 	: "cBoxOculos",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 3.0
 	},
 	{ 
@@ -151,7 +151,7 @@ var equipamentosExistentes = [
 		"key"	: "mascara",
 		"imagem": "mascara.jpg",
 		"id" 	: "cBoxMascara",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 3.0
 	},
 	{ 
@@ -169,7 +169,7 @@ var equipamentosExistentes = [
 		"key"	: "balaclava",
 		"imagem": "balaclava.jpg",
 		"id" 	: "cBoxBalaclava",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 2.0
 	},
 	{ 
@@ -178,7 +178,7 @@ var equipamentosExistentes = [
 		"key"	: "colete",
 		"imagem": "colete.jpg",
 		"id" 	: "cBoxColete",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 5.0
 	},
 	{ 
@@ -187,7 +187,7 @@ var equipamentosExistentes = [
 		"key"	: "coleteTan",
 		"imagem": "coleteTan.jpg",
 		"id" 	: "cBoxColeteTan",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 5.0
 	},
 	{ 
@@ -397,6 +397,12 @@ var reservas = [
 				"telefone": "554796759938",
 				"valor": 7.0,
 				"equipamentos": "colete + balaclava"
+			},
+			{
+				"nome": "Guilherme Marino",
+				"telefone": "554797082354",
+				"valor": 71.0,
+				"equipamentos": "G36 + Oculos telado + Mascara telada + Colete Tan"
 			}
 		]
 	}
