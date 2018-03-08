@@ -87,7 +87,7 @@ $( document ).ready(function() {
 			texto += "%0A%0AC%C3%B3digo%20promocional%20utilizado%3A%20*" + objPromo.code+"*";
 		}
 
-		var url = "https://api.whatsapp.com/send?text="+texto+"&phone=554799458621";
+		var url = "https://api.whatsapp.com/send?text="+texto+"&phone=554797275424";
 		window.open(url);
 	});
 
