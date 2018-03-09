@@ -75,7 +75,7 @@ var promoCodes = [
 var equipamentosExistentes = [	
 	{
 		"name" 	: "M4",		
-		"descricao": "M4 elétrica com 2 magazines",
+		"descricao": "Aeg modelo m4 ",
 		"key"	: "m4",
 		"imagem": "m4.jpg",
 		"id" 	: "cBoxM4",
@@ -183,7 +183,7 @@ var equipamentosExistentes = [
 	},
 	{ 
 		"name" 	: "Colete Tan",		
-		"descricao": "Colete tático Tan com porta mags e bolsos auxiliares",
+		"descricao": "Colete tático Tan ",
 		"key"	: "coleteTan",
 		"imagem": "coleteTan.jpg",
 		"id" 	: "cBoxColeteTan",
