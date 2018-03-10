@@ -106,7 +106,7 @@ var equipamentosExistentes = [
 		"key"	: "g36",
 		"imagem": "g36.jpg",
 		"id" 	: "cBoxG36",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 60.0
 	},
 	{
@@ -142,7 +142,7 @@ var equipamentosExistentes = [
 		"key"	: "oculos",
 		"imagem": "oculos.jpg",
 		"id" 	: "cBoxOculos",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 3.0
 	},
 	{ 
@@ -151,7 +151,7 @@ var equipamentosExistentes = [
 		"key"	: "mascara",
 		"imagem": "mascara.jpg",
 		"id" 	: "cBoxMascara",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 3.0
 	},
 	{ 
@@ -169,7 +169,7 @@ var equipamentosExistentes = [
 		"key"	: "balaclava",
 		"imagem": "balaclava.jpg",
 		"id" 	: "cBoxBalaclava",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 2.0
 	},
 	{ 
@@ -178,7 +178,7 @@ var equipamentosExistentes = [
 		"key"	: "colete",
 		"imagem": "colete.jpg",
 		"id" 	: "cBoxColete",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 5.0
 	},
 	{ 
@@ -187,7 +187,7 @@ var equipamentosExistentes = [
 		"key"	: "coleteTan",
 		"imagem": "coleteTan.jpg",
 		"id" 	: "cBoxColeteTan",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 5.0
 	},
 	{ 
@@ -389,7 +389,7 @@ var reservas = [
 	} ,
 	{
 		"data": "11/03/2018",
-		"equipamentos":["colete", "balaclava"],
+		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan"],
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
