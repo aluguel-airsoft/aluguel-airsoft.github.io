@@ -389,7 +389,7 @@ var reservas = [
 	} ,
 	{
 		"data": "11/03/2018",
-		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan"],
+		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan", "m4", "glock", "mascara"],
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
@@ -403,6 +403,12 @@ var reservas = [
 				"telefone": "554797082354",
 				"valor": 71.0,
 				"equipamentos": "G36 + Oculos telado + Mascara telada + Colete Tan"
+			},
+			{
+				"nome": "Lucas Barbosa",
+				"telefone": "554792028142",
+				"valor": 83.0,
+				"equipamentos": "M4 + Glock + Mascara telada"
 			}
 		]
 	}
