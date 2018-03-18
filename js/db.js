@@ -389,7 +389,7 @@ var reservas = [
 	} ,
 	{
 		"data": "11/03/2018",
-		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan", "m4", "glock", "mascara"],
+		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan"],
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
@@ -403,13 +403,27 @@ var reservas = [
 				"telefone": "554797082354",
 				"valor": 71.0,
 				"equipamentos": "G36 + Oculos telado + Mascara telada + Colete Tan"
-			},
-			{
-				"nome": "Lucas Barbosa",
-				"telefone": "554792028142",
-				"valor": 83.0,
-				"equipamentos": "M4 + Glock + Mascara telada"
 			}
 		]
-	}
+	} ,
+
+	{
+		"data": "18/03/2018",
+		"equipamentos":["colete", "m4", "oculos", "mascara", "mascara1", "coleteTan"],
+		"responsavel": "Pedro S.",
+		"obs": [
+			{
+				"nome": "Jonathan",
+				"telefone": "554797810579",
+				"valor": 58.0,
+				"equipamentos": "Mascara + M4"
+			},
+			{
+				"nome": "alex",
+				"telefone": "554796346862",
+				"valor": 16.0,
+				"equipamentos": "2 coletes + oculos + mascara"
+			}
+		]
+	} 
 ];
