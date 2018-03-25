@@ -429,20 +429,20 @@ var reservas = [
 
 	{
 		"data": "25/03/2018",
-		"equipamentos":["usp", "m4", "oculos", "Oculos", "mascara", "mascara1"],
+		"equipamentos":["glock", "m4", "oculos", "Oculos", "mascara", "mascara1", "colete", "coleteTan"],
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
 				"nome": "Guilherme",
 				"telefone": "554796009839",
 				"valor": 61.0,
-				"equipamentos": " mascara + oculos + m4"
+				"equipamentos": " mascara + oculos + m4 + 2 colestes"
 			},
 			{
 				"nome": "Amigo Guilherme",
 				"telefone": "554796009839",
 				"valor": 41.0,
-				"equipamentos": "usp + oculos + mascara"
+				"equipamentos": "glock + oculos + mascara"
 			}
 		]
 	}
