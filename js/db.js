@@ -413,6 +413,7 @@ var reservas = [
 		"responsavel": "Pedro S.",
 		"obs": [
 			{
+				
 				"nome": "Jonathan",
 				"telefone": "554797810579",
 				"valor": 58.0,
@@ -445,5 +446,24 @@ var reservas = [
 				"equipamentos": "glock + oculos + mascara"
 			}
 		]
-	}
+	} ,
+	{
+		"data": "08/04/2018",
+		"equipamentos":["m4", "g36", "oculos", "mascara", "colete"],
+		"responsavel": "Pedro S.",
+		"obs": [
+			{
+				"nome": "Guilherme",
+				"telefone": "554796009839",
+				"valor": 61.0,
+				"equipamentos": "m4"
+			},
+			{
+				"nome": "Amigo Guilherme",
+				"telefone": "554796009839",
+				"valor": 41.0,
+				"equipamentos": "g36 + oculos + mascara + colete"
+			}
+		]
+	} 
 ];
