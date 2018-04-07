@@ -65,7 +65,7 @@ var promoCodes = [
 		"precoMaxComG36": 130
 	},
 	{
-		"code": "NATAL",
+		"code": "PASCOA",
 		"valor": 0.1,
 		"precoMax": 75,
 		"precoMaxComG36": 135
