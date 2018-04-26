@@ -296,7 +296,7 @@ var reservas = [
 				"telefone": "554796063185",
 				"valor": 3.0,
 				"equipamentos": "mascara1"
-			} ,
+			},
 			{
 				"nome": "wagner mattos",
 				"telefone": "-",
@@ -386,7 +386,7 @@ var reservas = [
 				"equipamentos": "Óculos telado + Mascara + colete tan"
 			}
 		]
-	} ,
+	},
 	{
 		"data": "11/03/2018",
 		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan"],
@@ -405,7 +405,7 @@ var reservas = [
 				"equipamentos": "G36 + Oculos telado + Mascara telada + Colete Tan"
 			}
 		]
-	} ,
+	},
 
 	{
 		"data": "18/03/2018",
@@ -426,7 +426,7 @@ var reservas = [
 				"equipamentos": "2 coletes + oculos + mascara"
 			}
 		]
-	} ,
+	},
 
 	{
 		"data": "25/03/2018",
@@ -446,7 +446,7 @@ var reservas = [
 				"equipamentos": "glock + oculos + mascara"
 			}
 		]
-	} ,
+	},
 	{
 		"data": "08/04/2018",
 		"equipamentos":["m4", "g36", "oculos", "mascara", "colete"],
@@ -465,31 +465,30 @@ var reservas = [
 				"equipamentos": "g36 + oculos + mascara + colete"
 			}
 		]
-	} ,
+	},
 	{
-		"data": "08/04/2018",
+		"data": "22/04/2018",
 		"equipamentos":["m4", "g36", "oculos", "mascara", "colete"],
-		"responsavel": "Pedro S.",
+		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
-				"nome": "Guilherme",
-				"telefone": "554796009839",
-				"valor": 61.0,
+				"nome": "Alexandre",
+				"telefone": "554784273077",
+				"valor": 33.0,
 				"equipamentos": "glock + mascara"
 			}
-			
 		]
-	} ,
+	},
 	{
 		"data": "29/04/2018",
 		"equipamentos":["m4", "g36", "oculos", "mascara", "colete","glock","coleteTan","mascara1","coldre","usp"],
-		"responsavel": "Pedro S.",
+		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
 				"nome": "Ivan",
 				"telefone": "554797853357",
 				"valor": 87.0,
-				"equipamentos": "m4 + glock + colete + óculos"
+				"equipamentos": "m4 + glock + colete + oculos"
 			},
 			{
 				"nome": "Nycholas",
@@ -501,7 +500,7 @@ var reservas = [
 				"nome": "Ruan",
 				"telefone": "554797642780",
 				"valor": 50.0,
-				"equipamentos": "usp + mascara + colete + oculos + Coldre "
+				"equipamentos": "usp + mascara1 + coleteTan + oculos + Coldre "
 			}
 		]
 	} 
