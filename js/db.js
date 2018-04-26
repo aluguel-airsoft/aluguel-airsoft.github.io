@@ -16,7 +16,7 @@ var findReserva = function(data){
 	}
 };
 
-var returnAllDatas = function() {				
+var returnAllDatas = function() {
 	var datas = [];
 	for (var i in reservas) {
 		datas.push(reservas[i].data);
@@ -296,7 +296,7 @@ var reservas = [
 				"telefone": "554796063185",
 				"valor": 3.0,
 				"equipamentos": "mascara1"
-			},
+			} ,
 			{
 				"nome": "wagner mattos",
 				"telefone": "-",
@@ -386,7 +386,7 @@ var reservas = [
 				"equipamentos": "Óculos telado + Mascara + colete tan"
 			}
 		]
-	},
+	} ,
 	{
 		"data": "11/03/2018",
 		"equipamentos":["colete", "balaclava", "g36", "oculos", "mascara1", "coleteTan"],
@@ -405,7 +405,7 @@ var reservas = [
 				"equipamentos": "G36 + Oculos telado + Mascara telada + Colete Tan"
 			}
 		]
-	},
+	} ,
 
 	{
 		"data": "18/03/2018",
@@ -426,7 +426,7 @@ var reservas = [
 				"equipamentos": "2 coletes + oculos + mascara"
 			}
 		]
-	},
+	} ,
 
 	{
 		"data": "25/03/2018",
@@ -446,7 +446,7 @@ var reservas = [
 				"equipamentos": "glock + oculos + mascara"
 			}
 		]
-	},
+	} ,
 	{
 		"data": "08/04/2018",
 		"equipamentos":["m4", "g36", "oculos", "mascara", "colete"],
@@ -465,36 +465,43 @@ var reservas = [
 				"equipamentos": "g36 + oculos + mascara + colete"
 			}
 		]
-	},
+	} ,
 	{
-		"data": "22/04/2018",
-		"equipamentos":["glock", "mascara"],
-		"responsavel": "Mauricio Michels",
+		"data": "08/04/2018",
+		"equipamentos":["m4", "g36", "oculos", "mascara", "colete"],
+		"responsavel": "Pedro S.",
 		"obs": [
 			{
-				"nome": "Alexandre",
-				"telefone": "554784273077",
-				"valor": 33.0,
-				"equipamentos": "Glock + Mascara"
+				"nome": "Guilherme",
+				"telefone": "554796009839",
+				"valor": 61.0,
+				"equipamentos": "glock + mascara"
 			}
+			
 		]
-	},
+	} ,
 	{
 		"data": "29/04/2018",
-		"equipamentos":["m4", "g36", "oculos", "glock", "colete", "mascara"],
-		"responsavel": "Mauricio Michels",
+		"equipamentos":["m4", "g36", "oculos", "mascara", "colete","glock","coleteTan","mascara1","coldre","usp"],
+		"responsavel": "Pedro S.",
 		"obs": [
 			{
 				"nome": "Ivan",
 				"telefone": "554797853357",
 				"valor": 87.0,
-				"equipamentos": "M4 + Glock + Colete + oculos"
+				"equipamentos": "m4 + glock + colete + óculos"
 			},
 			{
 				"nome": "Nycholas",
-				"telefone": "554797243269",
-				"valor": 41.0,
-				"equipamentos": "g36 + mascara"
+				"telefone": "554796009839",
+				"valor": 63.0,
+				"equipamentos": "g36 + mascara "
+			},
+			{
+				"nome": "Ruan",
+				"telefone": "554797642780",
+				"valor": 50.0,
+				"equipamentos": "usp + mascara + colete + oculos + Coldre "
 			}
 		]
 	} 
