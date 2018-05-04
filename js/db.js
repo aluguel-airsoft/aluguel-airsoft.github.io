@@ -124,7 +124,7 @@ var equipamentosExistentes = [
 		"key"	: "usp",
 		"imagem": "usp.jpg",
 		"id" 	: "cBoxUsp",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 35.0
 	},
 	{ 
@@ -503,5 +503,18 @@ var reservas = [
 				"equipamentos": "usp + mascara1 + coleteTan + oculos + Coldre "
 			}
 		]
-	} 
+	},
+	{
+		"data": "06/05/2018",
+		"equipamentos":["m4", "oculos", "mascara", "colete","glock","coldre", "coldre"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Guilherme Lima dos Santos",
+				"telefone": "554797640799",
+				"valor": 96.0,
+				"equipamentos": "M4 + Glock + Óculos telado + Máscara telada + Balaclava + Colete + Coldre"
+			}
+		]
+	}
 ];
