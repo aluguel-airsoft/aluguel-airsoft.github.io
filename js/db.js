@@ -506,7 +506,7 @@ var reservas = [
 	},
 	{
 		"data": "06/05/2018",
-		"equipamentos":["g36", "oculos", "mascara", "colete","glock","coldre", "coldre"],
+		"equipamentos":["m4", "g36", "oculos", "mascara", "colete","glock","coldre", "coldre"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
