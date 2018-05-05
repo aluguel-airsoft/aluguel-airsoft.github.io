@@ -65,7 +65,7 @@ var promoCodes = [
 		"precoMaxComG36": 130
 	},
 	{
-		"code": "PASCOA",
+		"code": "VIPER",
 		"valor": 0.1,
 		"precoMax": 75,
 		"precoMaxComG36": 135
@@ -89,7 +89,7 @@ var equipamentosExistentes = [
 		"imagem": "l96.jpg",
 		"id" 	: "cBoxL96",
 		"disponivel" : false,
-		"preco"	: 70.0
+		"preco"	: 75.0
 	},
 	{
 		"name" 	: "Shotgun",		
@@ -506,14 +506,26 @@ var reservas = [
 	},
 	{
 		"data": "06/05/2018",
-		"equipamentos":["m4", "g36", "oculos", "mascara", "colete","glock","coldre", "coldre"],
+		"equipamentos":["m4", "g36", "glock", "oculos", "mascara", "colete", "coleteTan","coldre", "coldre"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
+				"nome": "Gean Viper",
+				"telefone": "",
+				"valor": 0.0,
+				"equipamentos": "Colete "
+			},
+			{
 				"nome": "Bola",
 				"telefone": "554797640799",
-				"valor": 96.0,
-				"equipamentos": "g36 + Glock + Óculos telado + Máscara telada + Balaclava + Colete + Coldre"
+				"valor": 77.0,
+				"equipamentos": "g36 + Glock + Óculos telado + Máscara telada + Colete Tan + Coldre"
+			},
+			{
+				"nome": "Evnilson oliveira",
+				"telefone": "554797640799",
+				"valor": 55.0,
+				"equipamentos": "M4"
 			}
 		]
 	}
