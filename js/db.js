@@ -506,14 +506,14 @@ var reservas = [
 	},
 	{
 		"data": "06/05/2018",
-		"equipamentos":["m4", "oculos", "mascara", "colete","glock","coldre", "coldre"],
+		"equipamentos":["g36", "oculos", "mascara", "colete","glock","coldre", "coldre"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
-				"nome": "Guilherme Lima dos Santos",
+				"nome": "Bola",
 				"telefone": "554797640799",
 				"valor": 96.0,
-				"equipamentos": "M4 + Glock + Óculos telado + Máscara telada + Balaclava + Colete + Coldre"
+				"equipamentos": "g36 + Glock + Óculos telado + Máscara telada + Balaclava + Colete + Coldre"
 			}
 		]
 	}
