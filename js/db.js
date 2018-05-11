@@ -88,8 +88,8 @@ var equipamentosExistentes = [
 		"key"	: "l96",
 		"imagem": "l96.jpg",
 		"id" 	: "cBoxL96",
-		"disponivel" : false,
-		"preco"	: 75.0
+		"disponivel" : true,
+		"preco"	: 80.0
 	},
 	{
 		"name" 	: "Shotgun",		
@@ -526,6 +526,19 @@ var reservas = [
 				"telefone": "554799960730",
 				"valor": 55.0,
 				"equipamentos": "M4"
+			}
+		]
+	},
+	{
+		"data": "13/05/2018",
+		"equipamentos":["m4", "oculos", "mascara", "coleteTan", "balaclava"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Jorge Goedert",
+				"telefone": "554792022018",
+				"valor": 68.0,
+				"equipamentos": "m4 + oculos + mascara + coleteTan + balaclava"
 			}
 		]
 	}
