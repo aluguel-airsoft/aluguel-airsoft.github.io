@@ -531,14 +531,14 @@ var reservas = [
 	},
 	{
 		"data": "13/05/2018",
-		"equipamentos":["m4", "oculos", "mascara", "coleteTan", "balaclava"],
+		"equipamentos":["m4", "g36", "oculos", "mascara", "mascara1","colete", "coleteTan", "balaclava"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
 				"nome": "Jorge Goedert",
 				"telefone": "554792022018",
-				"valor": 68.0,
-				"equipamentos": "m4 + oculos + mascara + coleteTan + balaclava"
+				"valor": 120.0,
+				"equipamentos": "m4 + G36 + oculos + Oculos Mauricio + 2 mascaras + colete + coleteTan + balaclava"
 			}
 		]
 	}
