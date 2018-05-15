@@ -560,5 +560,31 @@ var reservas = [
 				"equipamentos": "m4 + colete + mascara1"
 			}
 		]
+	},
+	{
+		"data": "26/05/2018",
+		"equipamentos":["m4", "g36", "l96", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coleteTan", "coldre"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Gustavo Luiz",
+				"telefone": "554799132271",
+				"valor": 0.0,
+				"equipamentos": "m4 + g36 + l96 + glock + oculos + mascara + mascara1 + balaclava + colete + coleteTan + coldre"
+			}
+		]
+	},
+	{
+		"data": "27/05/2018",
+		"equipamentos":["m4", "g36", "l96", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coleteTan", "coldre"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Gustavo Luiz",
+				"telefone": "554799132271",
+				"valor": 0.0,
+				"equipamentos": "m4 + g36 + l96 + glock + oculos + mascara + mascara1 + balaclava + colete + coleteTan + coldre"
+			}
+		]
 	}
 ];
