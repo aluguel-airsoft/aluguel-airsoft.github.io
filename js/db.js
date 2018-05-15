@@ -544,14 +544,20 @@ var reservas = [
 	},
 	{
 		"data": "20/05/2018",
-		"equipamentos":["g36", "oculos", "mascara"],
+		"equipamentos":["g36", "oculos", "mascara", "mascara1", "m4", "colete"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
 				"nome": "Igor Schmokel",
 				"telefone": "554796447105",
-				"valor": 68.0,
+				"valor": 66.0,
 				"equipamentos": "g36 + oculos + mascara"
+			},
+			{
+				"nome": "Alexandro Cani",
+				"telefone": "554784311990",
+				"valor": 63.0,
+				"equipamentos": "m4 + colete + mascara1"
 			}
 		]
 	}
