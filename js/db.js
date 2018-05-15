@@ -541,5 +541,18 @@ var reservas = [
 				"equipamentos": "m4 + G36 + oculos + Oculos Mauricio + 2 mascaras + colete + coleteTan + balaclava"
 			}
 		]
+	},
+	{
+		"data": "20/05/2018",
+		"equipamentos":["g36", "oculos", "mascara"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Igor Schmokel",
+				"telefone": "554796447105",
+				"valor": 68.0,
+				"equipamentos": "g36 + oculos + mascara"
+			}
+		]
 	}
 ];
