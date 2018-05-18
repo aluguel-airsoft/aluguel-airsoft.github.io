@@ -544,7 +544,7 @@ var reservas = [
 	},
 	{
 		"data": "20/05/2018",
-		"equipamentos":["g36", "oculos", "mascara", "mascara1", "m4", "colete", "l96"],
+		"equipamentos":["g36", "oculos", "mascara", "mascara1", "m4", "colete", "l96", "usp"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -564,6 +564,12 @@ var reservas = [
 				"telefone": "",
 				"valor": 0.0,
 				"equipamentos": "l96"
+			},
+			{
+				"nome": "Jonatan",
+				"telefone": "554797810579",
+				"valor": 35.0,
+				"equipamentos": "UPS"
 			}
 		]
 	},
