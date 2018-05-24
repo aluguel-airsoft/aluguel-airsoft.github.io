@@ -574,7 +574,7 @@ var reservas = [
 		]
 	},
 	{
-		"data": "26/05/2018",
+		"data": "14/07/2018",
 		"equipamentos":["m4", "g36", "l96", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coleteTan", "coldre"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
@@ -587,7 +587,7 @@ var reservas = [
 		]
 	},
 	{
-		"data": "27/05/2018",
+		"data": "15/07/2018",
 		"equipamentos":["m4", "g36", "l96", "glock", "oculos", "mascara", "mascara1", "balaclava", "colete", "coleteTan", "coldre"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
