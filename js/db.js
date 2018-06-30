@@ -598,5 +598,18 @@ var reservas = [
 				"equipamentos": "m4 + g36 + l96 + glock + oculos + mascara + mascara1 + balaclava + colete + coleteTan + coldre"
 			}
 		]
+	},
+	{
+		"data": "01/07/2018",
+		"equipamentos":["m4", "colete"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Gabriel Mamedes",
+				"telefone": "554799738256",
+				"valor": 60.0,
+				"equipamentos": "m4 + colete"
+			}
+		]
 	}
 ];
