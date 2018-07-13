@@ -165,10 +165,12 @@ $( document ).ready(function() {
 		if(!$("#"+idCBox + "Hide").hasClass("hide")){
 			$("#"+idCBox + "Hide").addClass("hide");
 		}
-		if ($("#"+idCBox)[0].checked){
-			$("#"+idCBox)[0].checked = false;
-			$("#"+idCBox + "Hide .checkbox").removeClass("checked");
-			return true; 
+		if ($("#"+idCBox)[0]){
+			if ($("#"+idCBox)[0].checked){
+				$("#"+idCBox)[0].checked = false;
+				$("#"+idCBox + "Hide .checkbox").removeClass("checked");
+				return true; 
+			}
 		}
 		return false;
 	};
