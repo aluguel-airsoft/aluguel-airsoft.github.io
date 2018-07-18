@@ -97,7 +97,7 @@ var equipamentosExistentes = [
 		"key"	: "shotgun",
 		"imagem": "shotgun.jpg",
 		"id" 	: "cBoxShotgun",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 50.0
 	},
 	{
