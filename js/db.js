@@ -611,5 +611,18 @@ var reservas = [
 				"equipamentos": "m4 + colete"
 			}
 		]
-	}
+	},
+	{
+		"data": "22/07/2018",
+		"equipamentos":["g36", "oculos", "mascara", "coleteTan"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Wagner Wolf",
+				"telefone": "554198901018",
+				"valor": 71.0,
+				"equipamentos": "G36 + Óculos telado + Máscara telada + Colete Tan"
+			}
+		]
+	},
 ];
