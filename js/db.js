@@ -613,7 +613,7 @@ var reservas = [
 		]
 	},
 	{
-		"data": "22/07/2018",
+		"data": "23/07/2018",
 		"equipamentos":["g36", "oculos", "mascara", "coleteTan"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
