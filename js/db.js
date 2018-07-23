@@ -613,15 +613,15 @@ var reservas = [
 		]
 	},
 	{
-		"data": "23/07/2018",
-		"equipamentos":["g36", "oculos", "mascara", "coleteTan"],
+		"data": "26/07/2018",
+		"equipamentos":["m4"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
-				"nome": "Wagner Wolf",
-				"telefone": "554198901018",
-				"valor": 71.0,
-				"equipamentos": "G36 + Óculos telado + Máscara telada + Colete Tan"
+				"nome": "Gabriel Mamedes",
+				"telefone": "554799738256",
+				"valor": 55.0,
+				"equipamentos": "m4"
 			}
 		]
 	},
