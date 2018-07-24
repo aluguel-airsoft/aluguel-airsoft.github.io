@@ -627,7 +627,7 @@ var reservas = [
 	},
 	{
 		"data": "29/07/2018",
-		"equipamentos":["m4", "glock", "mascara", "coldre", "coleteTan", "g36", "mascara1", "colete"],
+		"equipamentos":["m4", "glock", "mascara", "coldre", "coleteTan", "g36", "mascara1", "colete", "shotgun", "oculos", "balaclava"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -641,6 +641,12 @@ var reservas = [
 				"telefone": "554797769992",
 				"valor": 68.0,
 				"equipamentos": "G36 + Mascara telada + Colete"
+			},
+			{
+				"nome": "David",
+				"telefone": "554792379460",
+				"valor": 55.0,
+				"equipamentos": "Shotgun + Óculos telado + Balaclava"
 			}
 		]
 	},
