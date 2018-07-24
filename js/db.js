@@ -625,4 +625,17 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "29/07/2018",
+		"equipamentos":["m4", "glock", "mascara", "coldre", "coleteTan"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Alexandre Albuquerque",
+				"telefone": "554797238973",
+				"valor": 91.0,
+				"equipamentos": "M4 + Glock + coldre + Máscara telada + colete tan"
+			}
+		]
+	},
 ];
