@@ -627,7 +627,7 @@ var reservas = [
 	},
 	{
 		"data": "29/07/2018",
-		"equipamentos":["m4", "glock", "mascara", "coldre", "coleteTan"],
+		"equipamentos":["m4", "glock", "mascara", "coldre", "coleteTan", "g36", "mascara1", "colete"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -635,6 +635,12 @@ var reservas = [
 				"telefone": "554797238973",
 				"valor": 91.0,
 				"equipamentos": "M4 + Glock + coldre + Máscara telada + colete tan"
+			},
+			{
+				"nome": "Gabriel Silva",
+				"telefone": "554797769992",
+				"valor": 68.0,
+				"equipamentos": "G36 + Mascara telada + Colete"
 			}
 		]
 	},
