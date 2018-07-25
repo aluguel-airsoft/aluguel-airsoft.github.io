@@ -2,7 +2,7 @@ $( document ).ready(function() {
 	var precoEquipamentos = 0.0;
 	var equipSelecionados = [];
 
-	//------ Date picker -----------
+//------ Date picker -----------
 
 	$('#dataDesejada').datepicker({					
 		format: "dd/mm/yyyy",
@@ -11,7 +11,27 @@ $( document ).ready(function() {
 		daysOfWeekHighlighted: "0",
 	});
 
-	//------ Checkbox change -------
+	var validaData = function() {
+		var data = $("#dataDesejada").val();
+		var RegExPattern = /^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02]) [\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))|(((0[1-9]|[12]\d|3[01])(0[13578]|1[02])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|[12]\d|30)(0[13456789]|1[012])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|1\d|2[0-8])02((1[6-9]|[2-9]\d)?\d{2}))|(2902((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00))))$/;
+		if (!((data.match(RegExPattern)) && (data!=''))) {
+			alert('Data inválida.');
+			$("#dataDesejada").focus();
+			return false;
+		}
+		else
+			var dataArray = data.split("/");
+			if (dataArray[2].length < 4) {
+				dataArray[2] = "20" + dataArray[2];
+				$("#dataDesejada").val(dataArray.join("/"));
+				if(!validaData()){
+					return false;
+				}
+			}
+			return true;
+	};
+
+//------ Checkbox change -------
 
 	window.onChangeFunc = function(thisInput) {		
 		var objEquip = findExistEquip("id",thisInput.id);
@@ -25,23 +45,27 @@ $( document ).ready(function() {
 		writeTotal();
 	};
 
-	//------ Codigo change -------
+//------ Codigo change -------
 
 	$('#codigoPromocional').change(function() {		
 		writeTotal();
 	});
 
-	//------ Date change ----------
+//------ Date change ----------
 
 	$('#dataDesejada').datepicker().on('changeDate', function() {
-		toggleHide();
+		if(validaData()){
+			toggleHide();
+		}
 	});
 
 	$('#dataDesejada').change(function() {			
-		toggleHide();
+		if(validaData()){
+			toggleHide();
+		}
 	});
 
-	//------ Confirma -------------
+//------ Confirma -------------
 
 	$( "#confirmar" ).click(function() {			
 		var texto = "Ol%C3%A1%2C%20vi%20seu%20an%C3%BAncio%20e%20tenho%20interesse%20em%20alugar%20seus%20equipamentos%20de%20Airsoft.%0AEquipamentos%3A%20%0A";
@@ -92,7 +116,7 @@ $( document ).ready(function() {
 		window.open(url);
 	});
 
-	//------ Aux functions --------
+//------ Aux functions --------
 
 	var getTotal = function() {						
 		if (validaDesconto()) {
@@ -211,7 +235,7 @@ $( document ).ready(function() {
 		}
 	};
 
-	//------ Page configs --------
+//------ Page configs --------
 	var initialConfig = function(){					
 		document.getElementById("ano").textContent = new Date().getFullYear();
 
