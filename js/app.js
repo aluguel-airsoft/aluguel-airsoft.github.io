@@ -11,12 +11,30 @@ $( document ).ready(function() {
 		daysOfWeekHighlighted: "0",
 	});
 
+	$("#dataDesejada").keyup(function(campoData){
+		if (campoData) {
+			var data = campoData.currentTarget.value;
+			if (data.length == 2){
+				data = data + '/';
+				$("#dataDesejada").val(data);
+				return true;              
+			}
+			if (data.length == 5){
+				data = data + '/' + new Date().getFullYear();
+				$("#dataDesejada").val(data);
+				$("#codigoPromocional").focus();
+				return true;
+			}
+		}
+	});
+
 	var validaData = function() {
 		var data = $("#dataDesejada").val();
 		var RegExPattern = /^((((0?[1-9]|[12]\d|3[01])[\.\-\/](0?[13578]|1[02]) [\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|[12]\d|30)[\.\-\/](0?[13456789]|1[012])[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|((0?[1-9]|1\d|2[0-8])[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?\d{2}))|(29[\.\-\/]0?2[\.\-\/]((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00)))|(((0[1-9]|[12]\d|3[01])(0[13578]|1[02])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|[12]\d|30)(0[13456789]|1[012])((1[6-9]|[2-9]\d)?\d{2}))|((0[1-9]|1\d|2[0-8])02((1[6-9]|[2-9]\d)?\d{2}))|(2902((1[6-9]|[2-9]\d)?(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)|00))))$/;
 		if (!((data.match(RegExPattern)) && (data!=''))) {
 			alert('Data inválida.');
 			$("#dataDesejada").focus();
+			$("#dataDesejada").val("");
 			return false;
 		}
 		else
