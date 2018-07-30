@@ -650,4 +650,17 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "05/08/2018",
+		"equipamentos":["g36", "colete", "mascara"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "David",
+				"telefone": "554792379460",
+				"valor": 68.0,
+				"equipamentos": "G36 + Mascara telada + Colete"
+			}
+		]
+	},
 ];
