@@ -45,11 +45,7 @@ var findEquipReservados = function(data, equipamentosRequeridos) {
 };
 
 // Db
-var precoMaximoPadrao = 85;
-
-var precoMaximo = precoMaximoPadrao;
 var porcentDesconto = 0.06;
-var precoMaximoComG36 = 140;
 
 var promoCodes = [				
 	{
