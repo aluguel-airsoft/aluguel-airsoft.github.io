@@ -92,15 +92,6 @@ var equipamentosExistentes = [
 		"preco"	: 80.0
 	},
 	{
-		"name" 	: "Shotgun",		
-		"descricao": "Shotgun spring, dispara 3 BBs por vez",
-		"key"	: "shotgun",
-		"imagem": "shotgun.jpg",
-		"id" 	: "cBoxShotgun",
-		"disponivel" : true,
-		"preco"	: 50.0
-	},
-	{
 		"name" 	: "G36",			
 		"descricao": "G36 elétrica",
 		"key"	: "g36",
@@ -108,6 +99,15 @@ var equipamentosExistentes = [
 		"id" 	: "cBoxG36",
 		"disponivel" : true,
 		"preco"	: 60.0
+	},
+	{
+		"name" 	: "Shotgun",		
+		"descricao": "Shotgun spring, dispara 3 BBs por vez",
+		"key"	: "shotgun",
+		"imagem": "shotgun.jpg",
+		"id" 	: "cBoxShotgun",
+		"disponivel" : true,
+		"preco"	: 50.0
 	},
 	{
 		"name" 	: "Mossberg",		

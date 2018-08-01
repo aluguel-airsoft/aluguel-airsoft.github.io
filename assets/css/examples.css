@@ -123,7 +123,8 @@
 
 .profile-background {
   background-image: url("../images/viper-completo.jpg");
-  background-position: 0px -260px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
   background-size: cover;
   height: 300px;
   position: relative;
