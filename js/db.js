@@ -648,7 +648,7 @@ var reservas = [
 	},
 	{
 		"data": "05/08/2018",
-		"equipamentos":["g36", "colete", "mascara", "oculos", "coleteTan", "mascara1", "balaclava"],
+		"equipamentos":["g36", "colete", "mascara", "oculos", "mascara1", "balaclava"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -660,8 +660,8 @@ var reservas = [
 			{
 				"nome": "Yuri",
 				"telefone": "554788606740",
-				"valor": 13.0,
-				"equipamentos": "Óculos telado + Colete Tan + Máscara telada + Balaclava"
+				"valor": 8.0,
+				"equipamentos": "Óculos telado + Máscara telada + Balaclava"
 			}
 		]
 	},
