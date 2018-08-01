@@ -88,7 +88,7 @@ var equipamentosExistentes = [
 		"key"	: "l96",
 		"imagem": "l96.jpg",
 		"id" 	: "cBoxL96",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 80.0
 	},
 	{
