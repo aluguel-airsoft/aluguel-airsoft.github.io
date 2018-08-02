@@ -656,12 +656,6 @@ var reservas = [
 				"telefone": "554792379460",
 				"valor": 68.0,
 				"equipamentos": "G36 + Mascara telada + Colete"
-			},
-			{
-				"nome": "Yuri",
-				"telefone": "554788606740",
-				"valor": 8.0,
-				"equipamentos": "Óculos telado + Máscara telada + Balaclava"
 			}
 		]
 	},
