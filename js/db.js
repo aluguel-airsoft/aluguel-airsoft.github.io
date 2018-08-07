@@ -602,7 +602,7 @@ var reservas = [
 		"obs": [
 			{
 				"nome": "Gabriel Mamedes",
-				"telefone": "554799738256",
+				"telefone": "554784564503",
 				"valor": 60.0,
 				"equipamentos": "m4 + colete"
 			}
@@ -615,7 +615,7 @@ var reservas = [
 		"obs": [
 			{
 				"nome": "Gabriel Mamedes",
-				"telefone": "554799738256",
+				"telefone": "554784564503",
 				"valor": 55.0,
 				"equipamentos": "m4"
 			}
@@ -656,6 +656,19 @@ var reservas = [
 				"telefone": "554792379460",
 				"valor": 68.0,
 				"equipamentos": "G36 + Mascara telada + Colete"
+			}
+		]
+	},
+	{
+		"data": "12/08/2018",
+		"equipamentos":["glock", "colete", "mascara"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "David",
+				"telefone": "554792379460",
+				"valor": 38.0,
+				"equipamentos": "Glock + Mascara telada + Colete"
 			}
 		]
 	},
