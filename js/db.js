@@ -71,11 +71,20 @@ var promoCodes = [
 var equipamentosExistentes = [	
 	{
 		"name" 	: "M4",		
-		"descricao": "Aeg modelo m4 ",
+		"descricao": "Aeg modelo m4",
 		"key"	: "m4",
 		"imagem": "m4.jpg",
 		"id" 	: "cBoxM4",
 		"disponivel" : false,
+		"preco"	: 55.0
+	},
+	{
+		"name" 	: "M4A1",		
+		"descricao": "Aeg modelo M4A1",
+		"key"	: "m4a1",
+		"imagem": "m4a1.jpg",
+		"id" 	: "cBoxM4a1",
+		"disponivel" : true,
 		"preco"	: 55.0
 	},
 	{
