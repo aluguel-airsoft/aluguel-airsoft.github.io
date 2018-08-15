@@ -681,4 +681,17 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "19/08/2018",
+		"equipamentos":["m4a1", "colete", "mascara"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "David",
+				"telefone": "554792379460",
+				"valor": 63.0,
+				"equipamentos": "M4A1 + Mascara telada + Colete"
+			}
+		]
+	},
 ];
