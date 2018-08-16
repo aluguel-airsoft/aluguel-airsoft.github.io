@@ -683,7 +683,7 @@ var reservas = [
 	},
 	{
 		"data": "19/08/2018",
-		"equipamentos":["m4a1", "colete", "mascara"],
+		"equipamentos":["m4a1", "colete", "mascara", "coleteTan"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -691,6 +691,12 @@ var reservas = [
 				"telefone": "554792379460",
 				"valor": 63.0,
 				"equipamentos": "M4A1 + Mascara telada + Colete"
+			},
+			{
+				"nome": "Erick",
+				"telefone": "554788081590",
+				"valor": 5.0,
+				"equipamentos": "Colete Tan"
 			}
 		]
 	},
