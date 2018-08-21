@@ -151,6 +151,15 @@ var equipamentosExistentes = [
 		"preco"	: 3.0
 	},
 	{ 
+		"name" 	: "Óculos telado",
+		"descricao": "Óculos telado pequeno",
+		"key"	: "oculos1",
+		"imagem": "oculos.jpg",
+		"id" 	: "cBoxOculos1",
+		"disponivel" : true,
+		"preco"	: 3.0
+	},
+	{ 
 		"name" 	: "Máscara telada",
 		"descricao": "Mascara telada para proteção facial",
 		"key"	: "mascara",
@@ -697,6 +706,25 @@ var reservas = [
 				"telefone": "554788081590",
 				"valor": 5.0,
 				"equipamentos": "Colete Tan"
+			}
+		]
+	},
+	{
+		"data": "26/08/2018",
+		"equipamentos":["m4a1", "g36", "oculos","mascara", "mascara1", "shotgun", "colete"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Leonardo",
+				"telefone": "554797761388",
+				"valor": 127.0,
+				"equipamentos": "M4A1 + G36 + Óculos telado + Mascara telada + Mascara telada"
+			},
+			{
+				"nome": "David",
+				"telefone": "554792379460",
+				"valor": 58.0,
+				"equipamentos": "Shotgun + Mascara telada + Colete"
 			}
 		]
 	},
