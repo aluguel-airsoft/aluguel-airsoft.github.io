@@ -710,6 +710,19 @@ var reservas = [
 		]
 	},
 	{
+		"data": "25/08/2018",
+		"equipamentos":["colete", "coleteTan"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Leopoldo",
+				"telefone": "554791792502",
+				"valor": 10.0,
+				"equipamentos": "Colete + ColeteTan"
+			}
+		]
+	},
+	{
 		"data": "26/08/2018",
 		"equipamentos":["m4a1", "g36", "oculos", "oculos1","mascara", "mascara1", "shotgun", "colete"],
 		"responsavel": "Mauricio Michels",
