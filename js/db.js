@@ -711,14 +711,14 @@ var reservas = [
 	},
 	{
 		"data": "26/08/2018",
-		"equipamentos":["m4a1", "g36", "oculos","mascara", "mascara1", "shotgun", "colete"],
+		"equipamentos":["m4a1", "g36", "oculos", "oculos1","mascara", "mascara1", "shotgun", "colete"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
 				"nome": "Leonardo",
 				"telefone": "554797761388",
 				"valor": 127.0,
-				"equipamentos": "M4A1 + G36 + Óculos telado + Mascara telada + Mascara telada"
+				"equipamentos": "M4A1 + G36 + Óculos telado + Óculos telado + Mascara telada + Mascara telada"
 			},
 			{
 				"nome": "David",
