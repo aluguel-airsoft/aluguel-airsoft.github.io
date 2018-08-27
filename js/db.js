@@ -88,15 +88,6 @@ var equipamentosExistentes = [
 		"preco"	: 55.0
 	},
 	{
-		"name" 	: "L96",		
-		"descricao": "Sniper spring, acompanha luneta",
-		"key"	: "l96",
-		"imagem": "l96.jpg",
-		"id" 	: "cBoxL96",
-		"disponivel" : true,
-		"preco"	: 80.0
-	},
-	{
 		"name" 	: "G36",			
 		"descricao": "G36 elétrica",
 		"key"	: "g36",
@@ -104,6 +95,15 @@ var equipamentosExistentes = [
 		"id" 	: "cBoxG36",
 		"disponivel" : true,
 		"preco"	: 60.0
+	},
+	{
+		"name" 	: "L96",		
+		"descricao": "Sniper spring, acompanha luneta",
+		"key"	: "l96",
+		"imagem": "l96.jpg",
+		"id" 	: "cBoxL96",
+		"disponivel" : true,
+		"preco"	: 80.0
 	},
 	{
 		"name" 	: "Shotgun",		
