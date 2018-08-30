@@ -112,7 +112,7 @@ var equipamentosExistentes = [
 		"imagem": "shotgun.jpg",
 		"id" 	: "cBoxShotgun",
 		"disponivel" : true,
-		"preco"	: 50.0
+		"preco"	: 45.0
 	},
 	{
 		"name" 	: "Mossberg",		
