@@ -741,4 +741,30 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "01/09/2018",
+		"equipamentos":["glock", "colete", "coleteTan"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Gustavo Henrique",
+				"telefone": "554788694364",
+				"valor": 40.0,
+				"equipamentos": "glock + colete + colete Tan"
+			}
+		]
+	},
+	{
+		"data": "09/09/2018",
+		"equipamentos":["m4a1","mascara", "colete"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "David",
+				"telefone": "554792379460",
+				"valor": 63.0,
+				"equipamentos": "M4A1 + Mascara telada + Colete"
+			}
+		]
+	},
 ];
