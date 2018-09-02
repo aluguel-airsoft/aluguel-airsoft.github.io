@@ -102,7 +102,7 @@ var equipamentosExistentes = [
 		"key"	: "l96",
 		"imagem": "l96.jpg",
 		"id" 	: "cBoxL96",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 80.0
 	},
 	{
@@ -210,7 +210,7 @@ var equipamentosExistentes = [
 		"key"	: "coldre",
 		"imagem": "coldre.jpg",
 		"id" 	: "cBoxColdre",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 4.0
 	}
 ];
@@ -756,7 +756,7 @@ var reservas = [
 	},
 	{
 		"data": "02/09/2018",
-		"equipamentos":["colete", "coleteTan"],
+		"equipamentos":["colete", "coleteTan", "m4a1", "mascara"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -764,6 +764,12 @@ var reservas = [
 				"telefone": "554791792502",
 				"valor": 10.0,
 				"equipamentos": "Colete + ColeteTan"
+			},
+			{
+				"nome": "Matheus Kaue",
+				"telefone": "554797413577",
+				"valor": 58.0,
+				"equipamentos": "M4A1 + Mascara"
 			}
 		]
 	},
