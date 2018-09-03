@@ -774,6 +774,19 @@ var reservas = [
 		]
 	},
 	{
+		"data": "05/09/2018",
+		"equipamentos":["colete"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Igor",
+				"telefone": "554788913099",
+				"valor": 5.0,
+				"equipamentos": "Colete"
+			}
+		]
+	},
+	{
 		"data": "09/09/2018",
 		"equipamentos":["m4a1","mascara", "colete"],
 		"responsavel": "Mauricio Michels",

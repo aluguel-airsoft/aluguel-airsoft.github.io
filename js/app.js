@@ -101,6 +101,12 @@ $( document ).ready(function() {
 			return;
 		}
 
+		var userName = $("#userName").val();
+		if (!userName) {
+			alert("Favor informe seu nome para a reserva");
+			return;
+		}
+
 		var data = $("#dataDesejada").val();
 		if (data) {
 			var equipIndis = findEquipReservados(data, equipamentosKey);
@@ -115,6 +121,7 @@ $( document ).ready(function() {
 				alert("Infelizmente já existe reserva para o(s) equipamento(s) \"" + auxEquips + "\" para o dia "+data);
 				return;
 			}else{
+				texto += "%0ANome%3A%20"+encodeURI(userName)+"%20";
 				texto += "%0AData%3A%20"+encodeURI(data)+"%20";
 			}
 		}else {
