@@ -799,4 +799,17 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "07/10/2018",
+		"equipamentos":["m4a1","glock", "oculos", "balaclava"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Allan de Souza Soares",
+				"telefone": "554792464983",
+				"valor": 90.0,
+				"equipamentos": "M4A1 + glock + oculos + balaclava"
+			}
+		]
+	},
 ];
