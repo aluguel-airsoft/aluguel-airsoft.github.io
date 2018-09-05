@@ -788,7 +788,7 @@ var reservas = [
 	},
 	{
 		"data": "09/09/2018",
-		"equipamentos":["m4a1","mascara", "colete"],
+		"equipamentos":["m4a1","mascara", "colete", "g36", "oculos", "mascara1", "coleteTan"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -796,6 +796,12 @@ var reservas = [
 				"telefone": "554792379460",
 				"valor": 63.0,
 				"equipamentos": "M4A1 + Mascara telada + Colete"
+			},
+			{
+				"nome": "Itrio Woods",
+				"telefone": "554797611318",
+				"valor": 71.0,
+				"equipamentos": "G36 + Óculos + Mascara telada + Colete Tan"
 			}
 		]
 	},
