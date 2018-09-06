@@ -788,7 +788,7 @@ var reservas = [
 	},
 	{
 		"data": "09/09/2018",
-		"equipamentos":["m4a1","mascara", "colete", "g36", "oculos", "mascara1", "coleteTan"],
+		"equipamentos":["m4a1","mascara", "colete", "g36", "oculos", "mascara1", "coleteTan", "glock", "oculos1"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -802,6 +802,12 @@ var reservas = [
 				"telefone": "554797611318",
 				"valor": 71.0,
 				"equipamentos": "G36 + Óculos + Mascara telada + Colete Tan"
+			},
+			{
+				"nome": "Mateus Ferreira de lima ",
+				"telefone": "554796167068",
+				"valor": 66.0,
+				"equipamentos": "Glock + Glock + Óculos telado + Mascara telada"
 			}
 		]
 	},
