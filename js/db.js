@@ -51,20 +51,14 @@ var promoCodes = [
 	{
 		"code": "AFIRMATIRA",
 		"valor": 0.270,
-		"precoMax": 65,
-		"precoMaxComG36": 125
 	},
 	{
 		"code": "ASJLLE",
 		"valor": 0.176,
-		"precoMax": 70,
-		"precoMaxComG36": 130
 	},
 	{
 		"code": "VIPER",
 		"valor": 0.1,
-		"precoMax": 75,
-		"precoMaxComG36": 135
 	}
 ];
 

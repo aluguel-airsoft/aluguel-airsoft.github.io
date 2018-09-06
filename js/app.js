@@ -152,26 +152,8 @@ $( document ).ready(function() {
 		}
 	};
 
-	// var setPrecoMaximo = function(objPromo) {		
-	// 	if (equipSelecionados.indexOf(findExistEquip("key", "g36")) >= 0
-	// 		&& equipSelecionados.indexOf(findExistEquip("key", "m4")) >= 0) {
-	// 		if (objPromo) {
-	// 			precoMaximo = objPromo.precoMaxComG36;
-	// 		}else{
-	// 			precoMaximo = precoMaximoComG36;
-	// 		}
-	// 	}else {
-	// 		if (objPromo) {
-	// 			precoMaximo = objPromo.precoMax;
-	// 		}else{
-	// 			precoMaximo = precoMaximoPadrao;
-	// 		}
-	// 	}
-	// };
-
 	var writeTotal = function() {					
 		$("#total").text("R$ " + getTotal().toFixed(2));
-		// $("#precoMaximo").text(precoMaximo.toFixed(2));
 	};
 
 	var validaDescontoPorSelecao = function() {		
@@ -186,7 +168,6 @@ $( document ).ready(function() {
 		var objPromo = validaPromo();
 		if (objPromo) {
 			porcentDesconto = objPromo.valor;
-			// setPrecoMaximo();
 			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code);
 			return true;
 		}else if(validaDescontoPorSelecao()){
@@ -260,8 +241,6 @@ $( document ).ready(function() {
 //------ Page configs --------
 	var initialConfig = function(){					
 		document.getElementById("ano").textContent = new Date().getFullYear();
-
-		// $("#precoMaximo").text(precoMaximo.toFixed(2));
 	};
 	initialConfig();
 
