@@ -786,8 +786,8 @@ var reservas = [
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
-				"nome": "David",
-				"telefone": "554792379460",
+				"nome": "Guilherme Andretta",
+				"telefone": "554699177262",
 				"valor": 63.0,
 				"equipamentos": "M4A1 + Mascara telada + Colete"
 			},
