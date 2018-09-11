@@ -49,6 +49,10 @@ var porcentDesconto = 0.06;
 
 var promoCodes = [				
 	{
+		"code": "RECVIPER",
+		"valor": 0.5,
+	},
+	{
 		"code": "AFIRMATIRA",
 		"valor": 0.270,
 	},
