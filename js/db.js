@@ -816,6 +816,19 @@ var reservas = [
 		]
 	},
 	{
+		"data": "16/09/2018",
+		"equipamentos":["m4a1"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Caue",
+				"telefone": "554699177262",
+				"valor": 30.0,
+				"equipamentos": "M4A1 + Colete multican"
+			}
+		]
+	},
+	{
 		"data": "07/10/2018",
 		"equipamentos":["m4a1","glock", "oculos", "balaclava"],
 		"responsavel": "Mauricio Michels",
