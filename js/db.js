@@ -817,7 +817,7 @@ var reservas = [
 	},
 	{
 		"data": "16/09/2018",
-		"equipamentos":["m4a1"],
+		"equipamentos":["m4a1","mascara", "coleteTan", "g36", "oculos", "glock"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -825,6 +825,12 @@ var reservas = [
 				"telefone": "554699177262",
 				"valor": 30.0,
 				"equipamentos": "M4A1 + Colete multican"
+			},
+			{
+				"nome": "Allan de Souza Soares",
+				"telefone": "554792464983",
+				"valor": 100.0,
+				"equipamentos": "Máscara telada + Óculos telado + Glock + G36 + Colete Tan"
 			}
 		]
 	},
