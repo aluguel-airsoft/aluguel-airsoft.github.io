@@ -100,7 +100,7 @@ var equipamentosExistentes = [
 		"key"	: "l96",
 		"imagem": "l96.jpg",
 		"id" 	: "cBoxL96",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 80.0
 	},
 	{
@@ -208,7 +208,7 @@ var equipamentosExistentes = [
 		"key"	: "coldre",
 		"imagem": "coldre.jpg",
 		"id" 	: "cBoxColdre",
-		"disponivel" : false,
+		"disponivel" : true,
 		"preco"	: 4.0
 	}
 ];
@@ -850,6 +850,32 @@ var reservas = [
 				"telefone": "554792464983",
 				"valor": 90.0,
 				"equipamentos": "M4A1 + glock + oculos + balaclava"
+			}
+		]
+	},
+	{
+		"data": "20/10/2018",
+		"equipamentos":["g36", "mascara", "coleteTan"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Juliano",
+				"telefone": "554197021393",
+				"valor": 68.0,
+				"equipamentos": "G36 + Mascara + colete Tan"
+			}
+		]
+	},
+	{
+		"data": "21/10/2018",
+		"equipamentos":["g36", "mascara", "coleteTan"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Juliano",
+				"telefone": "554197021393",
+				"valor": 0.0,
+				"equipamentos": "G36 + Mascara + colete Tan"
 			}
 		]
 	},
