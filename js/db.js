@@ -841,6 +841,19 @@ var reservas = [
 		]
 	},
 	{
+		"data": "23/09/2018",
+		"equipamentos":["mascara", "mascara1"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Eduardo",
+				"telefone": "554799163942",
+				"valor": 6.0,
+				"equipamentos": "2 mascaras"
+			}
+		]
+	},
+	{
 		"data": "07/10/2018",
 		"equipamentos":["m4a1","glock", "oculos", "balaclava"],
 		"responsavel": "Mauricio Michels",
