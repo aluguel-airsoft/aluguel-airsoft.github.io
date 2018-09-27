@@ -854,6 +854,32 @@ var reservas = [
 		]
 	},
 	{
+		"data": "29/09/2018",
+		"equipamentos":["glock", "colete"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Mateus",
+				"telefone": "554796850612",
+				"valor": 35.0,
+				"equipamentos": "Glock + Colete"
+			}
+		]
+	},
+	{
+		"data": "30/09/2018",
+		"equipamentos":["g36", "colete", "oculos", "mascara"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Simei Pereira",
+				"telefone": "554788058797",
+				"valor": 71.0,
+				"equipamentos": "G36 + Colete + oculos + mascara"
+			}
+		]
+	},
+	{
 		"data": "07/10/2018",
 		"equipamentos":["m4a1","glock", "oculos", "balaclava"],
 		"responsavel": "Mauricio Michels",
