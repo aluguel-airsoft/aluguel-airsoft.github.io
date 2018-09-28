@@ -855,7 +855,7 @@ var reservas = [
 	},
 	{
 		"data": "29/09/2018",
-		"equipamentos":["glock", "colete"],
+		"equipamentos":["glock", "colete", "m4a1"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -863,6 +863,12 @@ var reservas = [
 				"telefone": "554796850612",
 				"valor": 35.0,
 				"equipamentos": "Glock + Colete"
+			},
+			{
+				"nome": "Marcio José Reitz",
+				"telefone": "554788470213",
+				"valor": 55.0,
+				"equipamentos": "M4A1"
 			}
 		]
 	},
