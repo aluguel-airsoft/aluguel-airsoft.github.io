@@ -900,7 +900,7 @@ var reservas = [
 	},
 	{
 		"data": "20/10/2018",
-		"equipamentos":["g36", "mascara", "coleteTan"],
+		"equipamentos":["g36", "mascara", "coleteTan", "m4a1", "mascara1", "colete"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -908,12 +908,18 @@ var reservas = [
 				"telefone": "554197021393",
 				"valor": 68.0,
 				"equipamentos": "G36 + Mascara + colete Tan"
+			},
+			{
+				"nome": "Cristiano",
+				"telefone": "554197021393",
+				"valor": 63.0,
+				"equipamentos": "M4A1 + Mascara + colete"
 			}
 		]
 	},
 	{
 		"data": "21/10/2018",
-		"equipamentos":["g36", "mascara", "coleteTan"],
+		"equipamentos":["g36", "mascara", "coleteTan", "m4a1", "mascara1", "colete"],
 		"responsavel": "Mauricio Michels",
 		"obs": [
 			{
@@ -921,6 +927,12 @@ var reservas = [
 				"telefone": "554197021393",
 				"valor": 0.0,
 				"equipamentos": "G36 + Mascara + colete Tan"
+			},
+			{
+				"nome": "Cristiano",
+				"telefone": "554197021393",
+				"valor": 63.0,
+				"equipamentos": "M4A1 + Mascara + colete"
 			}
 		]
 	},
