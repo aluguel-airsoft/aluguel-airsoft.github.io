@@ -118,7 +118,7 @@ var equipamentosExistentes = [
 		"key"	: "mossberg",
 		"imagem": "mossberg.jpg",
 		"id" 	: "cBoxMossberg",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 40.0
 	},
 	{ 
