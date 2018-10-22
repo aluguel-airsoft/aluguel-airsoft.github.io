@@ -936,4 +936,18 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "05/11/2018",
+		"equipamentos":["glock", "coleteTan", "oculos"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Samuel da costa correa ",
+				"telefone": "554799649838",
+				"valor": 38.0,
+				"equipamentos": "Glock + Oculos + colete Tan"
+			}
+		]
+	},
+
 ];
