@@ -203,11 +203,29 @@ var equipamentosExistentes = [
 		"preco"	: 5.0
 	},
 	{ 
+		"name" 	: "Colete multicam",		
+		"descricao": "Colete tático multicam com porta mags e bolsos auxiliares",
+		"key"	: "colete-multicam",
+		"imagem": "colete-multicam.png",
+		"id" 	: "cBoxColeteMulticam",
+		"disponivel" : true,
+		"preco"	: 20.0
+	},
+	{ 
 		"name" 	: "Colete",		
 		"descricao": "Colete tático preto com porta mags e bolsos auxiliares",
 		"key"	: "colete",
 		"imagem": "colete.png",
 		"id" 	: "cBoxColete",
+		"disponivel" : true,
+		"preco"	: 20.0
+	},
+	{ 
+		"name" 	: "Colete plate",		
+		"descricao": "Colete plate tático",
+		"key"	: "colete-plate",
+		"imagem": "colete-plate.png",
+		"id" 	: "cBoxColetePlate",
 		"disponivel" : true,
 		"preco"	: 20.0
 	},
