@@ -71,25 +71,43 @@ var equipamentosExistentes = [
 		"name" 	: "M4",		
 		"descricao": "Aeg modelo m4",
 		"key"	: "m4",
-		"imagem": "m4.jpg",
+		"imagem": "m4.png",
 		"id" 	: "cBoxM4",
 		"disponivel" : false,
-		"preco"	: 55.0
+		"preco"	: 60.0
 	},
 	{
 		"name" 	: "M4A1",		
 		"descricao": "Aeg modelo M4A1",
 		"key"	: "m4a1",
-		"imagem": "m4a1.jpg",
+		"imagem": "m4a1.png",
 		"id" 	: "cBoxM4a1",
 		"disponivel" : true,
-		"preco"	: 55.0
+		"preco"	: 60.0
+	},
+	{
+		"name" 	: "Ares Amoeba",		
+		"descricao": "Aeg Ares Amoeba modelo M4",
+		"key"	: "ares",
+		"imagem": "ares-amoeba.png",
+		"id" 	: "cBoxAres",
+		"disponivel" : true,
+		"preco"	: 60.0
+	},
+	{
+		"name" 	: "ICS",		
+		"descricao": "Aeg ICS modelo Cxp-15k",
+		"key"	: "ics",
+		"imagem": "ics.png",
+		"id" 	: "cBoxIcs",
+		"disponivel" : true,
+		"preco"	: 60.0
 	},
 	{
 		"name" 	: "G36",			
 		"descricao": "G36 elétrica",
 		"key"	: "g36",
-		"imagem": "g36.jpg",
+		"imagem": "g36.png",
 		"id" 	: "cBoxG36",
 		"disponivel" : true,
 		"preco"	: 60.0
@@ -98,16 +116,16 @@ var equipamentosExistentes = [
 		"name" 	: "L96",		
 		"descricao": "Sniper spring, acompanha luneta",
 		"key"	: "l96",
-		"imagem": "l96.jpg",
+		"imagem": "l96.png",
 		"id" 	: "cBoxL96",
 		"disponivel" : true,
-		"preco"	: 80.0
+		"preco"	: 70.0
 	},
 	{
 		"name" 	: "Shotgun",		
 		"descricao": "Shotgun spring, dispara 3 BBs por vez",
 		"key"	: "shotgun",
-		"imagem": "shotgun.jpg",
+		"imagem": "shotgun.png",
 		"id" 	: "cBoxShotgun",
 		"disponivel" : true,
 		"preco"	: 45.0
@@ -116,7 +134,7 @@ var equipamentosExistentes = [
 		"name" 	: "Mossberg",		
 		"descricao": "Shotgun mossberg spring, dispara 1 BBs por vez",
 		"key"	: "mossberg",
-		"imagem": "mossberg.jpg",
+		"imagem": "mossberg.png",
 		"id" 	: "cBoxMossberg",
 		"disponivel" : false,
 		"preco"	: 40.0
@@ -125,7 +143,7 @@ var equipamentosExistentes = [
 		"name" 	: "USP",		
 		"descricao": "Pistola USP Gbb(CO2)",
 		"key"	: "usp",
-		"imagem": "usp.jpg",
+		"imagem": "usp.png",
 		"id" 	: "cBoxUsp",
 		"disponivel" : false,
 		"preco"	: 35.0
@@ -134,7 +152,7 @@ var equipamentosExistentes = [
 		"name" 	: "Glock",		
 		"descricao": "Glock elétrica",
 		"key"	: "glock",
-		"imagem": "glock.jpg",
+		"imagem": "glock.png",
 		"id" 	: "cBoxGlock",
 		"disponivel" : true,
 		"preco"	: 30.0
@@ -143,73 +161,73 @@ var equipamentosExistentes = [
 		"name" 	: "Óculos telado",
 		"descricao": "Óculos telado pequeno",
 		"key"	: "oculos",
-		"imagem": "oculos.jpg",
+		"imagem": "oculos.png",
 		"id" 	: "cBoxOculos",
 		"disponivel" : true,
-		"preco"	: 3.0
+		"preco"	: 10.0
 	},
 	{ 
 		"name" 	: "Óculos telado",
 		"descricao": "Óculos telado pequeno",
 		"key"	: "oculos1",
-		"imagem": "oculos.jpg",
+		"imagem": "oculos.png",
 		"id" 	: "cBoxOculos1",
 		"disponivel" : true,
-		"preco"	: 3.0
+		"preco"	: 10.0
 	},
 	{ 
 		"name" 	: "Máscara telada",
 		"descricao": "Mascara telada para proteção facial",
 		"key"	: "mascara",
-		"imagem": "mascara.jpg",
+		"imagem": "mascara.png",
 		"id" 	: "cBoxMascara",
 		"disponivel" : true,
-		"preco"	: 3.0
+		"preco"	: 15.0
 	},
 	{ 
 		"name" 	: "Máscara telada",
 		"descricao": "Mascara telada para proteção facial",
 		"key"	: "mascara1",
-		"imagem": "mascara.jpg",
+		"imagem": "mascara.png",
 		"id" 	: "cBoxMascara1",
 		"disponivel" : true,
-		"preco"	: 3.0
+		"preco"	: 15.0
 	},
 	{ 
 		"name" 	: "Balaclava",	
 		"descricao": "Balaclava de caveira. Meia face",
 		"key"	: "balaclava",
-		"imagem": "balaclava.jpg",
+		"imagem": "balaclava.png",
 		"id" 	: "cBoxBalaclava",
 		"disponivel" : true,
-		"preco"	: 2.0
+		"preco"	: 5.0
 	},
 	{ 
 		"name" 	: "Colete",		
 		"descricao": "Colete tático preto com porta mags e bolsos auxiliares",
 		"key"	: "colete",
-		"imagem": "colete.jpg",
+		"imagem": "colete.png",
 		"id" 	: "cBoxColete",
 		"disponivel" : true,
-		"preco"	: 5.0
+		"preco"	: 20.0
 	},
 	{ 
 		"name" 	: "Colete Tan",		
 		"descricao": "Colete tático Tan ",
 		"key"	: "coleteTan",
-		"imagem": "coleteTan.jpg",
+		"imagem": "coleteTan.png",
 		"id" 	: "cBoxColeteTan",
 		"disponivel" : true,
-		"preco"	: 5.0
+		"preco"	: 20.0
 	},
 	{ 
 		"name" 	: "Coldre",		
 		"descricao": "Coldre lateral de perna com cinto tático",
 		"key"	: "coldre",
-		"imagem": "coldre.jpg",
+		"imagem": "coldre.png",
 		"id" 	: "cBoxColdre",
 		"disponivel" : true,
-		"preco"	: 4.0
+		"preco"	: 10.0
 	}
 ];
 
