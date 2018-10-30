@@ -973,6 +973,31 @@ var reservas = [
 		]
 	},
 	{
+		"data": "04/11/2018",
+		"equipamentos":["g36", "balaclava", "ares", "m4a1"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Simei Pereira",
+				"telefone": "554788058797",
+				"valor": 65.0,
+				"equipamentos": "G36 + balaclava"
+			},
+			{
+				"nome": "Sedinei Pereira",
+				"telefone": "554791150057",
+				"valor": 60.0,
+				"equipamentos": "Ares"
+			},
+			{
+				"nome": "Thiago Roger de Oliveira",
+				"telefone": "554797581353",
+				"valor": 60.0,
+				"equipamentos": "M4A1"
+			}
+		]
+	},
+	{
 		"data": "05/11/2018",
 		"equipamentos":["glock", "coleteTan", "oculos"],
 		"responsavel": "Mauricio Michels",
@@ -985,5 +1010,4 @@ var reservas = [
 			}
 		]
 	},
-
 ];
