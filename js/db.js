@@ -16,7 +16,7 @@ var findReserva = function(data){
 	}
 };
 
-var returnAllDatas = function() {
+var returnAllDatas = function() {				
 	var datas = [];
 	for (var i in reservas) {
 		datas.push(reservas[i].data);
@@ -982,6 +982,19 @@ var reservas = [
 				"telefone": "554799649838",
 				"valor": 38.0,
 				"equipamentos": "Glock + Oculos + colete Tan"
+			}
+		]
+	},
+	{
+		"data": "10/11/2018",
+		"equipamentos":["m4a1", "ares", "oculos", "oculos1", "mascara", "mascara1", "colete-multicam", "colete"],
+		"responsavel": "Mauricio Michels",
+		"obs": [
+			{
+				"nome": "Dirceu",
+				"telefone": "554796540031",
+				"valor": 210.0,
+				"equipamentos": "M4A1 + Ares Amoeba + Óculos telado + Óculos telado + Máscara telada + Máscara telada + Colete multicam + Colete"
 			}
 		]
 	},
