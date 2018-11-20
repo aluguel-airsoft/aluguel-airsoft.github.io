@@ -998,5 +998,18 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "25/11/2018",
+		"equipamentos":["ares", "mascara", "coldre", "glock"],
+		"responsavel": "Lew",
+		"obs": [
+			{
+				"nome": "Lucas Erias Comin",
+				"telefone": "554797643629",
+				"valor": 115.0,
+				"equipamentos": "Ares Amoeba + Máscara telada + Glock + Coldre"
+			}
+		]
+	},
 
 ];
