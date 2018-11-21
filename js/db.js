@@ -1000,7 +1000,7 @@ var reservas = [
 	},
 	{
 		"data": "25/11/2018",
-		"equipamentos":["ares", "mascara", "coldre", "glock", "oculos", "m4a1", "oculos1", "balaclava"],
+		"equipamentos":["ares", "mascara", "coldre", "glock", "oculos", "m4a1", "oculos1", "balaclava", "g36", "ics", "colete", "colete-plate"],
 		"responsavel": "Lew",
 		"obs": [
 			{
@@ -1014,6 +1014,12 @@ var reservas = [
 				"telefone": "554788021253",
 				"valor": 75.0,
 				"equipamentos": "M4A1 + oculos telado + Balaclava"
+			},
+			{
+				"nome": "Rodrigo C Ricioli",
+				"telefone": "554799169455",
+				"valor": 160.0,
+				"equipamentos": "G36 + ICS + Colete + Colete plate"
 			}
 		]
 	},
