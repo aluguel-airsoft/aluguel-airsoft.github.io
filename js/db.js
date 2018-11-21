@@ -1000,7 +1000,7 @@ var reservas = [
 	},
 	{
 		"data": "25/11/2018",
-		"equipamentos":["ares", "mascara", "coldre", "glock", "oculos"],
+		"equipamentos":["ares", "mascara", "coldre", "glock", "oculos", "m4a1", "oculos1", "balaclava"],
 		"responsavel": "Lew",
 		"obs": [
 			{
@@ -1008,6 +1008,12 @@ var reservas = [
 				"telefone": "554797643629",
 				"valor": 125.0,
 				"equipamentos": "Ares Amoeba + Máscara telada + Glock + Coldre + oculos telado"
+			},
+			{
+				"nome": "Luís Carlos",
+				"telefone": "554788021253",
+				"valor": 75.0,
+				"equipamentos": "M4A1 + oculos telado + Balaclava"
 			}
 		]
 	},
