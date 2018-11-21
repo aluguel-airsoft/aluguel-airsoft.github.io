@@ -1011,7 +1011,7 @@ var reservas = [
 			},
 			{
 				"nome": "Luís Carlos",
-				"telefone": "554788021253",
+				"telefone": "554288021253",
 				"valor": 75.0,
 				"equipamentos": "M4A1 + oculos telado + Balaclava"
 			},
