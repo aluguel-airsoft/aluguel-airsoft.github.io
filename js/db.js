@@ -999,8 +999,27 @@ var reservas = [
 		]
 	},
 	{
+		"data": "24/11/2018",
+		"equipamentos":["ares", "mascara", "oculos", "m4a1", "oculos1", "balaclava"],
+		"responsavel": "Lew",
+		"obs": [
+			{
+				"nome": "Luís Carlos",
+				"telefone": "554288021253",
+				"valor": 75.0,
+				"equipamentos": "M4A1 + oculos telado + Balaclava"
+			},
+			{
+				"nome": "Leonardo Geremias",
+				"telefone": "554899714196",
+				"valor": 85.0,
+				"equipamentos": "Ares + Óculos telado + Máscara telada"
+			}
+		]
+	},
+	{
 		"data": "25/11/2018",
-		"equipamentos":["ares", "mascara", "coldre", "glock", "oculos", "m4a1", "oculos1", "balaclava", "g36", "ics", "colete", "colete-plate"],
+		"equipamentos":["ares", "mascara", "coldre", "glock", "oculos", "g36", "ics", "colete", "colete-plate"],
 		"responsavel": "Lew",
 		"obs": [
 			{
@@ -1008,12 +1027,6 @@ var reservas = [
 				"telefone": "554797643629",
 				"valor": 125.0,
 				"equipamentos": "Ares Amoeba + Máscara telada + Glock + Coldre + oculos telado"
-			},
-			{
-				"nome": "Luís Carlos",
-				"telefone": "554288021253",
-				"valor": 75.0,
-				"equipamentos": "M4A1 + oculos telado + Balaclava"
 			},
 			{
 				"nome": "Rodrigo C Ricioli",
