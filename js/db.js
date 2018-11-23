@@ -1000,7 +1000,7 @@ var reservas = [
 	},
 	{
 		"data": "24/11/2018",
-		"equipamentos":["ares", "mascara", "oculos", "m4a1", "oculos1", "balaclava"],
+		"equipamentos":["ares", "mascara", "oculos", "m4a1", "oculos1", "balaclava", "ics"],
 		"responsavel": "Lew",
 		"obs": [
 			{
@@ -1014,6 +1014,12 @@ var reservas = [
 				"telefone": "554899714196",
 				"valor": 85.0,
 				"equipamentos": "Ares + Óculos telado + Máscara telada"
+			},
+			{
+				"nome": "Victor Amaral",
+				"telefone": "554899388701",
+				"valor": 60.0,
+				"equipamentos": "ICS"
 			}
 		]
 	},
