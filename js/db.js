@@ -1017,7 +1017,7 @@ var reservas = [
 			},
 			{
 				"nome": "Victor Amaral",
-				"telefone": "554899388701",
+				"telefone": "554799388701",
 				"valor": 60.0,
 				"equipamentos": "ICS"
 			}
