@@ -1000,7 +1000,7 @@ var reservas = [
 	},
 	{
 		"data": "24/11/2018",
-		"equipamentos":["ares", "mascara", "oculos", "m4a1", "oculos1", "balaclava", "ics"],
+		"equipamentos":["ares", "mascara", "oculos", "m4a1", "oculos1", "balaclava", "ics", "g36", "colete-multicam"],
 		"responsavel": "Lew",
 		"obs": [
 			{
@@ -1020,6 +1020,12 @@ var reservas = [
 				"telefone": "554799388701",
 				"valor": 60.0,
 				"equipamentos": "ICS"
+			} ,
+			{
+				"nome": "Marco Peretti",
+				"telefone": "554792639323",
+				"valor": 80.0,
+				"equipamentos": "G36 + colete multicam"
 			}
 		]
 	},
