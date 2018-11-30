@@ -91,7 +91,7 @@ var equipamentosExistentes = [
 		"key"	: "ares",
 		"imagem": "ares-amoeba.png",
 		"id" 	: "cBoxAres",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 60.0
 	},
 	{
