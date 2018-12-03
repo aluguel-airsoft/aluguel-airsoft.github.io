@@ -1046,7 +1046,7 @@ var reservas = [
 				"valor": 160.0,
 				"equipamentos": "G36 + ICS + Colete + Colete plate"
 			},
-{
+			{
 				"nome": "Robson da Silva",
 				"telefone": "554796337799",
 				"valor": 54.0,
@@ -1054,5 +1054,19 @@ var reservas = [
 			}
 		]
 	},
+	{
+		"data": "09/12/2018",
+		"equipamentos":["m4a1", "g36", "oculos", "oculos1", "mascara", "mascara1"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Leonardo",
+				"telefone": "554797761388",
+				"valor": 170.0,
+				"equipamentos": "M4A1 + G36 + Oculos + Oculos + Mascara + Mascara"
+			}
+		]
+	},
+
 
 ];
