@@ -63,6 +63,10 @@ var promoCodes = [
 	{
 		"code": "VIPER",
 		"valor": 0.1,
+	},
+	{
+		"code": "NATAL",
+		"valor": 0.05,
 	}
 ];
 
@@ -1067,6 +1071,43 @@ var reservas = [
 			}
 		]
 	},
-
-
+	{
+		"data": "09/12/2018",
+		"equipamentos":["m4a1", "g36", "oculos", "oculos1", "mascara", "mascara1"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Leonardo",
+				"telefone": "554797761388",
+				"valor": 170.0,
+				"equipamentos": "M4A1 + G36 + Oculos + Oculos + Mascara + Mascara"
+			}
+		]
+	},
+	{
+		"data": "16/12/2018",
+		"equipamentos":["l96", "coldre"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Sidmar Cunhago",
+				"telefone": "554784087583",
+				"valor": 80.0,
+				"equipamentos": "L96 + coldre"
+			}
+		]
+	},
+	{
+		"data": "20/01/2019",
+		"equipamentos":["coleteTan", "glock", "coldre"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Alex Hedler",
+				"telefone": "554797249361",
+				"valor": 60.0,
+				"equipamentos": "coleteTan + glock + coldre"
+			}
+		]
+	}
 ];
