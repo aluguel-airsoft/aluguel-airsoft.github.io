@@ -1125,7 +1125,7 @@ var reservas = [
 				"nome": "Willian",
 				"telefone": "554797471568",
 				"valor": 60.0,
-				"equipamentos": "M4A1 + colete-multicam"
+				"equipamentos": "ICS"
 			}
 		]
 	}
