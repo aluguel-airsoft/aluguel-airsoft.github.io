@@ -1109,5 +1109,18 @@ var reservas = [
 				"equipamentos": "coleteTan + glock + coldre"
 			}
 		]
+	},
+	{
+		"data": "12/01/2019",
+		"equipamentos":["m4a1", "colete-multicam"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Ricky",
+				"telefone": "",
+				"valor": 0.0,
+				"equipamentos": "M4A1 + colete-multicam"
+			}
+		]
 	}
 ];
