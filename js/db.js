@@ -1112,13 +1112,19 @@ var reservas = [
 	},
 	{
 		"data": "12/01/2019",
-		"equipamentos":["m4a1", "colete-multicam"],
+		"equipamentos":["m4a1", "colete-multicam", "ics"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
 				"nome": "Ricky",
 				"telefone": "",
 				"valor": 0.0,
+				"equipamentos": "M4A1 + colete-multicam"
+			},
+			{
+				"nome": "Willian",
+				"telefone": "554797471568",
+				"valor": 60.0,
 				"equipamentos": "M4A1 + colete-multicam"
 			}
 		]
