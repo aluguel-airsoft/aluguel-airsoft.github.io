@@ -1098,19 +1098,6 @@ var reservas = [
 		]
 	},
 	{
-		"data": "20/01/2019",
-		"equipamentos":["coleteTan", "glock", "coldre"],
-		"responsavel": "Mauricio",
-		"obs": [
-			{
-				"nome": "Alex Hedler",
-				"telefone": "554797249361",
-				"valor": 60.0,
-				"equipamentos": "coleteTan + glock + coldre"
-			}
-		]
-	},
-	{
 		"data": "12/01/2019",
 		"equipamentos":["m4a1", "colete-multicam", "ics"],
 		"responsavel": "Mauricio",
@@ -1128,5 +1115,25 @@ var reservas = [
 				"equipamentos": "ICS"
 			}
 		]
+	},
+	{
+		"data": "20/01/2019",
+		"equipamentos":["coleteTan", "glock", "coldre", "m4a1"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Alex Hedler",
+				"telefone": "554797249361",
+				"valor": 60.0,
+				"equipamentos": "coleteTan + glock + coldre"
+			},
+			{
+				"nome": "Roberto",
+				"telefone": "554796050956",
+				"valor": 60.0,
+				"equipamentos": "M4A1"
+			}
+		]
 	}
+
 ];
