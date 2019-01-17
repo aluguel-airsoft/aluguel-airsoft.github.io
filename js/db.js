@@ -1118,7 +1118,7 @@ var reservas = [
 	},
 	{
 		"data": "20/01/2019",
-		"equipamentos":["coleteTan", "glock", "coldre", "m4a1"],
+		"equipamentos":["coleteTan", "glock", "coldre", "m4a1", "oculos1", "mascara1", "colete-multicam", "g36"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
@@ -1131,7 +1131,13 @@ var reservas = [
 				"nome": "Roberto",
 				"telefone": "554796050956",
 				"valor": 60.0,
-				"equipamentos": "M4A1"
+				"equipamentos": "G36"
+			},
+			{
+				"nome": "Wagner",
+				"telefone": "554798901018",
+				"valor": 105.0,
+				"equipamentos": "M4A1 + Oculos + Mascara + Colete multicam"
 			}
 		]
 	}
