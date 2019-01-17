@@ -104,7 +104,7 @@ var equipamentosExistentes = [
 		"key"	: "ics",
 		"imagem": "ics.png",
 		"id" 	: "cBoxIcs",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 60.0
 	},
 	{
