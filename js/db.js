@@ -1143,7 +1143,7 @@ var reservas = [
 	},
 	{
 		"data": "09/02/2019",
-		"equipamentos":["m4a1"],
+		"equipamentos":["m4a1", "glock"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
@@ -1151,12 +1151,18 @@ var reservas = [
 				"telefone": "554797095946",
 				"valor": 60.0,
 				"equipamentos": "M4A1"
+			},
+			{
+				"nome": "Miguel Buss Rocha",
+				"telefone": "554796764565",
+				"valor": 30.0,
+				"equipamentos": "Glock"
 			}
 		]
 	},
 	{
 		"data": "10/02/2019",
-		"equipamentos":["m4a1", "mascara", "glock"],
+		"equipamentos":["m4a1", "mascara"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
@@ -1164,12 +1170,6 @@ var reservas = [
 				"telefone": "554788694364",
 				"valor": 75.0,
 				"equipamentos": "M4A1 + Mascara"
-			},
-			{
-				"nome": "Miguel Buss Rocha",
-				"telefone": "554796764565",
-				"valor": 30.0,
-				"equipamentos": "Glock"
 			}
 		]
 	}
