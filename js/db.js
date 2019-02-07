@@ -1172,6 +1172,19 @@ var reservas = [
 				"equipamentos": "M4A1 + Mascara"
 			}
 		]
+	},
+	{
+		"data": "17/02/2019",
+		"equipamentos":["m4a1", "g36", "oculos", "oculos1", "mascara", "mascara1"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Renato",
+				"telefone": "554784638700",
+				"valor": 170.0,
+				"equipamentos": "M4A1 + G36 + 2 oculos + 2 Mascara"
+			}
+		]
 	}
 
 ];
