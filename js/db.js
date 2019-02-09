@@ -1162,7 +1162,7 @@ var reservas = [
 	},
 	{
 		"data": "10/02/2019",
-		"equipamentos":["m4a1", "mascara"],
+		"equipamentos":[],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
