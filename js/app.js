@@ -168,7 +168,7 @@ $( document ).ready(function() {
 		var objPromo = validaPromo();
 		if (objPromo) {
 			porcentDesconto = objPromo.valor;
-			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code);
+			$("#promAplicada").text("Código promocional aplicado: " + objPromo.code + " (" + objPromo.valor * 100 + "%)");
 			return true;
 		}else if(validaDescontoPorSelecao()){
 			$("#promAplicada").text("");

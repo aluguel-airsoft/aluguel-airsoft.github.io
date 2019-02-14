@@ -54,11 +54,11 @@ var promoCodes = [
 	},
 	{
 		"code": "AFIRMATIRA",
-		"valor": 0.270,
+		"valor": 0.25,
 	},
 	{
 		"code": "ASJLLE",
-		"valor": 0.176,
+		"valor": 0.15,
 	},
 	{
 		"code": "VIPER",
