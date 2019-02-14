@@ -65,7 +65,7 @@ var promoCodes = [
 		"valor": 0.1,
 	},
 	{
-		"code": "NATAL",
+		"code": "BRAVO",
 		"valor": 0.05,
 	}
 ];
