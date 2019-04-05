@@ -176,7 +176,7 @@ var equipamentosExistentes = [
 		"key"	: "oculos1",
 		"imagem": "oculos.png",
 		"id" 	: "cBoxOculos1",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 10.0
 	},
 	{ 
@@ -194,7 +194,7 @@ var equipamentosExistentes = [
 		"key"	: "mascara1",
 		"imagem": "mascara.png",
 		"id" 	: "cBoxMascara1",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 15.0
 	},
 	{ 
@@ -1183,6 +1183,19 @@ var reservas = [
 				"telefone": "554784638700",
 				"valor": 170.0,
 				"equipamentos": "M4A1 + G36 + 2 oculos + 2 Mascara"
+			}
+		]
+	},
+	{
+		"data": "07/04/2019",
+		"equipamentos":["g36"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Leonardo Geremias",
+				"telefone": "554899714196",
+				"valor": 60.0,
+				"equipamentos": "G36"
 			}
 		]
 	}
