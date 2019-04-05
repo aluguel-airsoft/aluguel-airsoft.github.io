@@ -1188,7 +1188,7 @@ var reservas = [
 	},
 	{
 		"data": "07/04/2019",
-		"equipamentos":["g36"],
+		"equipamentos":["g36", "m4a1", "colete-multicam"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
@@ -1196,6 +1196,12 @@ var reservas = [
 				"telefone": "554899714196",
 				"valor": 60.0,
 				"equipamentos": "G36"
+			},
+			{
+				"nome": "Thiago miranda",
+				"telefone": "554796051314",
+				"valor": 80.0,
+				"equipamentos": "M4A1 + colete-multicam"
 			}
 		]
 	}
