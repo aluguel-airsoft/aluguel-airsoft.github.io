@@ -1188,7 +1188,7 @@ var reservas = [
 	},
 	{
 		"data": "07/04/2019",
-		"equipamentos":["g36", "m4a1", "colete-multicam"],
+		"equipamentos":["g36", "m4a1", "colete-multicam", "glock", "oculos", "mascara"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
@@ -1202,6 +1202,18 @@ var reservas = [
 				"telefone": "554796051314",
 				"valor": 80.0,
 				"equipamentos": "M4A1 + colete-multicam"
+			},
+			{
+				"nome": "Vamilson de lima",
+				"telefone": "554799892314",
+				"valor": 30.0,
+				"equipamentos": "Glock"
+			},
+			{
+				"nome": "Andre Montibeller",
+				"telefone": "554891478777",
+				"valor": 25.0,
+				"equipamentos": "Oculos + Mascara"
 			}
 		]
 	}
