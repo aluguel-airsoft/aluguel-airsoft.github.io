@@ -1219,14 +1219,14 @@ var reservas = [
 	},
 	{
 		"data": "12/04/2019",
-		"equipamentos":["m4a1"],
+		"equipamentos":["m4a1", "g36"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
 				"nome": "Marco peretti",
 				"telefone": "5547992639323",
-				"valor": 60.0,
-				"equipamentos": "M4A1"
+				"valor": 120.0,
+				"equipamentos": "M4A1 + G36"
 			}
 		]
 	}
