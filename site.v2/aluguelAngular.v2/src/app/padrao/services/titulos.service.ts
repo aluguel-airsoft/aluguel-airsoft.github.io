@@ -3,9 +3,9 @@ import {Titulo} from '../models/titulo';
 import {HttpClient} from '@angular/common/http';
 import {environment} from 'src/environments/environment';
 import BaseService from 'src/app/shared/services/base.service';
-import {AuthService} from '../../../shared/services/auth.service';
 import {Observable, of} from 'rxjs';
 import {map} from 'rxjs/operators';
+import { AuthService } from 'src/app/shared/services/auth.service';
 
 @Injectable({
   providedIn: 'root'
@@ -19,7 +19,7 @@ export class TitulosService extends BaseService {
   }
 
   get(): Observable<Titulo[]> {
-    const url = this.urlApi.url + '/DocumentoContabil/GetDocumentoContabil?idpessoa=' + this.authService.getUsuario().pessoa.idProprio + '&idcanaldistribuicao=10';
+    const url = this.urlApi.url + '/DocumentoContabil/GetDocumentoContabil?idpessoa=' + this.authService.getUsuario();
     return this.http.get(url, {headers: this.getAuthHeaders()}).pipe(
       map((res: any) => {
         /* TODO: Corrigir após a resolução do Bug #351 */

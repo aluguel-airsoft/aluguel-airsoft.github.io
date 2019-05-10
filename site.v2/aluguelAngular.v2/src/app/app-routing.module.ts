@@ -5,10 +5,7 @@ import {LoginComponent} from './autentificacao/login/login.component';
 
 const routes: Routes = [
   {path: 'login', component: LoginComponent},
-  {path: '', canActivate: [AuthGuard], loadChildren: './modulos/padrao/padrao.module#PadraoModule'},
-  {path: 'sap', loadChildren: './modulos/sap/sap.module#SapModule'},
-  {path: 'linx', loadChildren: './modulos/linx/linx.module#LinxModule'},
-  {path: 'jforce', loadChildren: './modulos/jforce/jforce.module#JforceModule'},
+  {path: '', canActivate: [AuthGuard], loadChildren: './padrao/padrao.module#PadraoModule'},
   {path: '**', redirectTo: 'login'}
 ];
 

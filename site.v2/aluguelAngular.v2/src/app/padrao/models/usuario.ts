@@ -1,10 +1,8 @@
-import {Pessoa} from './pessoa';
 
 export class Usuario {
 
   public email: string;
   public idUser: string;
-  public pessoa: Pessoa;
   public blocked: boolean;
   public enabled: boolean;
   public password: string;

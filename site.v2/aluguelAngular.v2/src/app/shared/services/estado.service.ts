@@ -24,7 +24,7 @@ export class EstadoService extends BaseService {
         observer.complete();
       });
     } else {
-      const url = this.urlApi.url + '/Cliente/GetFiltroCliente?idpessoa=' + this.authService.getUsuario().pessoa.idProprio + '&nivel=1';
+      const url = this.urlApi.url + '/Cliente/GetFiltroCliente?idpessoa=' + this.authService.getUsuario();
       return this.http.get(url, {headers: this.getAuthHeaders()}).pipe(
         map((res: any) => {
           if (res.isValid) {

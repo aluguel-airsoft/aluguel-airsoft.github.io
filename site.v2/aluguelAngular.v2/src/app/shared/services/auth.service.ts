@@ -4,7 +4,7 @@ import {environment} from '../../../environments/environment';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {map} from 'rxjs/operators';
-import {Usuario} from '../../modulos/padrao/models/usuario';
+import { Usuario } from 'src/app/padrao/models/usuario';
 
 @Injectable()
 

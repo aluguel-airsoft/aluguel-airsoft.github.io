@@ -23,7 +23,7 @@ export class BairroService extends BaseService {
         observer.complete();
       });
     } else {
-      const url = this.urlApi.url + '/Cliente/GetFiltroCliente?idpessoa=' + this.authService.getUsuario().pessoa.idProprio + '&nivel=3';
+      const url = this.urlApi.url + '/Cliente/GetFiltroCliente?idpessoa=' + this.authService.getUsuario();
       return this.http.get(url, {headers: this.getAuthHeaders()}).pipe(
         map((res: any) => {
           if (res.isValid) {
