@@ -1,0 +1,186 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="button-collapse" data-activates="slide-out" materialize="sideNav">
+        <i class="material-icons">menu</i>
+      </a>
+      <a *ngIf="isMobile" class="brand-logo left">
+        <span class="navbar-title">{{titulo.getTitle() | translate}}</span>
+      </a>
+
+      <ul class="right">
+        <li [hidden]="!pesquisar" class="navbar-pesquisa">
+          <input #pesquisarInput (input)="fazerPesquisa($event.target['value'])" placeholder="Pesquise aqui..."
+                 type="text">
+        </li>
+        <li>
+          <a (click)="abrirPesquisa()"><i class="material-icons">search</i></a>
+        </li>
+        <li>
+          <a [materializeParams]="[{edge:'right'}]" data-activates="filtro-slide-out" data-target="filtro-slide-out"
+             materialize="sideNav">
+            <i class="material-icons">filter_list</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="side-nav side-filtro" id="filtro-slide-out">
+  <li>
+    <h5>Filtros</h5>
+  </li>
+  <li>
+    <div class="row">
+      <div class="col s12 m6" style="padding: 0">
+        <p>
+          <input [(ngModel)]="filtros.checkVencidos" id="vencidos" name="vencidos" type="checkbox">
+          <label for="vencidos">Vencidos</label>
+        </p>
+      </div>
+      <div class="col s12 m6" style="padding: 0">
+        <p>
+          <label>
+            <input [(ngModel)]="filtros.checkAVencer" id="avencer" name="avencer" type="checkbox">
+            <label for="avencer">A Vencer</label>
+          </label>
+        </p>
+      </div>
+      <div class="input-field col s12" style="padding: 0">
+        <i class="material-icons prefix" style="top: 15px">today</i>
+        <input (click)="abrirDatePicker()" [ngModel]="filtros.dtVencimento | date:'dd/MM/yyyy'"
+               placeholder="Data de Validade"
+               type="text">
+      </div>
+      <div class="input-field col s12" style="padding: 0">
+        <select [(ngModel)]="filtros.cliente" [materializeSelectOptions]="clientes" materialize="material_select">
+          <option disabled selected value="">Selecione um Cliente</option>
+          <option *ngFor="let cliente of clientes | ordenar : 'razaoSocial' "
+                  [value]="cliente.idCliente">{{cliente.idEmpresa}} - {{cliente.razaoSocial}}</option>
+        </select>
+      </div>
+    </div>
+  </li>
+  <li>
+    <h5>Ordenar</h5>
+  </li>
+  <li>
+    <div class="input-field">
+      <select [(ngModel)]="ordenarPorSelect" [materializeSelectOptions]="filtros.ordenar" materialize="material_select">
+        <option disabled selected value="">Ordenar por</option>
+        <option *ngFor="let ordenar of filtros.ordenar" [value]="ordenar.campo">{{ordenar.label}}</option>
+      </select>
+    </div>
+  </li>
+  <li><br></li>
+  <li>
+    <div class="row">
+      <div class="col s6">
+        <a (click)="limparFiltro()" class="btn btn-flat waves-effect">Limpar</a>
+      </div>
+      <div class="col s6">
+        <a (click)="filtrar()" class="btn waves-effect">Filtrar</a>
+      </div>
+    </div>
+  </li>
+  <li><br></li>
+</ul>
+
+<main>
+  <input [(ngModel)]="filtros.dtVencimento" [materializeActions]="dtVencimentoAction"
+         [materializeParams]="[{format: 'yyyy-mm-dd'}]"
+         materialize="pickadate"
+         style="display: none">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+  <div (scrolled)="infiniteScroll()" *ngIf="!isLoading" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
+       class="row"
+       infiniteScroll>
+    <div *ngFor="let titulo of titulos" class="col s12 status-responsivo">
+      <div class="card titulo">
+        <div class="row">
+          <div *ngIf="titulo.montanteMoeda < 1000" class="col s1 status">
+            <p class="status orange">{{"titulos.card.badge" | translate}}</p>
+          </div>
+          <div class="col s11">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12">
+                  <span class="card-title">
+                    <b>{{titulo.razaoSocial}}</b>
+                  </span>
+                </div>
+                <div class="col s6 m4">
+                  <p class="card-item">
+                    <strong>{{"titulos.card.nrDocumento" | translate}}</strong>{{titulo.nroDocumentoContabil}}
+                  </p>
+                </div>
+                <div class="col s6 m4">
+                  <p class="card-item">
+                    <strong>{{"titulos.card.valor" | translate}}</strong>{{titulo.montanteMoeda | currency:'BRL':'symbol-narrow'}}
+                  </p>
+                </div>
+                <div class="col s6 m4">
+                  <p class="card-item">
+                    <strong>{{"titulos.card.atraso" | translate}}</strong>{{titulo.diasAtraso}}
+                  </p>
+                </div>
+                <div class="col s6 m4">
+                  <p class="card-item">
+                    <strong>{{"titulos.card.vencimento" | translate}}</strong>{{titulo.dtPlanejamento | date: 'dd/MM/yyyy'}}
+                  </p>
+                </div>
+                <div class="col s6 m8">
+                  <p class="card-item">
+                    <strong>{{"titulos.card.valorAtualizado" | translate}}</strong>{{titulo.montanteMoeda | currency:'BRL':'symbol-narrow'}}
+                  </p>
+                </div>
+                <div class="col s6 m4">
+                  <p class="card-item">
+                    <strong>{{"titulos.card.compensacao" | translate}}</strong>{{titulo.dtCompensacao ? (titulo.dtCompensacao | date: 'dd/MM/yyyy') : 'Não Compensado'}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="fimInfiniteScroll" class="row">
+      <div class="col s12">
+        <div class="card">
+          <div class="card-content">
+            <p class="center">Não há mais registros</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div class="row">
+  <div class="col s12 m12 barra-total">
+    <div class="card horizontal z-depth-5">
+      <div class="card-stacked">
+        <div class="card-content">
+          <div class="row center">
+            <div class="col s4">
+              <strong>{{"titulos.barraTotal.vencidos" | translate}}</strong><br>
+              {{totalVencidos | currency:'BRL'}}
+            </div>
+            <div class="col s4">
+              <strong>{{"titulos.barraTotal.total" | translate}}</strong><br>
+              {{total | currency:'BRL'}}
+            </div>
+            <div class="col s4">
+              <strong>{{"titulos.barraTotal.aVencer" | translate}}</strong><br>
+              {{totalAVencer | currency:'BRL'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

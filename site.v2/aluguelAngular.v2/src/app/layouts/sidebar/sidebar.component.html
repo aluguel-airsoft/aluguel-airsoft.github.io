@@ -1,0 +1,31 @@
+<ul class="side-nav fixed" id="slide-out">
+  <li>
+    <div class="user-view">
+      <div class="background" style="background-color: #607d8b"></div>
+      <a href="#user"><img class="circle"
+                           src="http://asaucalgary.ca/wp-content/uploads/2017/07/profile-placeholder-e1506743338230.png"></a>
+      <a href="#name"><span class="white-text name">{{usuario.firstName}} {{usuario.lastName}}</span></a>
+      <a href="#email"><span class="white-text email">{{usuario.email}}</span></a>
+    </div>
+  </li>
+  <li *ngFor="let i of padraoRotas">
+    <a [routerLink]="i.routerLink"><i class="material-icons">{{i.icone}}</i>{{i.nome | translate}}</a>
+  </li>
+  <li>
+    <div class="divider"></div>
+  </li>
+  <li><a class="subheader">{{"sidebar.separadores.configuracoes" | translate}}</a></li>
+  <li>
+    <a data-activates='dropdownIdioma' href="#" materialize="dropdown">
+      <i class="material-icons">translate</i>Idioma
+    </a>
+    <ul class='dropdown-content' id='dropdownIdioma'>
+      <li><a (click)="useLanguage('pt-BR')">Português</a></li>
+      <li><a (click)="useLanguage('en-US')">English</a></li>
+    </ul>
+  </li>
+  <li>
+    <a (click)="fazerLogout()" class="waves-effect"><i
+      class="material-icons">exit_to_app</i>{{"sidebar.opcoes.sair" | translate}}</a>
+  </li>
+</ul>

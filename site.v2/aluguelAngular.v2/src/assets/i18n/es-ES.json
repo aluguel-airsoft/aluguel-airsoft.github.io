@@ -1,0 +1,66 @@
+{
+  "shared": {
+    "sessao": {
+      "sessao": "Sessión"
+    },
+    "botao": {
+      "novo": "Nuevo",
+      "salvar": "Guardar",
+      "cancelar": "Cancelar",
+      "voltar": "Volver",
+      "pesquisar": "Buscar",
+      "atualizar": "Atualizar",
+      "filtrar": "Filtrar",
+      "avançar": "Adelantar",
+      "retroceder": "Retroceder",
+      "excluir": "Borrar",
+      "editar": "Editar",
+      "aprovar": "Aprobar",
+      "recusar": "Rechazar",
+      "reterpendente": "ReterPiendente"
+    },
+    "pesquisa": {
+      "placeholder": "Buscar aquí..."
+    }
+  },
+  "sidebar": {
+    "opcoes": {
+      "dashboard": "Dashboard",
+      "listaClientes": "Clientes",
+      "planejamentoVisitas": "Planificación de Visitas",
+      "statusMetas": "Status Metas",
+      "statusOrdens": "Status Órdenes",
+      "statusTitulos": "Status Títulos",
+      "statusClientes": "Status Clientes",
+      "gerenciamentoArquivos": "Gestión de Archivos",
+      "sair": "Salir del Sistema"
+    },
+    "separadores": {
+      "configuracoes": "Ajustes"
+    }
+  },
+  "dashboard": {
+    "titulo": "Dashboard"
+  },
+  "clientes": {
+    "titulo": "Clientes"
+  },
+  "planejamento": {
+    "titulo": "Planificación de Visitas"
+  },
+  "metas": {
+    "titulo": "Status Metas"
+  },
+  "ordens": {
+    "titulo": "Status Órdenes"
+  },
+  "titulos": {
+    "titulo": "Status Títulos"
+  },
+  "status-clientes": {
+    "titulo": "Status Clientes"
+  },
+  "arquivos": {
+    "titulo": "Gestión de Archivos"
+  }
+}

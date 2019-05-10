@@ -1,0 +1,760 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="button-collapse" data-activates="slide-out" materialize="sideNav">
+        <i class="material-icons">menu</i>
+      </a>
+      <a (click)="voltarPagina()" class="brand-logo">
+        <i class="material-icons hide-on-med-and-down">arrow_back</i>
+        <span class="navbar-title">{{titulo.getTitle() | translate}}</span>
+      </a>
+
+      <ul class="right">
+        <li (click)="submitOrdem()">
+          <a><i class="material-icons">done</i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul class="side-nav" id="filtro-slide-out" style="padding: 20px 15px 0 15px">
+  <li>
+    <h5>Filtros</h5>
+  </li>
+  <li>
+    <div class="input-field col s12">
+      <input placeholder="Estado" type="text">
+    </div>
+    <div class="input-field col s12">
+      <input placeholder="Cidade" type="text">
+    </div>
+    <div class="input-field col s12">
+      <input placeholder="Bairro" type="text">
+    </div>
+  </li>
+  <li><br></li>
+  <li>
+    <h5>Ordenar</h5>
+  </li>
+  <li>
+    <div class="input-field col s12">
+      <input placeholder="Ordenar por" type="text">
+    </div>
+  </li>
+  <li><br></li>
+  <li>
+    <div class="row">
+      <div class="col s6">
+        <a class="btn btn-flat waves-effect">Limpar</a>
+      </div>
+      <div class="col s6">
+        <a class="btn waves-effect">Filtrar</a>
+      </div>
+    </div>
+  </li>
+</ul>
+
+<main>
+  <div class="row">
+    <div class="col s12 m12 l12 xl12">
+      <ul class="tabs" id="tabs" materialize="tabs">
+        <li class="tab col s3"><a (click)="mostrarBarraPedido=false" class="tab-item active"
+                                  href="#cabecalho">Cabeçalho</a></li>
+        <li class="tab col s3"><a class="tab-item" href="#carrinho">Carrinho</a></li>
+        <li class="tab col s3"><a (click)="carregarLancamentos()" class="tab-item" href="#lancamentos">Lançamentos</a>
+        </li>
+        <li class="tab col s3"><a (click)="carregarCatalogo()" class="tab-item" href="#catalogo">Catálogo</a></li>
+        <li class="tab col s3"><a (click)="carregarHistorico()" class="tab-item" href="#historico">Histórico</a></li>
+        <li class="tab col s3"><a class="tab-item" href="#mixIdeal">Mix Ideal</a></li>
+        <li class="tab col s3"><a class="tab-item" href="#estCliente">Est. Cliente</a></li>
+        <li class="tab col s3"><a (click)="carregarCampanha()" class="tab-item" href="#campanhas">Campanhas</a></li>
+      </ul>
+    </div>
+
+    <!-- Loading geral -->
+
+    <div *ngIf="isLoading" class="col s12 center-align">
+      <app-loading></app-loading>
+      {{mensagemBusca}}
+    </div>
+
+    <!-- Abas -->
+
+    <div class="col s12" id="cabecalho">
+      <form (ngSubmit)="submitClienteForm(ordensForm.value)" *ngIf="!isLoading" [formGroup]="ordensForm">
+        <div class="card">
+          <div class="card-content">
+            <h5>
+              <small>Dados da Ordem</small>
+            </h5>
+            <div class="row">
+              <div class="col s12 m6">
+                <div class="input-field">
+                  <input formControlName="numeroOrdemJforce" id="codigo" name="numeroOrdemJforce" type="text">
+                  <label for="numeroOrdemJforce">Número Ordem JForce</label>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="input-field">
+                  <input formControlName="numeroPedido" id="numeroPedido" name="numeroPedido" type="text">
+                  <label for="numeroPedido">Número Pedido Cliente</label>
+                </div>
+              </div>
+              <div class="col s12 m6">
+                <div class="input-field">
+                  <input class="datepicker" formControlName="dataEmissao" id="dataEmissao" materialize="pickadate"
+                         name="dataEmissao" type="text">
+                  <label for="dataEmissao">Data Emissão</label>
+                </div>
+              </div>
+              <div
+                [ngClass]="{selectInvalido: ordensForm.get('tipoOrdem').touched && ordensForm.get('tipoOrdem').invalid}"
+                class="input-field col s12 m6">
+                <select formControlName="tipoOrdem" materialize="material_select">
+                  <option disabled selected value="">Selecione um Tipo Ordem</option>
+                  <option *ngFor="let tipoOrdem of listaTipoOrdem" value="{{tipoOrdem.idProprio}}">
+                    {{tipoOrdem.idProprio}} -
+                    {{tipoOrdem.descricao}}
+                  </option>
+                </select>
+                <span [hidden]="!ordensForm.get('tipoOrdem').touched || ordensForm.get('tipoOrdem').valid"
+                      class="helper-text red-text" data-error="wrong" data-success="right">
+                  <small>Campo obrigatório</small>
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s6">
+                <input class="checkbox-orange" formControlName="enviarEmpresa" id="enviarEmpresa" name="enviarEmpresa"
+                       type="checkbox"/>
+                <label for="enviarEmpresa">Enviar para Empresa</label>
+              </div>
+              <div class="col s6">
+                <input formControlName="enviarGestor" id="enviarGestor" name="enviarGestor" type="checkbox"/>
+                <label for="enviarGestor">Enviar para Gestor</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12">
+                <div class="input-field">
+                  <input formControlName="observacao" id="observacao" name="observacao" type="text">
+                  <label for="observacao">Observação</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-content">
+            <h5>
+              <small>Condição de Pagamento</small>
+            </h5>
+            <div class="row">
+              <div
+                [ngClass]="{selectInvalido: ordensForm.get('condPagamento').touched && ordensForm.get('condPagamento').invalid}"
+                class="input-field col s12 m6">
+                <select formControlName="condPagamento" materialize="material_select">
+                  <option disabled selected value="">Condição de Pagamento</option>
+                  <option *ngFor="let condPag of listaCondPagamento" value="{{condPag.id}}">{{condPag.descricao}}
+                  </option>
+                </select>
+                <span [hidden]="!ordensForm.get('condPagamento').touched || ordensForm.get('condPagamento').valid"
+                      class="helper-text red-text" data-error="wrong" data-success="right">
+                  <small>Campo obrigatório</small>
+                </span>
+              </div>
+              <div class="col s12 m6">
+                <div class="input-field">
+                  <input formControlName="prazo" id="prazo" name="prazo" type="text">
+                  <label for="prazo">% Prazo</label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <div class="col s12" id="carrinho">
+      <div *ngIf="!isLoading">
+        <input [(ngModel)]="searchText" placeholder="Buscar produto">
+        <div class="row">
+          <div *ngFor="let item of carrinho | filtro: searchText : 'descricao'" class="col s12">
+            <div class="card">
+              <div (click)="selecionarItem(item)" class="card-content">
+                <div class="row">
+                  <div class="col m2">
+                    <img alt="imgItem" class="materialboxed" height="auto" materialize="materialbox"
+                         src="https://jforceapp-copapel.azurewebsites.net/desk-imgs/{{item.idMaterial}}.png"
+                         width="100%">
+                  </div>
+                  <div class="col m10">
+                    <span class="card-title">
+                      <b>{{item.idMaterial}} - {{item.descricao}}</b>
+                    </span>
+                    <br>
+                    <div class="row">
+                      <p class="card-item col m4">
+                        <strong>Quantidade: </strong> <span>{{item.quantidadeVenda}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Item (%): </strong> <span>{{item.descontoGeral}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorDetalheImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Preço tabela: </strong> <span>{{item.valorTabela | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Prazo. (%): </strong> <span>{{item.descontoPrazo}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorUnitImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Valor Venda: </strong> <span>{{item.valorVenda | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Campanha (%): </strong> <span>{{item.descontoCampanha}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorTotalImp}}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="row">
+                  <div class="col m12 right-align">
+                    <button (click)="removerItemCarrinho(item)" class="btn btn-flat btn-acao" mat-button
+                            matTooltip="Excluir">
+                      <i class="material-icons">delete</i>
+                    </button>
+                    <button (click)="openModal(item.determinacaoCondicao)" class="btn btn-flat btn-acao" mat-button
+                            matTooltip="Determinação de Condição">
+                      <i class="material-icons">monetization_on</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" id="lancamentos">
+      <div *ngIf="!isLoading">
+        <input [(ngModel)]="searchText" placeholder="Buscar lançamento">
+        <div (scrolled)="infiniteScrollLancamentos()" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
+             class="row" infiniteScroll>
+          <div *ngFor="let item of lancamentos | filtro: searchText : 'descricao': listaCatalogo" class="col s12">
+            <div class="card">
+              <div (click)="selecionarItem(item)" class="card-content">
+                <div class="row">
+                  <div class="col m2">
+                    <img alt="imgItem" class="materialboxed" height="auto" materialize="materialbox"
+                         src="https://jforceapp-copapel.azurewebsites.net/desk-imgs/{{item.idMaterial}}.png"
+                         width="100%">
+                  </div>
+                  <div class="col m10">
+                    <span class="card-title">
+                      <b>{{item.idMaterial}} - {{item.descricao}}</b>
+                    </span>
+                    <br>
+                    <div class="row">
+                      <p class="card-item col m4">
+                        <strong>Quantidade: </strong> <span>{{item.quantidadeVenda}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Item (%): </strong> <span>{{item.descontoGeral}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorDetalheImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Preço tabela: </strong> <span>{{item.valorTabela | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Prazo. (%): </strong> <span>{{item.descontoPrazo}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorUnitImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Valor Venda: </strong> <span>{{item.valorVenda | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Campanha (%): </strong> <span>{{item.descontoCampanha}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorTotalImp}}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="row">
+                  <div class="col m12 right-align">
+                    <!-- <button class="btn btn-flat btn-acao" mat-button matTooltip="Excluir">
+                      <i class="material-icons">delete</i>
+                    </button> -->
+                    <button (click)="openModal(item.determinacaoCondicao)" class="btn btn-flat btn-acao" mat-button
+                            matTooltip="Determinação de Condição">
+                      <i class="material-icons">monetization_on</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Temporário -->
+        <div class="row">
+          <div class="col s12">
+            <div *ngIf="fimInfiniteScrollLancamentos" class="card">
+              <div class="card-content">
+                <p class="center">Não há mais registros</p>
+              </div>
+            </div>
+            <div *ngIf="!fimInfiniteScrollLancamentos" class="card">
+              <div class="card-content">
+                <p class="center">Buscando mais produtos...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" id="catalogo">
+      <div *ngIf="!isLoading">
+        <input [(ngModel)]="searchText" placeholder="Buscar produto">
+        <div (scrolled)="infiniteScrollCatalogo()" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
+             class="row" infiniteScroll>
+          <div *ngFor="let item of catalogo | filtro: searchText : 'descricao': listaCatalogo" class="col s12">
+            <div class="card">
+              <div (click)="selecionarItem(item)" class="card-content">
+                <div class="row">
+                  <div class="col m2">
+                    <img alt="imgItem" class="materialboxed" height="auto" materialize="materialbox"
+                         src="https://jforceapp-copapel.azurewebsites.net/desk-imgs/{{item.idMaterial}}.png"
+                         width="100%">
+                  </div>
+                  <div class="col m10">
+                    <span class="card-title">
+                      <b>{{item.idMaterial}} - {{item.descricao}}</b>
+                    </span>
+                    <br>
+                    <div class="row">
+                      <p class="card-item col m4">
+                        <strong>Quantidade: </strong> <span>{{item.quantidadeVenda}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Item (%): </strong> <span>{{item.descontoGeral}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorDetalheImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Preço tabela: </strong> <span>{{item.valorTabela | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Prazo. (%): </strong> <span>{{item.descontoPrazo}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorUnitImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Valor Venda: </strong> <span>{{item.valorVenda | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Campanha (%): </strong> <span>{{item.descontoCampanha}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorTotalImp}}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="row">
+                  <div class="col m12 right-align">
+                    <!-- <button class="btn btn-flat btn-acao" mat-button matTooltip="Excluir">
+                      <i class="material-icons">delete</i>
+                    </button> -->
+                    <button (click)="openModal(item.determinacaoCondicao)" class="btn btn-flat btn-acao" mat-button
+                            matTooltip="Determinação de Condição">
+                      <i class="material-icons">monetization_on</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Temporário -->
+        <div class="row">
+          <div class="col s12">
+            <div *ngIf="fimInfiniteScrollCatalogo" class="card">
+              <div class="card-content">
+                <p class="center">Não há mais registros</p>
+              </div>
+            </div>
+            <div *ngIf="!fimInfiniteScrollCatalogo" class="card">
+              <div class="card-content">
+                <p class="center">Buscando mais produtos...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" id="historico">
+      <div *ngIf="!isLoading">
+        <input [(ngModel)]="searchText" placeholder="Buscar produto">
+        <div (scrolled)="infiniteScrollHistorico()" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
+             class="row" infiniteScroll>
+          <div *ngFor="let item of historico | filtro: searchText : 'descricao': listaCatalogo" class="col s12">
+            <div class="card">
+              <div (click)="selecionarItem(item)" class="card-content">
+                <div class="row">
+                  <div class="col m2">
+                    <img alt="imgItem" class="materialboxed" height="auto" materialize="materialbox"
+                         src="https://jforceapp-copapel.azurewebsites.net/desk-imgs/{{item.idMaterial}}.png"
+                         width="100%">
+                  </div>
+                  <div class="col m10">
+                    <span class="card-title">
+                      <b>{{item.idMaterial}} - {{item.descricao}}</b>
+                    </span>
+                    <br>
+                    <div class="row">
+                      <p class="card-item col m4">
+                        <strong>Quantidade: </strong> <span>{{item.quantidadeVenda}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Item (%): </strong> <span>{{item.descontoGeral}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorDetalheImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Preço tabela: </strong> <span>{{item.valorTabela | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Prazo. (%): </strong> <span>{{item.descontoPrazo}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorUnitImp}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Valor Venda: </strong> <span>{{item.valorVenda | currency:'BRL'}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <strong>Desc. Campanha (%): </strong> <span>{{item.descontoCampanha}}</span>
+                      </p>
+                      <p class="card-item col m4">
+                        <span>{{item.valorTotalImp}}</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-action">
+                <div class="row">
+                  <div class="col m12 right-align">
+                    <!-- <button class="btn btn-flat btn-acao" mat-button matTooltip="Excluir">
+                      <i class="material-icons">delete</i>
+                    </button> -->
+                    <button (click)="openModal(item.determinacaoCondicao)" class="btn btn-flat btn-acao" mat-button
+                            matTooltip="Determinação de Condição">
+                      <i class="material-icons">monetization_on</i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Temporário -->
+        <div class="row">
+          <div class="col s12">
+            <div *ngIf="fimInfiniteScrollHistorico" class="card">
+              <div class="card-content">
+                <p class="center">Não há mais registros</p>
+              </div>
+            </div>
+            <div *ngIf="!fimInfiniteScrollHistorico" class="card">
+              <div class="card-content">
+                <p class="center">Buscando mais produtos...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" id="mixIdeal">
+      <div *ngIf="!isLoading">
+        <div class="card">
+          <div class="card-content">
+            <h5>
+              <small>mixIdeal</small>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" id="estCliente">
+      <div *ngIf="!isLoading">
+        <div class="card">
+          <div class="card-content">
+            <h5>
+              <small>estCliente</small>
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col s12" id="campanhas">
+      <div *ngIf="!isLoading">
+        <input [(ngModel)]="searchText" placeholder="Buscar campanha">
+        <div (scrolled)="infiniteScrollCampanha()" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50"
+             class="row" infiniteScroll>
+          <div *ngFor="let item of campanha | filtro: searchText : 'descricao': listaCampanha" class="col s12">
+            <div class="card">
+              <div class="card-content">
+                <span class="card-title">
+                  <b>{{item.id}} - {{item.descricao}}</b>
+                </span>
+                <br>
+                <div class="row">
+                  <p class="card-item col m4">
+                    <strong>Data inicial: </strong> <span>{{item.dtValidadeInicial | date: 'dd/MM/yyyy'}}</span>
+                  </p>
+                  <p class="card-item col m4">
+                    <strong>Valor Ordem: </strong> <span>{{item.descontoGeral | currency:'BRL'}}</span>
+                  </p>
+                  <p class="card-item col m4">
+                    <strong>Data Final: </strong> <span>{{item.dtValidadeFinal | date: 'dd/MM/yyyy'}}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Temporário -->
+        <div class="row">
+          <div class="col s12">
+            <div *ngIf="fimInfiniteScrollCampanha" class="card">
+              <div class="card-content">
+                <p class="center">Não há mais registros</p>
+              </div>
+            </div>
+            <div *ngIf="!fimInfiniteScrollCampanha" class="card">
+              <div class="card-content">
+                <p class="center">Buscando mais produtos...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Determinação de Condição -->
+    <div [materializeActions]="modalDetCond" class="modal" id="modalDetCond" materialize="modal">
+      <div class="modal-content">
+        <h5 style="margin-bottom: 20px">Determinação de Condição</h5>
+        <div *ngFor="let determinacaoCondicao of listaDeterminacaoCondicao" class="row">
+          <div class="col s12">
+            <strong>Registro: </strong> <span>{{determinacaoCondicao.registroCondicao}}</span>
+          </div>
+          <div class="col s12">
+            <strong>Tipo: </strong> <span>{{determinacaoCondicao.tipoCondicao}}</span>
+          </div>
+          <div class="col s12" style="margin-top: 10px">
+            <strong>{{determinacaoCondicao.valorCondicao | currency:'BRL'}}</strong>
+          </div>
+          <div class="col s12 divider"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="modal-close waves-effect waves-green btn-flat">FECHAR</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal emails -->
+    <div [materializeActions]="modalEmail" class="modal" id="modalEmail" materialize="modal">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12 m12">
+            <h5 style="margin-bottom: 20px">Cópia da Ordem</h5>
+            <p>Entre com ao menos 1 email para enviar a cópia da ordem.</p>
+          </div>
+          <div class="row">
+            <div class="col s6 m8">
+              <div class="input-field">
+                <input [(ngModel)]="emailAdd" id="inputEmail" name="inputEmail" type="text">
+                <label for="inputEmail">E-mail</label>
+              </div>
+            </div>
+            <div class="col s6 m4" style="margin-top: 15px;">
+              <button (click)="adicionarEmail(emailAdd)"
+                      class="btn btn-acao grey lighten-5 grey-text text-darken-3">Adicionar
+              </button>
+            </div>
+          </div>
+          <div *ngIf="listaEmailCopia.length > 0" class="row">
+            <div class="col s11 m10">
+              <div *ngFor="let email of listaEmailCopia" class="">
+                <div class="col s6 m8">
+                  {{email}}
+                </div>
+                <div class="col s6 m4 right-align">
+                  <button (click)="editarEmail(email)" class="btn btn-flat btn-acao" mat-button
+                          matTooltip="Editar" style="padding: 0px 15px 0px 15px;">
+                    <i class="material-icons">create</i>
+                  </button>
+                  <button (click)="removerEmail(email)" class="btn btn-flat btn-acao"
+                          mat-button matTooltip="Excluir" style="padding: 0px 15px 0px 15px;">
+                    <i class="material-icons">delete</i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button (click)="isLoading=false" class="modal-close waves-effect waves-green btn-flat">CANCELAR</button>
+        <button (click)="confirmaEmail()" class="modal-close waves-effect waves-green btn-flat">ENVIAR</button>
+      </div>
+    </div>
+
+    <!-- Modal Pendencias -->
+    <div [materializeActions]="modalPendencias" class="modal" id="modalPendencias" materialize="modal">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s12 m12">
+            <h5 style="margin-bottom: 20px">Pendências da Ordem</h5>
+            <p>A ordem possui a seguinte pendência: </p>
+          </div>
+          <div class="col s12 m12">
+            <div *ngFor="let pend of listaPendencias">
+              - {{pend.message}}
+            </div>
+          </div>
+          <div class="col s12 m12">
+            <p>Deseja continuar mesmo assim?</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-close waves-effect waves-green btn-flat">CANCELAR</button>
+        <button (click)="confirmaPendencias()" class="modal-close waves-effect waves-green btn-flat">OK</button>
+      </div>
+    </div>
+
+    <div *ngIf="!isLoading && mostrarBarraPedido" class="col s12 barra-pedido">
+      <div class="card z-depth-3">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12">
+              <!-- Descrição do produto fica nesta linha -->
+              <b>{{itemAdd.idMaterial}} - {{itemAdd.descricao}}</b>
+            </div>
+          </div>
+          <div *ngIf="isLoadingItemAdd" class="row">
+            <div class="col s12 center-align">
+              <app-loading></app-loading>
+              Validando valores
+            </div>
+          </div>
+          <div *ngIf="!isLoadingItemAdd" class="row">
+            <div class="col s2">
+              <div class="input-field">
+                <input (blur)="verificarItemAdd(itemAdd)" [(ngModel)]="itemAdd.quantidadeVenda"
+                       id="quantidadeVendaItemAdd" name="quantidadeVendaItemAdd" type="text">
+                <label class="active" for="quantidadeVendaItemAdd">Quantidade</label>
+              </div>
+            </div>
+            <div class="col s1">
+              <div class="input-field">
+                <input (blur)="verificarItemAdd(itemAdd)" [(ngModel)]="itemAdd.descontoGeral" id="descontoGeral"
+                       name="descontoGeral" type="text">
+                <label class="active" for="descontoGeral">Desconto (%)</label>
+              </div>
+            </div>
+            <div class="col s1">
+              <div class="input-field">
+                <input (blur)="verificarItemAdd(itemAdd)" [(ngModel)]="itemAdd.descontoPrazo" id="descontoPrazo"
+                       name="descontoPrazo" type="text">
+                <label class="active" for="descontoPrazo">Desc. Prazo</label>
+              </div>
+            </div>
+            <div class="col s2">
+              <div class="input-field">
+                <input (blur)="verificarItemAdd(itemAdd)" [(ngModel)]="itemAdd.descontoCampanha" id="descontoCampanha"
+                       name="descontoCampanha" type="text">
+                <label class="active" for="descontoCampanha">Desc. Campanha</label>
+              </div>
+            </div>
+            <div class="col s1">
+              <div class="input-field">
+                <input (blur)="verificarItemAddValor(itemAdd)" [(ngModel)]="itemAdd.valorVenda" id="valorVenda"
+                       name="valorVenda" type="text">
+                <label class="active" for="valorVenda">Preço</label>
+              </div>
+            </div>
+            <div class="col s1">
+              <div class="input-field">
+                <input [(ngModel)]="itemAdd.estoque" id="estoque" name="estoque" type="text">
+                <label class="active" for="estoque">Estoque cliente</label>
+              </div>
+            </div>
+            <div class="col s2">
+              <b>
+                <div class="col s12">
+                  Total NF:
+                </div>
+                <div class="col s12">
+                  UN NF:
+                </div>
+                <div class="col s12">
+                  Tot. Bruto s/ IPI:
+                </div>
+                <div class="col s12">
+                  Vendidos:
+                </div>
+              </b>
+            </div>
+            <div class="col s2">
+              <div class="col s12">
+                {{calcularTotalCarrinho() | currency:'BRL'}}
+              </div>
+              <div class="col s12">
+                ---
+              </div>
+              <div class="col s12">
+                R$ 0,00
+              </div>
+              <div class="col s12">
+                {{carrinho.length}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</main>

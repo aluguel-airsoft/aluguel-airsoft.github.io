@@ -1,0 +1,80 @@
+{
+  "shared": {
+    "sessao": {
+      "sessao": "Session"
+    },
+    "botao": {
+      "novo": "New",
+      "salvar": "Save",
+      "cancelar": "Cancel",
+      "voltar": "Back",
+      "pesquisar": "Search",
+      "atualizar": "Refresh",
+      "filtrar": "Filter",
+      "avançar": "Next",
+      "retroceder": "Previous",
+      "excluir": "Delete",
+      "editar": "Edit",
+      "aprovar": "Accept",
+      "recusar": "Decline",
+      "reterpendente": "Hold pending"
+    },
+    "pesquisa": {
+      "placeholder": "Seach here..."
+    }
+  },
+  "sidebar": {
+    "opcoes": {
+      "dashboard": "Dashboard",
+      "listaClientes": "Customers",
+      "planejamentoVisitas": "Guest Planning",
+      "statusMetas": "Goal Status",
+      "statusOrdens": "Order Status",
+      "statusTitulos": "Titles Status",
+      "statusClientes": "Customers Status",
+      "gerenciamentoArquivos": "File Management",
+      "sair": "Logout"
+    },
+    "separadores": {
+      "configuracoes": "Settings"
+    }
+  },
+  "dashboard": {
+    "titulo": "Dashboard"
+  },
+  "clientes": {
+    "titulo": "Customers"
+  },
+  "planejamento": {
+    "titulo": "Guest Planning"
+  },
+  "metas": {
+    "titulo": "Goal Status"
+  },
+  "ordens": {
+    "titulo": "Order Status"
+  },
+  "titulos": {
+    "titulo": "Titles Status",
+    "card": {
+      "badge": "Blocked",
+      "nrDocumento": "Document Number: ",
+      "valor": "Amount: ",
+      "atraso": "Delay: ",
+      "vencimento": "Expiration: ",
+      "valorAtualizado": "Updated Amount: ",
+      "compensacao": "Compensation: "
+    },
+    "barraTotal": {
+      "vencidos": "Expirated",
+      "total": "Total",
+      "aVencer": "Expirating"
+    }
+  },
+  "status-clientes": {
+    "titulo": "Customers Status"
+  },
+  "arquivos": {
+    "titulo": "File Management"
+  }
+}

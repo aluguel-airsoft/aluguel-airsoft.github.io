@@ -1,0 +1,9 @@
+<app-clientes-grid [hidden]="item"></app-clientes-grid>
+<app-clientes-form *ngIf="item !== null" [item]="item"></app-clientes-form>
+
+<div [hidden]="item" class="fixed-action-btn">
+  <a (click)="novo()" class="btn btn-large btn-fab-acao waves-effect white black-text">
+    <i class="material-icons">add</i>
+    <span>Novo</span>
+  </a>
+</div>

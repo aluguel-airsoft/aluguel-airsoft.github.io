@@ -1,0 +1,9 @@
+<app-planejamento-grid [hidden]="item"></app-planejamento-grid>
+<app-planejamento-form *ngIf="item !== null" [item]="item"></app-planejamento-form>
+
+<div [hidden]="item" class="fixed-action-btn">
+  <a (click)="novo()" class="btn btn-large btn-fab-acao waves-effect white black-text">
+    <i class="material-icons">add</i>
+    <span>Novo</span>
+  </a>
+</div>

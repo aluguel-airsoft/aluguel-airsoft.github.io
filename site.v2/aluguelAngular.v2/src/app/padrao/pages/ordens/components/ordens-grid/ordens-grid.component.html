@@ -1,0 +1,202 @@
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a class="button-collapse" data-activates="slide-out" materialize="sideNav">
+        <i class="material-icons">menu</i>
+      </a>
+      <a class="brand-logo left">
+        <span class="navbar-title">{{titulo.getTitle() | translate}}</span>
+      </a>
+
+      <ul class="right">
+        <li *ngIf="pesquisarInput" class="navbar-pesquisa">
+          <input (input)="searchText=$event.target.value" placeholder="Pesquise aqui..." type="text">
+        </li>
+        <li>
+          <a (click)="pesquisarInput = !pesquisarInput"><i class="material-icons">search</i></a>
+        </li>
+        <li *ngIf="!isLoading">
+          <a [materializeParams]="[{edge:'right'}]" data-activates="filtro-slide-out" data-target="filtro-slide-out"
+             materialize="sideNav">
+            <i class="material-icons">filter_list</i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<ul *ngIf="!isLoading" class="side-nav side-filtro" id="filtro-slide-out">
+  <li>
+    <h5>Filtros</h5>
+  </li>
+  <li>
+    <div class="input-field">
+      <i class="material-icons prefix" style="top: 15px">today</i>
+      <input (click)="abrirDatePicker('dtInicialAction')" [ngModel]="filtros.dtInicial | date:'dd/MM/yyyy'"
+             id="dtInicial" placeholder="Selecione uma data"
+             style="margin-bottom: 0" type="text">
+      <label for="dtInicial">Data Inicial</label>
+    </div>
+    <div class="input-field">
+      <i class="material-icons prefix" style="top: 15px">today</i>
+      <input (click)="abrirDatePicker('dtFinalAction')" [ngModel]="filtros.dtFinal | date:'dd/MM/yyyy'" id="dtFinal"
+             placeholder="Selecione uma data"
+             style="margin-bottom: 0" type="text">
+      <label for="dtFinal">Data Final</label>
+    </div>
+    <div class="input-field">
+      <select (ngModelChange)="selecionarEmpresa($event)" [(ngModel)]="selects.empresas"
+              [materializeSelectOptions]="filtros.empresas" materialize="material_select" multiple>
+        <option disabled selected value="">Selecione uma Empresa</option>
+        <option *ngFor="let item of filtros.empresas | ordenar:'razaoSocial'"
+                [value]="item.id">{{item.razaoSocial}}</option>
+      </select>
+    </div>
+    <div class="input-field">
+      <select (ngModelChange)="selecionarStatus($event)" [(ngModel)]="selects.status"
+              [materializeSelectOptions]="filtros.status" materialize="material_select" multiple>
+        <option disabled selected value="">Selecione um Status</option>
+        <option *ngFor="let item of filtros.status | ordenar:'descricao'"
+                [value]="item.id">{{item.descricao}}</option>
+      </select>
+    </div>
+  </li>
+  <li>
+    <h5>Ordenar</h5>
+  </li>
+  <li>
+    <div class="input-field">
+      <select [(ngModel)]="ordenarPorSelect" [materializeSelectOptions]="filtros.ordenar" materialize="material_select">
+        <option disabled selected value="">Ordenar por</option>
+        <option *ngFor="let ordenar of filtros.ordenar" [value]="ordenar.campo">{{ordenar.label}}</option>
+      </select>
+    </div>
+  </li>
+  <li><br></li>
+  <li>
+    <div class="row">
+      <div class="col s6">
+        <a (click)="limparFiltro()" class="btn btn-flat waves-effect">Limpar</a>
+      </div>
+      <div class="col s6">
+        <a (click)="filtrar()" class="btn waves-effect">Filtrar</a>
+      </div>
+    </div>
+  </li>
+  <li><br></li>
+</ul>
+
+<main>
+  <input [(ngModel)]="filtros.dtInicial" [materializeActions]="dtInicialAction"
+         [materializeParams]="[{format: 'yyyy-mm-dd'}]"
+         materialize="pickadate"
+         style="display: none">
+  <input [(ngModel)]="filtros.dtFinal" [materializeActions]="dtFinalAction"
+         [materializeParams]="[{format: 'yyyy-mm-dd'}]"
+         materialize="pickadate"
+         style="display: none">
+
+  <app-loading *ngIf="isLoading"></app-loading>
+  <div *ngIf="!isLoading">
+    <div (scrolled)="infiniteScroll()" [infiniteScrollDistance]="1" [infiniteScrollThrottle]="50" class="row"
+         infiniteScroll>
+      <div *ngFor="let ordem of ordens | filtro: searchText : 'cliente' : listaOrdens" class="col s12">
+        <div class="card">
+          <span *ngIf="ordem" class="new badge right orange lighten-4 black-text" data-badge-caption="Ativo"
+                style="font-weight: 500; transform: rotate(270deg) translateX(-45%); width: 205px; position: absolute; left: -105px; z-index: 888"></span>
+          <div class="card-content" style="padding-left: 30px">
+            <div class="row">
+              <div class="col s1">
+                <img alt="Empresa" class="circle"
+                     height="auto" src="https://jforceapp-dev.azurewebsites.net/assets/img/favicon.ico"
+                     width="100%">
+              </div>
+              <div class="col s11">
+                <span class="card-title">
+                  <b>{{ordem.cliente}}</b>
+                </span>
+                <div *ngIf="(ordem.numeroOrdemJForce || '').trim().length>0">
+                  <div class="sub-titulo">
+                    <strong>JForce: </strong>&nbsp;<span>{{ordem.numeroOrdemJForce || ' - '}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <p class="card-item col m6">
+                <strong>Tipo de Ordem: </strong><span>{{ordem.tipoOrdem}}</span>
+              </p>
+              <p class="card-item col m6">
+                <strong>Data Pedido: </strong><span>{{ordem.dtPedido | date: 'dd/MM/yyyy'}}</span>
+              </p>
+              <p class="card-item col m6">
+                <strong>Ordem de compra: </strong><span>{{ordem.nroPedidoCliente}}</span>
+              </p>
+              <p class="card-item col m6">
+                <strong>Condição Pagto: </strong><span>{{ordem.condicaoPagamento}}</span>
+              </p>
+            </div>
+            <div class="row">
+              <p class="card-item col m12">
+                <strong>Quantidade de items: </strong><span>{{ordem.qtdeItensOrdem}}</span>
+              </p>
+              <p class="card-item col m12">
+                <strong>Valor c/ imposto: </strong><span>{{ordem.valorLiquido | currency:'BRL':'symbol-narrow'}}</span>
+              </p>
+            </div>
+            <div class="row">
+              <p class="card-item col m12">
+                <strong>Observação: </strong><span>{{ ordem.observacao || ' - '}}</span>
+              </p>
+            </div>
+          </div>
+          <div class="card-action" style="padding-left: 30px">
+            <div class="row">
+              <div class="col m7" style="padding-top: 8px">
+                <div class="col m2 grey lighten-1"
+                     style="font-size: 14px; border-top-left-radius: 4px; border-bottom-left-radius: 4px;">
+                  <strong>Status: </strong>
+                </div>
+                <div>
+                  <div class="col m10 green lighten-3"
+                       style="font-size: 14px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; min-height: 21px">
+                    <span>{{ordem.status != ' ' ? ordem.status || ' - ' : ' - '}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col m5 right-align">
+                <button class="btn btn-flat btn-small btn-acao">
+                  <i class="material-icons">edit</i>
+                </button>
+                <button class="btn btn-flat btn-small btn-acao">
+                  <i class="material-icons">email</i>
+                </button>
+                <button class="btn btn-flat btn-small btn-acao">
+                  <i class="material-icons">delete</i>
+                </button>
+                <button class="btn btn-flat btn-small btn-acao">
+                  <i class="material-icons">arrow_upward</i>
+                </button>
+                <button (click)="verItensOrdem(ordem)" class="btn btn-flat btn-small btn-acao" data-position="bottom"
+                        data-tooltip="Itens da Ordem" materialize="tooltip">
+                  <i class="material-icons">format_list_bulleted</i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div *ngIf="fimInfiniteScroll" class="row">
+        <div class="col s12">
+          <div class="card">
+            <div class="card-content">
+              <p class="center">Não há mais registros</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

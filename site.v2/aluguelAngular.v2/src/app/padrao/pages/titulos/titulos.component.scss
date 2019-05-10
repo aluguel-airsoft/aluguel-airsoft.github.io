@@ -1,0 +1,19 @@
+.card-content {
+  padding: 5px 0;
+}
+
+.barra-total {
+  bottom: 0;
+  position: fixed;
+  padding-left: 310px;
+
+  .card-stacked {
+    padding: 10px 0 10px 0;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .barra-total {
+    padding-left: 10px;
+  }
+}

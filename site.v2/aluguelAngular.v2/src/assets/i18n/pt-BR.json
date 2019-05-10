@@ -1,0 +1,83 @@
+{
+  "shared": {
+    "sessao": {
+      "sessao": "Sessão"
+    },
+    "botao": {
+      "novo": "Novo",
+      "salvar": "Salvar",
+      "cancelar": "Cancelar",
+      "voltar": "Voltar",
+      "pesquisar": "Pesquisar",
+      "atualizar": "Atualizar",
+      "filtrar": "Filtrar",
+      "avançar": "Avançar",
+      "retroceder": "Retroceder",
+      "excluir": "Excluir",
+      "editar": "Editar",
+      "aprovar": "Aprovar",
+      "recusar": "Recusar",
+      "reterpendente": "ReterPendente"
+    },
+    "pesquisa": {
+      "placeholder": "Pesquise aqui..."
+    }
+  },
+  "sidebar": {
+    "opcoes": {
+      "dashboard": "Dashboard",
+      "listaClientes": "Clientes",
+      "planejamentoVisitas": "Planejamento de Visitas",
+      "statusMetas": "Status Metas",
+      "statusOrdens": "Status Ordens",
+      "statusTitulos": "Status Títulos",
+      "statusClientes": "Status Clientes",
+      "gerenciamentoArquivos": "Gerenciamento de Arquivos",
+      "sair": "Sair do Sistema"
+    },
+    "separadores": {
+      "configuracoes": "Configurações"
+    }
+  },
+  "dashboard": {
+    "titulo": "Dashboard"
+  },
+  "clientes": {
+    "titulo": "Clientes"
+  },
+  "planejamento": {
+    "titulo": "Planejamento de Visitas"
+  },
+  "metas": {
+    "titulo": "Status Metas"
+  },
+  "ordens": {
+    "titulo": "Nova Ordem"
+  },
+  "status-ordens": {
+    "titulo": "Status Ordens"
+  },
+  "titulos": {
+    "titulo": "Status Títulos",
+    "card": {
+      "badge": "Bloqueado",
+      "nrDocumento": "Nº Documento: ",
+      "valor": "Valor: ",
+      "atraso": "Atraso: ",
+      "vencimento": "Vencimento: ",
+      "valorAtualizado": "Valor Atualizado: ",
+      "compensacao": "Compensação: "
+    },
+    "barraTotal": {
+      "vencidos": "Vencidos",
+      "total": "Total",
+      "aVencer": "A Vencer"
+    }
+  },
+  "status-clientes": {
+    "titulo": "Status Clientes"
+  },
+  "arquivos": {
+    "titulo": "Gerenciamento de Arquivos"
+  }
+}
