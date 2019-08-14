@@ -1229,6 +1229,26 @@ var reservas = [
 				"equipamentos": "M4A1 + G36"
 			}
 		]
+	},
+	{
+		"data": "18/08/2019",
+		"equipamentos":["m4a1", "g36", "l96", "oculos", "mascara"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Gabriel Hernandez",
+				"telefone": "554799837932",
+				"valor": 130.0,
+				"equipamentos": "G36 + L96"
+			},
+			{
+				"nome": "Otávio Rodacoswiski",
+				"telefone": "554788048805",
+				"valor": 85.0,
+				"equipamentos": "M4A1 + Mascara + Oculos"
+			}
+
+		]
 	}
 
 ];
