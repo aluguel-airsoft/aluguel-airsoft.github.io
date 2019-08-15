@@ -1232,7 +1232,7 @@ var reservas = [
 	},
 	{
 		"data": "18/08/2019",
-		"equipamentos":["m4a1", "g36", "l96", "oculos", "mascara"],
+		"equipamentos":["m4a1", "g36", "l96", "oculos", "mascara", "shotgun", "colete-multicam"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
@@ -1246,6 +1246,12 @@ var reservas = [
 				"telefone": "554788048805",
 				"valor": 85.0,
 				"equipamentos": "M4A1 + Mascara + Oculos"
+			},
+			{
+				"nome": "André Siqueira",
+				"telefone": "554791338552",
+				"valor": 65.0,
+				"equipamentos": "Shotgun + colete-multicam"
 			}
 
 		]
