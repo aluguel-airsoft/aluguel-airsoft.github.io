@@ -1232,7 +1232,7 @@ var reservas = [
 	},
 	{
 		"data": "18/08/2019",
-		"equipamentos":["m4a1", "g36", "l96", "oculos", "mascara", "shotgun", "colete-multicam"],
+		"equipamentos":["m4a1", "g36", "l96", "oculos", "mascara"],
 		"responsavel": "Mauricio",
 		"obs": [
 			{
