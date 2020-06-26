@@ -1255,6 +1255,19 @@ var reservas = [
 			}
 
 		]
+	},
+	{
+		"data": "28/06/2020",
+		"equipamentos":["m4a1"],
+		"responsavel": "Mauricio",
+		"obs": [
+			{
+				"nome": "Patrick Farias",
+				"telefone": "554784235839",
+				"valor": 60.0,
+				"equipamentos": "M4A1"
+			}
+		]
 	}
 
 ];
