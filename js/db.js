@@ -113,7 +113,7 @@ var equipamentosExistentes = [
 		"key"	: "g36",
 		"imagem": "g36.png",
 		"id" 	: "cBoxG36",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 60.0
 	},
 	{
@@ -122,7 +122,7 @@ var equipamentosExistentes = [
 		"key"	: "l96",
 		"imagem": "l96.png",
 		"id" 	: "cBoxL96",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 70.0
 	},
 	{
@@ -203,7 +203,7 @@ var equipamentosExistentes = [
 		"key"	: "balaclava",
 		"imagem": "balaclava.png",
 		"id" 	: "cBoxBalaclava",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 5.0
 	},
 	{ 
@@ -212,7 +212,7 @@ var equipamentosExistentes = [
 		"key"	: "colete-multicam",
 		"imagem": "colete-multicam.png",
 		"id" 	: "cBoxColeteMulticam",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 20.0
 	},
 	{ 
@@ -221,7 +221,7 @@ var equipamentosExistentes = [
 		"key"	: "colete",
 		"imagem": "colete.png",
 		"id" 	: "cBoxColete",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 20.0
 	},
 	{ 
@@ -248,7 +248,7 @@ var equipamentosExistentes = [
 		"key"	: "coldre",
 		"imagem": "coldre.png",
 		"id" 	: "cBoxColdre",
-		"disponivel" : true,
+		"disponivel" : false,
 		"preco"	: 10.0
 	}
 ];
